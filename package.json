@@ -1,0 +1,11 @@
+{
+  "name": "zhongshengji-seo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && npx serve public"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.9"
+  }
+}
