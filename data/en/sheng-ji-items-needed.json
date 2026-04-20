@@ -1,0 +1,91 @@
+{
+  "slug": "sheng-ji-items-needed",
+  "slugZhHans": "zhong-sheng-ji-xuyao-sheme-wupin",
+  "slugZhHant": "zhong-sheng-ji-xuyao-sheme-wupin",
+  "metaTitle": "Sheng Ji Items Needed: Hair, Nails, Blood, Garment & BaZi — Complete Guide",
+  "metaDescription": "Sheng Ji requires 4 items: hair (20–30 strands), nail clippings, blood drops on absorbent paper, and a worn garment. Plus your birth date and time (BaZi). Full kit mailed to you. WeChat NSDG521.",
+  "metaKeywords": "Sheng Ji items needed, what do you need for Sheng Ji, Sheng Ji hair nails blood, Sheng Ji BaZi, living tomb items preparation",
+  "h1": "Sheng Ji Items Needed: Hair, Nails, Blood, Garment & BaZi — Complete Preparation Guide",
+  "heroSub": "Every item serves as a carrier of the client's life essence — missing any one will prevent the dragon vein from properly bonding with the client",
+  "showPrice": true,
+  "sections": [
+    {
+      "h2": "The 4 Physical Items Required for Sheng Ji",
+      "items": [
+        {
+          "h3": "Item 1: Hair — The Primary Carrier of Life Information",
+          "content": "Hair is the most important of the four items. In Taoist metaphysics, hair contains the client's complete life information and spirit imprint, making it the primary medium for establishing a deep bond with the dragon vein's earth qi. Preparation: collect 20–30 naturally shed strands (from a comb or brush is ideal). No special timing is required. Place in the sealed bag included in the specialist collection kit mailed by the agent."
+        },
+        {
+          "h3": "Item 2: Nail Clippings — Secondary Carrier of Physical Energy",
+          "content": "Nail clippings, like hair, are extensions of the client's body and carry the client's life information. Both fingernail and toenail clippings are acceptable; there is no difference in effect. Preparation: collect a small amount of nail clippings from your normal nail-cutting routine and place them in the designated sealed bag from the kit."
+        },
+        {
+          "h3": "Item 3: Blood — The Most Direct Symbol of Life Force",
+          "content": "Blood carries the client's life force most directly and has a uniquely irreplaceable role in the Sheng Ji ceremony. Preparation: the collection kit includes a specialist absorbent paper and a sterile lancet. Prick the tip of one finger (the ring finger is traditional), allow 5–8 drops to fall onto the absorbent paper, and let it air-dry completely before sealing. The agent will provide step-by-step guidance via WeChat if needed."
+        },
+        {
+          "h3": "Item 4: A Worn Garment — Dual Purpose: Proxy and Ongoing Conduit",
+          "content": "The garment serves two functions. First, it acts as a physical proxy for the client at the dragon vein site — carrying the client's personal qi into the earth. Second, after the ceremony, the garment is returned to the client infused with the dragon vein's earth qi. Carrying or wearing this garment provides ongoing energetic support between the client and the dragon vein. Preparation: one previously worn garment (a fitted T-shirt or undergarment works best), clean-washed and placed in the garment bag included in the kit."
+        }
+      ]
+    },
+    {
+      "h2": "The Essential Information: Your BaZi (Four Pillars of Destiny)",
+      "items": [
+        {
+          "h3": "Why Your Exact Birth Data Matters",
+          "content": "Your BaZi — birth year, month, day and hour — is the foundation Master Lin uses to write the petition document (shu wen) and select the auspicious ceremony date. The petition document formally introduces you to the dragon deity by name and birth data; the ceremony date is selected to harmonise with your personal fate chart. The more accurate your birth data, the more precisely the ritual can be calibrated to your specific fate configuration."
+        },
+        {
+          "h3": "What If You Don't Know Your Exact Birth Hour?",
+          "content": "This is a very common situation — many people, especially those born before hospital records were standard, do not have a precise birth time. Providing an approximate range (e.g. 'between 6am and 8am') is acceptable. Master Lin will use supplementary methods — including physiognomy observation and known life events — to narrow down the most likely birth hour. Accuracy is preferable, but uncertainty does not prevent you from proceeding."
+        }
+      ]
+    },
+    {
+      "h2": "Preparation & Shipping FAQ",
+      "items": [
+        {
+          "h3": "Can Family Members Collect Items on My Behalf?",
+          "content": "No. All four items must come from the client themselves. The entire premise of Sheng Ji is that the dragon vein bonds with the specific person whose life information is placed within it. Items from another person — even a spouse or sibling — will not create any bond with the intended client."
+        },
+        {
+          "h3": "How Do I Ship the Items? (Especially for Malaysia and Singapore clients)",
+          "content": "Once your items are prepared and placed in the collection kit's packaging box, ship via DHL, FedEx or a reliable international courier to the address provided by Mr. Liang Dongrong (WeChat: NSDG521). Keep the tracking number and share it with the agent. For customs declaration, describe the contents as 'personal clothing and paper documents'. The agent will provide specific packing and declaration guidance."
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Sheng Ji Items Needed: Hair, Nails, Blood, Garment & BaZi — Complete Preparation Guide",
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-04-19",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Liang Dongrong"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zhong Sheng Ji · Taiwan Zi Xin Ge Authorised Agent",
+      "url": "https://www.zhongshengji.vip"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Sheng Ji"
+      },
+      {
+        "@type": "Thing",
+        "name": "Zhong Sheng Ji"
+      },
+      {
+        "@type": "Thing",
+        "name": "Living Tomb Feng Shui"
+      }
+    ]
+  }
+}
