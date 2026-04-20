@@ -74,7 +74,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基费用多少钱？五年期与终身版价格及区别详解",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -89,9 +92,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基价格"},
-      {"@type": "Thing", "name": "种生基费用"},
-      {"@type": "Thing", "name": "生基风水收费"}
+      {
+        "@type": "Thing",
+        "name": "种生基价格"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基费用"
+      },
+      {
+        "@type": "Thing",
+        "name": "生基风水收费"
+      }
     ],
     "mainEntity": [
       {
@@ -119,5 +131,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-price-cost"
 }

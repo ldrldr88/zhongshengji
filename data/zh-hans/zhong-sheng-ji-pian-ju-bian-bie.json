@@ -82,7 +82,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基骗局怎么辨别？鉴别真假种生基大师的5个核心方法",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -97,9 +100,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基骗局"},
-      {"@type": "Thing", "name": "种生基辨别"},
-      {"@type": "Thing", "name": "种生基风险"}
+      {
+        "@type": "Thing",
+        "name": "种生基骗局"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基辨别"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基风险"
+      }
     ],
     "mainEntity": [
       {
@@ -119,5 +131,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-risks-scam-warning"
 }

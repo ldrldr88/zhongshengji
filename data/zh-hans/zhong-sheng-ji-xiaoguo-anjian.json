@@ -78,7 +78,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基效果真实案例：面相·事业·财运·官运改变全记录",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -93,9 +96,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基效果"},
-      {"@type": "Thing", "name": "种生基真实案例"},
-      {"@type": "Thing", "name": "种生基客户见证"}
+      {
+        "@type": "Thing",
+        "name": "种生基效果"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基真实案例"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基客户见证"
+      }
     ],
     "mainEntity": [
       {
@@ -115,5 +127,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-benefits-effects"
 }

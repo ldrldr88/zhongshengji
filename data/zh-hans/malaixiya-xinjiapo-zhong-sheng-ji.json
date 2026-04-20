@@ -78,7 +78,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "马来西亚·新加坡华人种生基：台湾林老师服务·邮寄即可完成",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -93,9 +96,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "马来西亚种生基"},
-      {"@type": "Thing", "name": "新加坡种生基"},
-      {"@type": "Thing", "name": "东南亚华人种生基"}
+      {
+        "@type": "Thing",
+        "name": "马来西亚种生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "新加坡种生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "东南亚华人种生基"
+      }
     ],
     "mainEntity": [
       {
@@ -115,5 +127,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-malaysia-singapore"
 }

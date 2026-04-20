@@ -110,7 +110,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "HowTo"],
+    "@type": [
+      "Article",
+      "HowTo"
+    ],
     "headline": "种生基做法与步骤：两天完整仪式流程逐步详解",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -125,18 +128,63 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基做法"},
-      {"@type": "Thing", "name": "种生基步骤"},
-      {"@type": "Thing", "name": "种生基仪式"}
+      {
+        "@type": "Thing",
+        "name": "种生基做法"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基步骤"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基仪式"
+      }
     ],
     "step": [
-      {"@type": "HowToStep", "position": 1, "name": "请神开坛", "text": "法师开坛请护法神明降临，建立神圣场域"},
-      {"@type": "HowToStep", "position": 2, "name": "禀告疏文", "text": "向天地神明呈报命主信息与祈求事项"},
-      {"@type": "HowToStep", "position": 3, "name": "消灾解厄", "text": "以替身承接命主煞气，替身送煞"},
-      {"@type": "HowToStep", "position": 4, "name": "点七星灯", "text": "稳固命主元神，化解命格中的煞气"},
-      {"@type": "HowToStep", "position": 5, "name": "进钱补运", "text": "招请财神，为命主补足财运与福运基础"},
-      {"@type": "HowToStep", "position": 6, "name": "开光点眼", "text": "对命主宝盒物品开光，赋予法力"},
-      {"@type": "HowToStep", "position": 7, "name": "命主宝盒安入龙穴", "text": "在台湾富贵双全龙穴将命主宝盒正式入穴"}
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "请神开坛",
+        "text": "法师开坛请护法神明降临，建立神圣场域"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "禀告疏文",
+        "text": "向天地神明呈报命主信息与祈求事项"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "消灾解厄",
+        "text": "以替身承接命主煞气，替身送煞"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "点七星灯",
+        "text": "稳固命主元神，化解命格中的煞气"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "进钱补运",
+        "text": "招请财神，为命主补足财运与福运基础"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "开光点眼",
+        "text": "对命主宝盒物品开光，赋予法力"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 7,
+        "name": "命主宝盒安入龙穴",
+        "text": "在台湾富贵双全龙穴将命主宝盒正式入穴"
+      }
     ]
-  }
+  },
+  "slugEn": "how-to-do-sheng-ji"
 }

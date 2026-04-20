@@ -1,56 +1,71 @@
 const fs   = require('fs');
-const path = require('path');
 const Handlebars = require('handlebars');
 
-const BASE_URL  = 'https://www.zhongshengji.vip';
-const TODAY     = new Date().toISOString().split('T')[0];
+const BASE_URL = 'https://www.zhongshengji.vip';
+const TODAY    = new Date().toISOString().split('T')[0];
 
-// 读取模板
-const templateSrc = fs.readFileSync('./templates/page.html', 'utf-8');
-const template    = Handlebars.compile(templateSrc);
+// ── 三语言模板 ──
+const templates = {
+  'zh-hans': Handlebars.compile(fs.readFileSync('./templates/page-zh-hans.html', 'utf-8')),
+  'zh-hant': Handlebars.compile(fs.readFileSync('./templates/page-zh-hant.html', 'utf-8')),
+  'en':      Handlebars.compile(fs.readFileSync('./templates/page-en.html',      'utf-8')),
+};
 
-// 确保输出目录存在
-if (!fs.existsSync('./public')) fs.mkdirSync('./public');
+// ── 确保输出目录存在 ──
+['./public', './public/zh-tw', './public/en'].forEach(d => {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+});
 
-// ── 静态页面（固定，不走 JSON 工厂）──
+// ── 语言配置 ──
+const LANG_CONFIG = {
+  'zh-hans': { dir: 'data/zh-hans', outPrefix: '',       hreflang: 'zh-Hans', label: '简体中文' },
+  'zh-hant': { dir: 'data/zh-hant', outPrefix: 'zh-tw/', hreflang: 'zh-Hant', label: '繁體中文' },
+  'en':      { dir: 'data/en',      outPrefix: 'en/',    hreflang: 'en',      label: 'English'  },
+};
+
+// ── 静态页 ──
 const staticPages = [
-  { loc: '/',        priority: '1.0', changefreq: 'weekly'  },
-  { loc: '/about/',  priority: '0.8', changefreq: 'monthly' },
-  { loc: '/yuyue/',  priority: '0.9', changefreq: 'monthly' },
+  { loc: '/',       priority: '1.0', changefreq: 'weekly'  },
+  { loc: '/about/', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/yuyue/', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/zh-tw/', priority: '1.0', changefreq: 'weekly'  },
+  { loc: '/en/',    priority: '1.0', changefreq: 'weekly'  },
 ];
 
-// ── 读取 data/ 里的所有 JSON，生成页面 ──
-const files = fs.readdirSync('./data').filter(f => f.endsWith('.json'));
-const dynamicPages = [];
+const allDynamicPages = [];
 
-files.forEach(file => {
-  const raw  = fs.readFileSync(`./data/${file}`, 'utf-8');
-  const data = JSON.parse(raw);
+// ── 逐语言构建 ──
+Object.entries(LANG_CONFIG).forEach(([lang, cfg]) => {
+  const dataDir = `./${cfg.dir}`;
+  if (!fs.existsSync(dataDir)) {
+    console.warn(`⚠  目录不存在，跳过：${cfg.dir}`);
+    return;
+  }
 
-  // Schema 转成字符串，填进模板
-  data.schemaString = JSON.stringify(data.schema, null, 2);
+  const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
+  const tmpl  = templates[lang];
 
-  // 生成 HTML
-  const html = template(data);
+  files.forEach(file => {
+    const data = JSON.parse(fs.readFileSync(`${dataDir}/${file}`, 'utf-8'));
 
-  // 以 slug 命名，写入 public/ 目录
-  const outDir = `./public/${data.slug}`;
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(`${outDir}/index.html`, html);
+    data.schemaString = JSON.stringify(data.schema, null, 2);
+    data.lang         = lang;
+    data.hreflang     = cfg.hreflang;
 
-  console.log(`✓ Built: /${data.slug}/`);
+    const html   = tmpl(data);
+    const outDir = `./public/${cfg.outPrefix}${data.slug}`;
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(`${outDir}/index.html`, html);
 
-  // 记录进 sitemap 动态列表
-  dynamicPages.push({
-    loc:        `/${data.slug}/`,
-    priority:   '0.8',
-    changefreq: 'monthly',
+    const loc = `/${cfg.outPrefix}${data.slug}/`;
+    console.log(`✓ [${cfg.label}] ${loc}`);
+
+    allDynamicPages.push({ loc, priority: '0.8', changefreq: 'monthly' });
   });
 });
 
-// ── 自动生成 sitemap.xml ──
-const allPages = [...staticPages, ...dynamicPages];
-
+// ── 生成 sitemap.xml ──
+const allPages = [...staticPages, ...allDynamicPages];
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages.map(p => `
@@ -60,10 +75,8 @@ ${allPages.map(p => `
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority}</priority>
   </url>`).join('')}
-</urlset>
-`;
+</urlset>`.trim();
 
-fs.writeFileSync('./public/sitemap.xml', sitemapXml.trim());
-console.log(`✓ sitemap.xml 已更新（${allPages.length} 个 URL）`);
-
-console.log(`\n完成！共生成 ${files.length} 个动态页面，sitemap 包含 ${allPages.length} 个 URL。`);
+fs.writeFileSync('./public/sitemap.xml', sitemapXml);
+console.log(`\n✓ sitemap.xml 已更新（${allPages.length} 个 URL）`);
+console.log(`✓ 完成！动态页共 ${allDynamicPages.length} 个，sitemap 共 ${allPages.length} 个 URL。`);

@@ -82,7 +82,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基风水师哪里找？靠谱大师的5个核心鉴别标准",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -97,9 +100,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基风水师"},
-      {"@type": "Thing", "name": "靠谱种生基大师"},
-      {"@type": "Thing", "name": "种生基哪里找"}
+      {
+        "@type": "Thing",
+        "name": "种生基风水师"
+      },
+      {
+        "@type": "Thing",
+        "name": "靠谱种生基大师"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基哪里找"
+      }
     ],
     "mainEntity": [
       {
@@ -119,5 +131,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "find-sheng-ji-master"
 }

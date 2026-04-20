@@ -92,7 +92,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基改运全解：催财·催官·延寿·保命·求婚·求子九大方向",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -107,10 +110,22 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基改运"},
-      {"@type": "Thing", "name": "种生基催财"},
-      {"@type": "Thing", "name": "种生基催官"},
-      {"@type": "Thing", "name": "种生基延寿"}
+      {
+        "@type": "Thing",
+        "name": "种生基改运"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基催财"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基催官"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基延寿"
+      }
     ],
     "mainEntity": [
       {
@@ -130,5 +145,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-wealth-career-luck"
 }

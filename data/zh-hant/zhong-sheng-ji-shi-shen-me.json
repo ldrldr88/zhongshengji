@@ -72,22 +72,63 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "種生基是什麼意思？道家正統活人改運秘術全面解答",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
     "inLanguage": "zh-TW",
-    "author": {"@type": "Person", "name": "梁東榮"},
-    "publisher": {"@type": "Organization", "name": "種生基 · 台灣慈心閣開運會館大陸授權", "url": "https://www.zhongshengji.vip"},
+    "author": {
+      "@type": "Person",
+      "name": "梁東榮"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "種生基 · 台灣慈心閣開運會館大陸授權",
+      "url": "https://www.zhongshengji.vip"
+    },
     "about": [
-      {"@type": "Thing", "name": "種生基"},
-      {"@type": "Thing", "name": "生基風水"},
-      {"@type": "Thing", "name": "活人墓"}
+      {
+        "@type": "Thing",
+        "name": "種生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "生基風水"
+      },
+      {
+        "@type": "Thing",
+        "name": "活人墓"
+      }
     ],
     "mainEntity": [
-      {"@type": "Question", "name": "種生基是什麼意思？", "acceptedAnswer": {"@type": "Answer", "text": "種生基是道家傳統風水秘術，在活人在世時選取真龍正穴，將頭髮、指甲、血液等安置於龍穴，借助地脈龍氣持續提升運勢，達到催官、招財、延壽、保命的效果。"}},
-      {"@type": "Question", "name": "種生基多久見效？", "acceptedAnswer": {"@type": "Answer", "text": "種生基完成後通常1至3個月內開始顯現運勢變化，面相氣色改善最先可見，事業財運隨後逐步提升。"}},
-      {"@type": "Question", "name": "種生基需要本人去台灣嗎？", "acceptedAnswer": {"@type": "Answer", "text": "五年期體驗版（7.2萬元）無需親臨台灣，郵寄物品即可完成。終身版（50萬元）需本人到場全程參與。"}}
+      {
+        "@type": "Question",
+        "name": "種生基是什麼意思？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "種生基是道家傳統風水秘術，在活人在世時選取真龍正穴，將頭髮、指甲、血液等安置於龍穴，借助地脈龍氣持續提升運勢，達到催官、招財、延壽、保命的效果。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "種生基多久見效？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "種生基完成後通常1至3個月內開始顯現運勢變化，面相氣色改善最先可見，事業財運隨後逐步提升。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "種生基需要本人去台灣嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "五年期體驗版（7.2萬元）無需親臨台灣，郵寄物品即可完成。終身版（50萬元）需本人到場全程參與。"
+        }
+      }
     ]
-  }
+  },
+  "slugEn": "what-is-zhong-sheng-ji"
 }

@@ -78,7 +78,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基禁忌与注意事项：做之前必须了解的5大禁忌",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -93,9 +96,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基禁忌"},
-      {"@type": "Thing", "name": "种生基注意事项"},
-      {"@type": "Thing", "name": "种生基副作用"}
+      {
+        "@type": "Thing",
+        "name": "种生基禁忌"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基注意事项"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基副作用"
+      }
     ],
     "mainEntity": [
       {
@@ -123,5 +135,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-taboos-precautions"
 }

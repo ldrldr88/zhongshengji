@@ -73,7 +73,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基和阴宅风水的区别：活人改运与荫庇后代的根本差异",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -88,9 +91,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基"},
-      {"@type": "Thing", "name": "阴宅风水"},
-      {"@type": "Thing", "name": "活人墓"}
+      {
+        "@type": "Thing",
+        "name": "种生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "阴宅风水"
+      },
+      {
+        "@type": "Thing",
+        "name": "活人墓"
+      }
     ],
     "mainEntity": [
       {
@@ -110,5 +122,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-vs-feng-shui"
 }

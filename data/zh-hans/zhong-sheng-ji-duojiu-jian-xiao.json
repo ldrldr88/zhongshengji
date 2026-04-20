@@ -78,7 +78,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基多久见效？起运时间与影响效果的关键因素详解",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -93,9 +96,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基见效时间"},
-      {"@type": "Thing", "name": "种生基效果"},
-      {"@type": "Thing", "name": "种生基改运"}
+      {
+        "@type": "Thing",
+        "name": "种生基见效时间"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基效果"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基改运"
+      }
     ],
     "mainEntity": [
       {
@@ -123,5 +135,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-benefits-effects"
 }

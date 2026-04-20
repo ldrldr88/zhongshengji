@@ -401,40 +401,56 @@
       align-self: stretch;
     }
 
-    /* ===== 页脚 ===== */
-     .site-footer {
-  background: #0e0b04;
-  border-top: 1px solid var(--gold-dark);
-  padding: 32px 5%;
-  text-align: center;
-}
+        /* ===== 页脚 ===== */
+    .site-footer {
+      background: #0e0b04;
+      border-top: 1px solid var(--gold-dark);
+      padding: 32px 5%;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .footer-links a {
+      color: #d9c07a;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+    .footer-copy {
+      font-size: 0.9rem;
+      color: #a88a4a;
+      line-height: 1.8;
+    }
 
-.footer-links {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
-.footer-links a {
-  color: #d9c07a;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: var(--gold-light);
-  text-decoration: underline;
-}
-
-.footer-copy {
-  font-size: 0.9rem;
-  color: #a88a4a;
-  line-height: 1.8;
-}
-
+    /* ===== 语言切换器 ===== */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .lang-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #c8a84a;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      padding: 3px 6px;
+      border-radius: 2px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .lang-btn:hover { color: var(--gold-light); }
+    .lang-btn.active { color: #fff; background: rgba(201,168,76,0.18); }
+    .lang-sep { color: rgba(201,168,76,0.4); font-size: 0.75rem; }
+    @media (max-width: 480px) { .lang-switcher { display: none; } }
 
     /* ===== 响应式 ===== */
     @media (max-width: 640px) {
@@ -455,6 +471,13 @@
   <!-- 顶部导航 -->
   <nav class="site-nav">
     <a href="/" class="nav-logo">种 生 基</a>
+    <div class="lang-switcher">
+      <a href="/{{slug}}/" class="lang-btn active">简体</a>
+      <span class="lang-sep">|</span>
+      <a href="/zh-tw/{{slug}}/" class="lang-btn">繁體</a>
+      <span class="lang-sep">|</span>
+      <a href="/en/{{slugEn}}/" class="lang-btn">EN</a>
+    </div>
     <a href="#contact" class="nav-cta">立即咨询</a>
   </nav>
 
@@ -573,9 +596,11 @@
       <a href="/">首页</a>
       <a href="/about/">关于林老师</a>
       <a href="/yuyue/">预约流程</a>
-      <a href="/jia-ge/">费用说明</a>
+      <a href="/zhong-sheng-ji-jia-ge-fei-yong/">费用说明</a>
+      <a href="/zh-tw/{{slug}}/">繁體版</a>
+      <a href="/en/{{slugEn}}/">English</a>
     </div>
-    <p class="footer-copy">© 2026 zhongshengji.vip · 台湾兹心阁开运会馆 · 大陆授权：梁东荣</p>
+    <p class="footer-copy">© 2026 zhongshengji.vip · 台湾兹心阁开运会馆 · 大陆授权：梁东荣先生</p>
   </footer>
 
 </body>

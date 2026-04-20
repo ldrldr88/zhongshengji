@@ -271,15 +271,6 @@
       margin-top: 4px;
     }
 
-    
-    /* 语言切换器 */
-    .lang-switcher { display: flex; align-items: center; gap: 8px; }
-    .lang-btn { font-size: 0.82rem; font-weight: 600; color: #c8a84a; text-decoration: none; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 2px; transition: color 0.2s, background 0.2s; }
-    .lang-btn:hover { color: var(--gold-light); }
-    .lang-btn.active { color: #fff; background: rgba(201,168,76,0.18); }
-    .lang-sep { color: rgba(201,168,76,0.4); font-size: 0.75rem; }
-    @media (max-width: 480px) { .lang-switcher { display: none; } }
-
     @media (max-width: 600px) {
       .hero-stats { flex-direction: column; }
       .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
@@ -774,8 +765,7 @@
       color: rgba(255,255,255,0.55);
     }
 
-    /* ─── 底部 ─── */
-    .site-footer {
+    .site-footer, footer {
       background: #0e0b04;
       border-top: 1px solid var(--gold-dark);
       padding: 32px 5%;
@@ -787,6 +777,7 @@
       justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 18px;
+      list-style: none;
     }
     .footer-links a {
       color: #d9c07a;
@@ -803,6 +794,15 @@
       color: #a88a4a;
       line-height: 1.8;
     }
+
+
+    /* ===== 语言切换器 ===== */
+    .lang-switcher { display: flex; align-items: center; gap: 8px; }
+    .lang-btn { font-size: 0.82rem; font-weight: 600; color: #c8a84a; text-decoration: none; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 2px; transition: color 0.2s, background 0.2s; }
+    .lang-btn:hover { color: var(--gold-light); }
+    .lang-btn.active { color: #fff; background: rgba(201,168,76,0.18); }
+    .lang-sep { color: rgba(201,168,76,0.4); font-size: 0.75rem; }
+    @media (max-width: 480px) { .lang-switcher { display: none; } }
 
     /* ─── 悬浮联系按钮（移动端） ─── */
     .float-btn {
@@ -1285,17 +1285,17 @@
 
 <!-- 页脚 -->
 <footer class="site-footer">
-  <div class="footer-inner">
-    <ul class="footer-links">
-      <li><a href="/">首页</a></li>
-      <li><a href="/zhong-sheng-ji-shi-shen-me/">种生基是什么</a></li>
-      <li><a href="/zhong-sheng-ji-jia-ge-fei-yong/">费用说明</a></li>
-      <li><a href="/zhong-sheng-ji-duojiu-jian-xiao/">见效时间</a></li>
-      <li><a href="/zhong-sheng-ji-pian-ju-bian-bie/">辨别骗局</a></li>
-      <li><a href="/taiwan-lin-laoshi-zhong-sheng-ji/">林老师介绍</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 zhongshengji.vip · 台湾兹心阁开运会馆 · 大陆授权：梁东荣先生</p>
-  </div>
+  <ul class="footer-links">
+    <li><a href="/">首页</a></li>
+    <li><a href="/zhong-sheng-ji-shi-shen-me/">种生基是什么</a></li>
+    <li><a href="/zhong-sheng-ji-jia-ge-fei-yong/">费用说明</a></li>
+    <li><a href="/zhong-sheng-ji-duojiu-jian-xiao/">见效时间</a></li>
+    <li><a href="/zhong-sheng-ji-pian-ju-bian-bie/">辨别骗局</a></li>
+    <li><a href="/taiwan-lin-laoshi-zhong-sheng-ji/">林老师介绍</a></li>
+    <li><a href="/zh-tw/">繁體</a></li>
+    <li><a href="/en/">English</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 zhongshengji.vip · 台湾兹心阁开运会馆 · 大陆授权：梁东荣先生</p>
 </footer>
 
 <!-- 移动端悬浮按钮 -->

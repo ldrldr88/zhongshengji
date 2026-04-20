@@ -82,7 +82,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基需要什么物品？四样物品与生辰八字的完整准备指南",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -97,9 +100,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基物品"},
-      {"@type": "Thing", "name": "种生基准备"},
-      {"@type": "Thing", "name": "种生基头发指甲血液"}
+      {
+        "@type": "Thing",
+        "name": "种生基物品"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基准备"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基头发指甲血液"
+      }
     ],
     "mainEntity": [
       {
@@ -127,5 +139,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-items-needed"
 }

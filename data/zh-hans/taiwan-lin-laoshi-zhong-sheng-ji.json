@@ -87,7 +87,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "台湾林老师种生基：林志萦大师与林家骅老师三代传承正统介绍",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -102,11 +105,26 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "台湾种生基"},
-      {"@type": "Thing", "name": "林志萦大师"},
-      {"@type": "Thing", "name": "林家骅老师"},
-      {"@type": "Thing", "name": "兹心阁开运会馆"},
-      {"@type": "Thing", "name": "台湾风水世家"}
+      {
+        "@type": "Thing",
+        "name": "台湾种生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "林志萦大师"
+      },
+      {
+        "@type": "Thing",
+        "name": "林家骅老师"
+      },
+      {
+        "@type": "Thing",
+        "name": "兹心阁开运会馆"
+      },
+      {
+        "@type": "Thing",
+        "name": "台湾风水世家"
+      }
     ],
     "mainEntity": [
       {
@@ -134,5 +152,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "taiwan-sheng-ji-master"
 }

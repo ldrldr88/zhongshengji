@@ -74,7 +74,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基延寿保命：真龙正穴地气滋养·化解灾煞·增寿秘术详解",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -89,9 +92,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基延寿"},
-      {"@type": "Thing", "name": "种生基保命"},
-      {"@type": "Thing", "name": "种生基化煞"}
+      {
+        "@type": "Thing",
+        "name": "种生基延寿"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基保命"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基化煞"
+      }
     ],
     "mainEntity": [
       {
@@ -111,5 +123,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-longevity-tomb"
 }

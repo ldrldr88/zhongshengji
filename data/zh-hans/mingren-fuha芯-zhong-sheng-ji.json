@@ -70,7 +70,10 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "名人富豪种生基：李嘉诚何鸿燊同款·媒体报道历史记录",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
@@ -85,9 +88,18 @@
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "名人种生基"},
-      {"@type": "Thing", "name": "富豪种生基"},
-      {"@type": "Thing", "name": "香港富豪风水"}
+      {
+        "@type": "Thing",
+        "name": "名人种生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "富豪种生基"
+      },
+      {
+        "@type": "Thing",
+        "name": "香港富豪风水"
+      }
     ],
     "mainEntity": [
       {
@@ -107,5 +119,6 @@
         }
       }
     ]
-  }
+  },
+  "slugEn": "sheng-ji-celebrity-cases"
 }

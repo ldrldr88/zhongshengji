@@ -423,33 +423,56 @@
       align-self: stretch;
     }
 
-    /* ===== 页脚 ===== */
+        /* ===== 頁腳 ===== */
     .site-footer {
       background: #0e0b04;
       border-top: 1px solid var(--gold-dark);
-      padding: 28px 5%;
+      padding: 32px 5%;
       text-align: center;
     }
-
     .footer-links {
       display: flex;
-      gap: 24px;
+      gap: 18px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
-
     .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      color: #d9c07a;
+      font-size: 0.95rem;
+      font-weight: 600;
       text-decoration: none;
     }
-    .footer-links a:hover { color: var(--gold); }
-
-    .footer-copy {
-      font-size: 0.8rem;
-      color: #4a3c20;
+    .footer-links a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
     }
+    .footer-copy {
+      font-size: 0.9rem;
+      color: #a88a4a;
+      line-height: 1.8;
+    }
+
+    /* ===== 语言切换器 ===== */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .lang-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #c8a84a;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      padding: 3px 6px;
+      border-radius: 2px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .lang-btn:hover { color: var(--gold-light); }
+    .lang-btn.active { color: #fff; background: rgba(201,168,76,0.18); }
+    .lang-sep { color: rgba(201,168,76,0.4); font-size: 0.75rem; }
+    @media (max-width: 480px) { .lang-switcher { display: none; } }
 
     /* ===== 响应式 ===== */
     @media (max-width: 640px) {
@@ -596,15 +619,17 @@
 
   </main>
 
-  <!-- 页脚 -->
+  <!-- 頁脚 -->
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="/">首页</a>
+      <a href="/zh-tw/">首頁</a>
       <a href="/about/">關於林老師</a>
       <a href="/yuyue/">預約流程</a>
-      <a href="/jia-ge/">費用說明</a>
+      <a href="/zh-tw/zhong-sheng-ji-jia-ge-fei-yong/">費用說明</a>
+      <a href="/zhong-sheng-ji-jia-ge-fei-yong/">简体版</a>
+      <a href="/en/sheng-ji-price-cost/">English</a>
     </div>
-    <p class="footer-copy">© 2026 zhongshengji.vip · 台灣慈心閣開運會館 · 大陸授權：梁東榮</p>
+    <p class="footer-copy">© 2026 zhongshengji.vip · 台灣慈心閣開運會館 · 大陸授權：梁東榮先生</p>
   </footer>
 
 </body>
