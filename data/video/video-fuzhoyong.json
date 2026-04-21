@@ -1,0 +1,43 @@
+{
+  "slug": "video-fuzhoyong",
+  "pageTag": "种生基疑问解答视频",
+  "metaTitle": "种生基有没有副作用？正统做法完整说明·林家驊老师视频解答",
+  "metaDescription": "正统道家种生基对命主本人无负面影响，不损耗健康或寿元，不影响子孙运势。有5大禁忌需遵守：不作奸犯科、不随意宣扬、需配合努力等。微信NSDG521。",
+  "metaKeywords": "种生基副作用,种生基有害吗,种生基安全吗",
+  "h1": "种生基有没有副作用？正统做法完整说明",
+  "heroSub": "林家驊老师亲自视频解答 · 台湾兹心阁开运会馆官方内容 · 微信NSDG521",
+  "mainVideoId": "EcQ4XnmNC6s",
+  "chapters": null,
+  "videoGrid": null,
+  "sections": [
+    {
+      "h2": "关于本问题的延伸阅读",
+      "items": [
+        {
+          "h3": "查看更多种生基常见疑问",
+          "content": "本视频专门解答「种生基的副作用」这一疑问。如需了解其他常见疑问，可访问我们的24个疑问合集页面，或直接通过微信NSDG521联系梁东荣先生进行一对一咨询。所有咨询严格保密，无任何预约压力。"
+        },
+        {
+          "h3": "五年期体验版是了解种生基效果的最佳方式",
+          "content": "如果观看视频后您对种生基有了初步了解，并希望亲身体验效果，五年期体验版（7.2万元）是最合适的起点。无需亲临台湾，邮寄四样物品即可完成全套种生基仪式，全程视频记录回寄，效果不满意可在五年内随时与助理沟通。"
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "种生基有没有副作用？正统做法完整说明",
+    "description": "正统道家种生基对命主本人无负面影响，不损耗健康或寿元，不影响子孙运势。有5大禁忌需遵守：不作奸犯科、不随意宣扬、需配合努力等。微信NSDG521。",
+    "thumbnailUrl": "https://img.youtube.com/vi/EcQ4XnmNC6s/maxresdefault.jpg",
+    "uploadDate": "2024-01-01",
+    "embedUrl": "https://www.youtube.com/embed/EcQ4XnmNC6s",
+    "url": "https://www.youtube.com/watch?v=EcQ4XnmNC6s",
+    "publisher": {
+      "@type": "Organization",
+      "name": "慈心阁林家驊種生基",
+      "url": "https://www.zhongshengji.vip"
+    },
+    "inLanguage": "zh-TW"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "video-tuandui-zhongshengji",
+  "pageTag": "团队种生基视频",
+  "metaTitle": "我们为自己团队举办种生基全程视频·内部成员亲身参与",
+  "metaDescription": "慈心阁团队成员为自己举办种生基的完整视频记录。连服务提供者自己也选择种生基，是对这项服务最真实的信任背书。微信NSDG521咨询梁东荣先生。",
+  "metaKeywords": "种生基团队视频,种生基内部视频,慈心阁种生基,种生基自己做,种生基真实性",
+  "h1": "我们为自己团队举办种生基：服务者亦是受益者",
+  "heroSub": "连我们自己的团队成员也选择种生基 · 这是对这项服务最直接的信任证明",
+  "mainVideoId": "qJqsWJv9zE8",
+  "chapters": null,
+  "videoGrid": null,
+  "sections": [
+    {
+      "h2": "为什么团队自己做种生基是最有力的证明",
+      "items": [
+        {
+          "h3": "如果服务者自己都不相信，他们不会为自己做",
+          "content": "一个最简单的逻辑：如果种生基服务是骗局，服务提供者绝不会花时间和精力为自己的团队成员举办同样的仪式。我们公开发布团队种生基视频，正是因为我们相信这项服务的真实效果——这种「以身作则」的示范，比任何文字介绍都更有说服力。"
+        },
+        {
+          "h3": "团队视频与客户视频的仪式完全相同",
+          "content": "视频中可以看到，团队成员的种生基仪式与普通客户完全相同——同样在台湾富贵双全龙穴、同样由林家驊老师主持、同样经历两天完整的法会流程。没有任何「内部简化版」或「快捷通道」，这本身就是对仪式完整性的证明。"
+        }
+      ]
+    },
+    {
+      "h2": "种生基服务的内部文化",
+      "items": [
+        {
+          "h3": "兹心阁团队对种生基的深度理解",
+          "content": "作为种生基服务的直接提供者，兹心阁团队对种生基的理论基础、仪式要求、效果机制有最深入的理解。团队成员自己选择接受种生基服务，是建立在这种深度理解之上的主动选择，而非被动的商业宣传。"
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "我们为自己团队举办种生基全程视频",
+    "description": "慈心阁团队成员为自己举办种生基的完整视频记录，服务者亦是受益者",
+    "thumbnailUrl": "https://img.youtube.com/vi/qJqsWJv9zE8/maxresdefault.jpg",
+    "uploadDate": "2024-01-01",
+    "embedUrl": "https://www.youtube.com/embed/qJqsWJv9zE8",
+    "url": "https://www.youtube.com/watch?v=qJqsWJv9zE8",
+    "publisher": {
+      "@type": "Organization",
+      "name": "慈心阁林家驊種生基",
+      "url": "https://www.zhongshengji.vip"
+    },
+    "inLanguage": "zh-TW"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "video-san-fenzhong-jieshao",
+  "pageTag": "机构介绍视频",
+  "metaTitle": "三分钟了解种生基·林家驊·台湾三代传承道家正统",
+  "metaDescription": "三分钟快速了解种生基是什么、林家驊老师的传承背景、台湾兹心阁开运会馆的服务。慈心阁官方视频，微信NSDG521咨询梁东荣先生。",
+  "metaKeywords": "种生基介绍视频,林家驊种生基,兹心阁种生基,三分钟了解种生基",
+  "h1": "三分钟认识种生基：林家驊老师亲自介绍",
+  "heroSub": "台湾兹心阁开运会馆官方视频 · 三分钟快速了解种生基与林氏家族传承",
+  "mainVideoId": "MxzwXcxO-r8",
+  "chapters": null,
+  "videoGrid": null,
+  "sections": [
+    {
+      "h2": "视频内容概要",
+      "items": [
+        {
+          "h3": "视频涵盖三个核心主题",
+          "content": "本视频由林家驊老师亲自主讲，涵盖三个核心内容：一是种生基的本质与原理——什么是活人立生基、为什么借助真龙正穴地气能改变运势；二是林氏家族三代传承的背景介绍；三是如何联系大陆授权代理梁东荣先生开始预约。"
+        },
+        {
+          "h3": "适合初次了解种生基的朋友",
+          "content": "如果您是第一次听说种生基，这个三分钟视频是最好的入门材料。看完之后您将对种生基有基本的了解，再决定是否深入了解或联系我们咨询，不存在任何预约压力。"
+        }
+      ]
+    },
+    {
+      "h2": "林家驊老师简介",
+      "items": [
+        {
+          "h3": "命理家族第三代·2007年经张天师奏职道家法师",
+          "content": "林家驊老师（道法法名林易禅），自幼跟随父亲林志萦大师学习紫微斗数、子平八字、风水堪舆之术。2007年经六十四代张天师张源先大法师保举奏职入万法宗坛，正式晋升为道家法师，传承中国道教净明宗闾山派玄易门正统道法。"
+        },
+        {
+          "h3": "2018年正式授权梁东荣为大陆独家代理",
+          "content": "2018年1月1日，林家驊老师独家授权梁东荣先生为大陆区种生基唯一代理。大陆客户可通过微信NSDG521直接联系梁东荣先生咨询预约，所有订单由林老师在台湾富贵双全龙穴亲自主持完成。"
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "三分钟认识种生基·林家驊老师亲自介绍",
+    "description": "台湾兹心阁开运会馆官方视频，林家驊老师三分钟介绍种生基原理与林氏家族传承背景",
+    "thumbnailUrl": "https://img.youtube.com/vi/MxzwXcxO-r8/maxresdefault.jpg",
+    "uploadDate": "2024-01-01",
+    "embedUrl": "https://www.youtube.com/embed/MxzwXcxO-r8",
+    "url": "https://www.youtube.com/watch?v=MxzwXcxO-r8",
+    "publisher": {
+      "@type": "Organization",
+      "name": "慈心阁林家驊種生基",
+      "url": "https://www.zhongshengji.vip"
+    },
+    "inLanguage": "zh-TW"
+  }
+}

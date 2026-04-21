@@ -1,0 +1,43 @@
+{
+  "slug": "video-zhengming-bu-pian",
+  "pageTag": "种生基疑问解答视频",
+  "metaTitle": "怎么证明林大师种生基不是骗人的？五大可核实证据·林家驊老师视频解答",
+  "metaDescription": "林大师种生基五大可核实证据：龙穴实地视频+产权证明、64代张天师奏职记录、客户全程未剪辑视频、媒体报道与行业认证、30年从业历史。微信NSDG521。",
+  "metaKeywords": "证明种生基不是骗局,种生基真实性,种生基可信度",
+  "h1": "怎么证明林大师种生基不是骗人的？五大可核实证据",
+  "heroSub": "林家驊老师亲自视频解答 · 台湾兹心阁开运会馆官方内容 · 微信NSDG521",
+  "mainVideoId": "ralIfMhfZSE",
+  "chapters": null,
+  "videoGrid": null,
+  "sections": [
+    {
+      "h2": "关于本问题的延伸阅读",
+      "items": [
+        {
+          "h3": "查看更多种生基常见疑问",
+          "content": "本视频专门解答「怎么证明种生基不是骗人的」这一疑问。如需了解其他常见疑问，可访问我们的24个疑问合集页面，或直接通过微信NSDG521联系梁东荣先生进行一对一咨询。所有咨询严格保密，无任何预约压力。"
+        },
+        {
+          "h3": "五年期体验版是了解种生基效果的最佳方式",
+          "content": "如果观看视频后您对种生基有了初步了解，并希望亲身体验效果，五年期体验版（7.2万元）是最合适的起点。无需亲临台湾，邮寄四样物品即可完成全套种生基仪式，全程视频记录回寄，效果不满意可在五年内随时与助理沟通。"
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "怎么证明林大师种生基不是骗人的？五大可核实证据",
+    "description": "林大师种生基五大可核实证据：龙穴实地视频+产权证明、64代张天师奏职记录、客户全程未剪辑视频、媒体报道与行业认证、30年从业历史。微信NSDG521。",
+    "thumbnailUrl": "https://img.youtube.com/vi/ralIfMhfZSE/maxresdefault.jpg",
+    "uploadDate": "2024-01-01",
+    "embedUrl": "https://www.youtube.com/embed/ralIfMhfZSE",
+    "url": "https://www.youtube.com/watch?v=ralIfMhfZSE",
+    "publisher": {
+      "@type": "Organization",
+      "name": "慈心阁林家驊種生基",
+      "url": "https://www.zhongshengji.vip"
+    },
+    "inLanguage": "zh-TW"
+  }
+}
