@@ -28,8 +28,11 @@ const staticPages = [
 
 const stalePaths = [
   './public/index_backup.html',
-  './public/mingren-fuha芯-zhong-sheng-ji',
-  './public/mingren-fuhaо-zhong-sheng-ji',
+];
+
+const legacyRedirectPaths = [
+  'mingren-fuhaо-zhong-sheng-ji', // Cyrillic о
+  'mingren-fuha芯-zhong-sheng-ji',
 ];
 
 function ensureDir(dir) {
@@ -39,6 +42,31 @@ function ensureDir(dir) {
 function removeStalePaths() {
   stalePaths.forEach(p => {
     if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
+  });
+}
+
+function legacyRedirectHtml() {
+  return `<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>页面已迁移</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="${BASE_URL}/mingren-fuhao-zhong-sheng-ji/">
+  <meta http-equiv="refresh" content="0; url=/mingren-fuhao-zhong-sheng-ji/">
+  <script>location.replace('/mingren-fuhao-zhong-sheng-ji/' + location.search);</script>
+</head>
+<body>
+  <p>页面已迁移，请访问 <a href="/mingren-fuhao-zhong-sheng-ji/">新页面</a>。</p>
+</body>
+</html>`;
+}
+
+function writeLegacyRedirectPages() {
+  legacyRedirectPaths.forEach(slug => {
+    const outDir = path.join(PUBLIC_DIR, slug);
+    ensureDir(outDir);
+    fs.writeFileSync(path.join(outDir, 'index.html'), legacyRedirectHtml());
   });
 }
 
@@ -167,6 +195,7 @@ function build() {
   ensureDir('./public/zh-tw');
   ensureDir('./public/en');
   removeStalePaths();
+  writeLegacyRedirectPages();
 
   const maps = buildLanguageMaps();
   const pages = [];

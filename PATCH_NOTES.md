@@ -61,3 +61,11 @@
 - public 输出中无 inline `<style>` 标签
 - public 输出中无过长 title / description
 - 繁体动态页 canonical 检查通过
+
+
+## 追加修复：旧错误 URL 跳转兜底
+
+- `vercel.json` 新增 percent-encoded 版本的旧 URL redirect 规则。
+- 新增 `middleware.js`，在 Vercel 文件系统路由前把两个旧错误 URL 308 到 `/mingren-fuhao-zhong-sheng-ji/`。
+- `build.js` 现在会自动生成两个旧 URL 的 fallback 页面：即使服务器重定向未生效，浏览器也会自动跳到新页面。
+- fallback 页面设置了 `noindex, follow` 和 canonical，避免旧 URL 被当成独立页面收录。

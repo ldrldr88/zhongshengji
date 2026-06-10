@@ -59,22 +59,27 @@
       "permanent": true
     },
     {
-      "source": "/about",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/yuyue",
-      "destination": "/yuyue/",
-      "permanent": true
-    },
-    {
-      "source": "/mingren-fuhaо-zhong-sheng-ji/",
+      "source": "/mingren-fuha%D0%BE-zhong-sheng-ji/",
       "destination": "/mingren-fuhao-zhong-sheng-ji/",
       "permanent": true
     },
     {
-      "source": "/mingren-fuha芯-zhong-sheng-ji/",
+      "source": "/mingren-fuha%D0%BE-zhong-sheng-ji",
+      "destination": "/mingren-fuhao-zhong-sheng-ji/",
+      "permanent": true
+    },
+    {
+      "source": "/mingren-fuha%E8%8A%AF-zhong-sheng-ji/",
+      "destination": "/mingren-fuhao-zhong-sheng-ji/",
+      "permanent": true
+    },
+    {
+      "source": "/mingren-fuha%E8%8A%AF-zhong-sheng-ji",
+      "destination": "/mingren-fuhao-zhong-sheng-ji/",
+      "permanent": true
+    },
+    {
+      "source": "/mingren-fuhaо-zhong-sheng-ji/",
       "destination": "/mingren-fuhao-zhong-sheng-ji/",
       "permanent": true
     },
@@ -84,8 +89,23 @@
       "permanent": true
     },
     {
+      "source": "/mingren-fuha芯-zhong-sheng-ji/",
+      "destination": "/mingren-fuhao-zhong-sheng-ji/",
+      "permanent": true
+    },
+    {
       "source": "/mingren-fuha芯-zhong-sheng-ji",
       "destination": "/mingren-fuhao-zhong-sheng-ji/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/yuyue",
+      "destination": "/yuyue/",
       "permanent": true
     },
     {
