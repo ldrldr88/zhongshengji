@@ -2,8 +2,8 @@
   "slug": "what-is-zhong-sheng-ji",
   "slugZhHans": "zhong-sheng-ji-shi-shen-me",
   "slugZhHant": "zhong-sheng-ji-shi-shen-me",
-  "metaTitle": "What is Zhong Sheng Ji (Sheng Ji)? The Taoist Living Tomb Ritual Explained",
-  "metaDescription": "Zhong Sheng Ji is an ancient Taoist Feng Shui ritual where a living person's DNA is placed in a dragon vein plot to boost wealth, career, longevity and luck. Taiwan 3-generation lineage. WeChat NSDG521.",
+  "metaTitle": "What is Zhong Sheng Ji? Taoist Living Tomb Ritual",
+  "metaDescription": "A concise explanation of Zhong Sheng Ji, also called Sheng Ji, the Taoist living tomb ritual using personal items and dragon vein land.",
   "metaKeywords": "what is Zhong Sheng Ji, Sheng Ji meaning, living tomb feng shui, life base ritual, Taoist longevity ritual",
   "h1": "What is Zhong Sheng Ji? The Ancient Taoist Living Tomb Ritual Fully Explained",
   "heroSub": "A 3-generation Taiwan Feng Shui lineage, ordained Taoist master, exclusive dragon vein plot — serving clients across China, Malaysia and Singapore",
@@ -76,23 +76,67 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "What is Zhong Sheng Ji? The Ancient Taoist Living Tomb Ritual Fully Explained",
     "datePublished": "2026-01-01",
     "dateModified": "2026-04-19",
     "inLanguage": "en",
-    "author": {"@type": "Person", "name": "Liang Dongrong", "jobTitle": "Sole Authorised Agent, Greater China & Southeast Asia"},
-    "publisher": {"@type": "Organization", "name": "Zhong Sheng Ji · Taiwan Zi Xin Ge Authorised Agent", "url": "https://www.zhongshengji.vip"},
+    "author": {
+      "@type": "Person",
+      "name": "Liang Dongrong",
+      "jobTitle": "Sole Authorised Agent, Greater China & Southeast Asia"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zhong Sheng Ji · Taiwan Zi Xin Ge Authorised Agent",
+      "url": "https://www.zhongshengji.vip"
+    },
     "about": [
-      {"@type": "Thing", "name": "Zhong Sheng Ji"},
-      {"@type": "Thing", "name": "Sheng Ji Feng Shui"},
-      {"@type": "Thing", "name": "Living Tomb Ritual"},
-      {"@type": "Thing", "name": "Taoist Longevity Ritual"}
+      {
+        "@type": "Thing",
+        "name": "Zhong Sheng Ji"
+      },
+      {
+        "@type": "Thing",
+        "name": "Sheng Ji Feng Shui"
+      },
+      {
+        "@type": "Thing",
+        "name": "Living Tomb Ritual"
+      },
+      {
+        "@type": "Thing",
+        "name": "Taoist Longevity Ritual"
+      }
     ],
     "mainEntity": [
-      {"@type": "Question", "name": "What is Zhong Sheng Ji?", "acceptedAnswer": {"@type": "Answer", "text": "Zhong Sheng Ji is an ancient Taoist Feng Shui ritual where a living person's hair, nails, blood and garment are placed in a true dragon vein plot. The earth qi of the dragon vein continuously elevates the person's career, wealth, health and longevity while they are still alive."}},
-      {"@type": "Question", "name": "How long does Sheng Ji take to show effects?", "acceptedAnswer": {"@type": "Answer", "text": "Facial complexion improves within 1 month; helpful people and cleared obstacles appear within 1–3 months; concrete career and financial improvements emerge within 3–6 months."}},
-      {"@type": "Question", "name": "Do I need to travel to Taiwan for Sheng Ji?", "acceptedAnswer": {"@type": "Answer", "text": "For the 5-Year package (RMB 72,000), no travel is needed — mail your 4 items to the authorised agent. The Lifetime package (RMB 500,000) requires personal attendance in Taiwan."}}
+      {
+        "@type": "Question",
+        "name": "What is Zhong Sheng Ji?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zhong Sheng Ji is an ancient Taoist Feng Shui ritual where a living person's hair, nails, blood and garment are placed in a true dragon vein plot. The earth qi of the dragon vein continuously elevates the person's career, wealth, health and longevity while they are still alive."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does Sheng Ji take to show effects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Facial complexion improves within 1 month; helpful people and cleared obstacles appear within 1–3 months; concrete career and financial improvements emerge within 3–6 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to travel to Taiwan for Sheng Ji?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For the 5-Year package (RMB 72,000), no travel is needed — mail your 4 items to the authorised agent. The Lifetime package (RMB 500,000) requires personal attendance in Taiwan."
+        }
+      }
     ]
   }
 }

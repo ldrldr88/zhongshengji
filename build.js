@@ -1,19 +1,16 @@
-
 const fs = require('fs');
+const path = require('path');
 const Handlebars = require('handlebars');
 
 const BASE_URL = 'https://www.zhongshengji.vip';
-const TODAY = new Date().toISOString().split('T')[0];
+const PUBLIC_DIR = './public';
 
 const templates = {
   'zh-hans': Handlebars.compile(fs.readFileSync('./templates/page-zh-hans.html', 'utf-8')),
   'zh-hant': Handlebars.compile(fs.readFileSync('./templates/page-zh-hant.html', 'utf-8')),
   'en': Handlebars.compile(fs.readFileSync('./templates/page-en.html', 'utf-8')),
+  'video': Handlebars.compile(fs.readFileSync('./templates/page-video.html', 'utf-8')),
 };
-
-['./public', './public/zh-tw', './public/en'].forEach(d => {
-  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
-});
 
 const LANG_CONFIG = {
   'zh-hans': { dir: 'data/zh-hans', outPrefix: '', hreflang: 'zh-Hans', label: '简体中文' },
@@ -22,92 +19,228 @@ const LANG_CONFIG = {
 };
 
 const staticPages = [
-  { loc: '/', priority: '1.0', changefreq: 'weekly' },
-  { loc: '/about/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/yuyue/', priority: '0.9', changefreq: 'monthly' },
-  { loc: '/zh-tw/', priority: '1.0', changefreq: 'weekly' },
-  { loc: '/en/', priority: '1.0', changefreq: 'weekly' },
+  { loc: '/', file: './public/index.html', priority: '1.0', changefreq: 'weekly' },
+  { loc: '/about/', file: './public/about/index.html', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/yuyue/', file: './public/yuyue/index.html', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/zh-tw/', file: './public/zh-tw/index.html', priority: '1.0', changefreq: 'weekly' },
+  { loc: '/en/', file: './public/en/index.html', priority: '1.0', changefreq: 'weekly' },
 ];
 
-const videoPages = [
-  { loc: '/videos/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-24-wenti/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-bian-bie-zhengjia/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-duojiu-youxiaoguo/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-fei-yong-wei-he-gao/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-fenmudi-zhong-sheng-ji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-fuchao/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-fuzhoyong/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-guanyu-women/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-hewei-zhong-sheng-ji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-jiali-zhong-sheng-ji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-kehu-quancheng/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-liang-dongrong-tiyan/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-longxue-tudi/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-misi/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-nian-ji-zhong-sheng-ji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-qita-gaiyun/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-qiyuan/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-san-fenzhong-jieshao/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-shui-xuyao-zhong-sheng-ji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-sihou-youyong/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-tou-zhong-sheng-ji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-tuandui-zhongshengji/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-women-geng-hao/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-xuanxue-yiju/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-yingxiang-zisun/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-zhengming-bu-pian/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-zhong-ji-ci/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-zhong-sheng-ji-chengxu/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-zhong-sheng-ji-gonghao/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-zhong-sheng-ji-haochu/', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/video-zuojianfanke/', priority: '0.8', changefreq: 'monthly' },
+const stalePaths = [
+  './public/index_backup.html',
+  './public/mingren-fuha芯-zhong-sheng-ji',
+  './public/mingren-fuhaо-zhong-sheng-ji',
 ];
 
-const allDynamicPages = [];
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
 
-Object.entries(LANG_CONFIG).forEach(([lang, cfg]) => {
-  const dataDir = `./${cfg.dir}`;
-  if (!fs.existsSync(dataDir)) {
-    console.warn(`⚠  目录不存在，跳过：${cfg.dir}`);
-    return;
+function removeStalePaths() {
+  stalePaths.forEach(p => {
+    if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
+  });
+}
+
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+}
+
+function listJsonFiles(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.json'))
+    .sort()
+    .map(f => path.join(dir, f));
+}
+
+function getLastmod(data, filePath) {
+  const schema = data && data.schema ? data.schema : {};
+  const candidates = [
+    schema.dateModified,
+    schema.datePublished,
+    schema.uploadDate,
+    data.dateModified,
+    data.datePublished,
+  ].filter(Boolean);
+
+  if (candidates.length > 0) return String(candidates[0]).slice(0, 10);
+
+  if (fs.existsSync(filePath)) {
+    return fs.statSync(filePath).mtime.toISOString().slice(0, 10);
   }
 
-  const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
-  const tmpl = templates[lang];
+  return new Date().toISOString().slice(0, 10);
+}
 
-  files.forEach(file => {
-    const data = JSON.parse(fs.readFileSync(`${dataDir}/${file}`, 'utf-8'));
+function extractFaqItems(schema) {
+  if (!schema) return [];
 
-    data.schemaString = JSON.stringify(data.schema, null, 2);
-    data.lang = lang;
-    data.hreflang = cfg.hreflang;
+  const schemas = Array.isArray(schema['@graph']) ? schema['@graph'] : [schema];
+  const items = [];
 
-    const html = tmpl(data);
-    const outDir = `./public/${cfg.outPrefix}${data.slug}`;
-    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(`${outDir}/index.html`, html);
+  schemas.forEach(node => {
+    const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
+    const isFaq = types.includes('FAQPage') || Array.isArray(node.mainEntity);
+    if (!isFaq || !Array.isArray(node.mainEntity)) return;
 
-    const loc = `/${cfg.outPrefix}${data.slug}/`;
-    console.log(`✓ [${cfg.label}] ${loc}`);
-
-    allDynamicPages.push({ loc, priority: '0.8', changefreq: 'monthly' });
+    node.mainEntity.forEach(entity => {
+      if (!entity || entity['@type'] !== 'Question') return;
+      const answer = entity.acceptedAnswer && entity.acceptedAnswer.text;
+      if (!entity.name || !answer) return;
+      items.push({
+        question: entity.name,
+        answer,
+      });
+    });
   });
-});
 
-const allPages = [...staticPages, ...videoPages, ...allDynamicPages];
-const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+  return items;
+}
+
+function buildLanguageMaps() {
+  const maps = {
+    byEn: new Map(),
+    byZhHans: new Map(),
+    byZhHant: new Map(),
+  };
+
+  Object.entries(LANG_CONFIG).forEach(([lang, cfg]) => {
+    listJsonFiles(cfg.dir).forEach(filePath => {
+      const data = readJson(filePath);
+      const zhHans = data.slugZhHans || (lang === 'zh-hans' ? data.slug : undefined);
+      const zhHant = data.slugZhHant || (lang === 'zh-hant' ? data.slug : zhHans);
+      const en = data.slugEn || (lang === 'en' ? data.slug : undefined);
+      const record = { zhHans, zhHant, en };
+
+      if (en && !maps.byEn.has(en)) maps.byEn.set(en, record);
+      if (zhHans && !maps.byZhHans.has(zhHans)) maps.byZhHans.set(zhHans, record);
+      if (zhHant && !maps.byZhHant.has(zhHant)) maps.byZhHant.set(zhHant, record);
+    });
+  });
+
+  return maps;
+}
+
+function enrichDataForLanguage(data, lang, maps) {
+  const enriched = { ...data };
+  let record;
+
+  if (lang === 'en') {
+    record = maps.byEn.get(enriched.slug);
+    enriched.slugEn = enriched.slug;
+  } else if (lang === 'zh-hant') {
+    record = maps.byZhHant.get(enriched.slug) || maps.byZhHans.get(enriched.slug);
+    enriched.slugZhHant = enriched.slug;
+  } else {
+    record = maps.byZhHans.get(enriched.slug) || maps.byZhHant.get(enriched.slug);
+    enriched.slugZhHans = enriched.slug;
+  }
+
+  enriched.slugZhHans = enriched.slugZhHans || (record && record.zhHans) || enriched.slug;
+  enriched.slugZhHant = enriched.slugZhHant || (record && record.zhHant) || enriched.slugZhHans || enriched.slug;
+  enriched.slugEn = enriched.slugEn || (record && record.en) || enriched.slug;
+
+  enriched.schemaString = JSON.stringify(enriched.schema || {}, null, 2);
+  enriched.faqItems = extractFaqItems(enriched.schema);
+  enriched.lang = lang;
+
+  return enriched;
+}
+
+function renderPage(tmpl, data, outDir) {
+  ensureDir(outDir);
+  fs.writeFileSync(path.join(outDir, 'index.html'), tmpl(data));
+}
+
+function sitemapEntry(page) {
+  return `  <url>
+    <loc>${BASE_URL}${page.loc}</loc>
+    <lastmod>${page.lastmod}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`;
+}
+
+function build() {
+  ensureDir(PUBLIC_DIR);
+  ensureDir('./public/zh-tw');
+  ensureDir('./public/en');
+  removeStalePaths();
+
+  const maps = buildLanguageMaps();
+  const pages = [];
+
+  staticPages.forEach(page => {
+    if (fs.existsSync(page.file)) {
+      pages.push({
+        ...page,
+        lastmod: fs.statSync(page.file).mtime.toISOString().slice(0, 10),
+      });
+    }
+  });
+
+  Object.entries(LANG_CONFIG).forEach(([lang, cfg]) => {
+    const files = listJsonFiles(cfg.dir);
+    const tmpl = templates[lang];
+
+    files.forEach(filePath => {
+      const rawData = readJson(filePath);
+      const data = enrichDataForLanguage(rawData, lang, maps);
+      const loc = `/${cfg.outPrefix}${data.slug}/`;
+      const outDir = path.join(PUBLIC_DIR, cfg.outPrefix, data.slug);
+
+      renderPage(tmpl, data, outDir);
+      console.log(`✓ [${cfg.label}] ${loc}`);
+
+      pages.push({
+        loc,
+        lastmod: getLastmod(rawData, filePath),
+        priority: '0.8',
+        changefreq: 'monthly',
+      });
+    });
+  });
+
+  listJsonFiles('./data/video').forEach(filePath => {
+    const rawData = readJson(filePath);
+    const data = {
+      ...rawData,
+      schemaString: JSON.stringify(rawData.schema || {}, null, 2),
+      faqItems: extractFaqItems(rawData.schema),
+      lang: 'video',
+    };
+    const loc = `/${data.slug}/`;
+    const outDir = path.join(PUBLIC_DIR, data.slug);
+
+    renderPage(templates.video, data, outDir);
+    console.log(`✓ [视频] ${loc}`);
+
+    pages.push({
+      loc,
+      lastmod: getLastmod(rawData, filePath),
+      priority: data.slug === 'videos' ? '0.8' : '0.7',
+      changefreq: 'monthly',
+    });
+  });
+
+  const seen = new Set();
+  const uniquePages = pages
+    .filter(page => {
+      if (seen.has(page.loc)) return false;
+      seen.add(page.loc);
+      return true;
+    })
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages.map(p => `
-  <url>
-    <loc>${BASE_URL}${p.loc}</loc>
-    <lastmod>${TODAY}</lastmod>
-    <changefreq>${p.changefreq}</changefreq>
-    <priority>${p.priority}</priority>
-  </url>`).join('')}
-</urlset>`.trim();
+${uniquePages.map(sitemapEntry).join('\n')}
+</urlset>`;
 
-fs.writeFileSync('./public/sitemap.xml', sitemapXml);
-console.log(`
-✓ sitemap.xml 已更新（${allPages.length} 个 URL）`);
-console.log(`✓ 完成！动态页共 ${allDynamicPages.length} 个，sitemap 共 ${allPages.length} 个 URL。`);
+  fs.writeFileSync('./public/sitemap.xml', sitemapXml);
+  console.log(`\n✓ sitemap.xml 已更新（${uniquePages.length} 个 URL）`);
+  console.log('✓ 完成！');
+}
+
+build();
