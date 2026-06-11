@@ -59,6 +59,36 @@
       "permanent": true
     },
     {
+      "source": "/zhong-sheng-ji-jiage/",
+      "destination": "/zhong-sheng-ji-jia-ge-fei-yong/",
+      "permanent": true
+    },
+    {
+      "source": "/zhong-sheng-ji-jiage",
+      "destination": "/zhong-sheng-ji-jia-ge-fei-yong/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-do-sheng-ji/",
+      "destination": "/en/how-to-do-sheng-ji/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-do-sheng-ji",
+      "destination": "/en/how-to-do-sheng-ji/",
+      "permanent": true
+    },
+    {
+      "source": "/jia-ge/",
+      "destination": "/zhong-sheng-ji-jia-ge-fei-yong/",
+      "permanent": true
+    },
+    {
+      "source": "/jia-ge",
+      "destination": "/zhong-sheng-ji-jia-ge-fei-yong/",
+      "permanent": true
+    },
+    {
       "source": "/mingren-fuha%D0%BE-zhong-sheng-ji/",
       "destination": "/mingren-fuhao-zhong-sheng-ji/",
       "permanent": true
