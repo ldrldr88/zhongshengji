@@ -141,7 +141,17 @@ function buildLanguageMaps() {
     byEn: new Map(),
     byZhHans: new Map(),
     byZhHant: new Map(),
+    // 互指校验：仅当英文数据文件真实存在且声明了对应中文 slug 时，
+    // 中文页才输出 hreflang="en"，避免非互指的 hreflang 被 Google 忽略
+    enTargetByZhHans: new Map(),
   };
+
+  listJsonFiles(LANG_CONFIG['en'].dir).forEach(filePath => {
+    const data = readJson(filePath);
+    if (data.slug && data.slugZhHans) {
+      maps.enTargetByZhHans.set(data.slugZhHans, data.slug);
+    }
+  });
 
   Object.entries(LANG_CONFIG).forEach(([lang, cfg]) => {
     listJsonFiles(cfg.dir).forEach(filePath => {
@@ -177,7 +187,16 @@ function enrichDataForLanguage(data, lang, maps) {
 
   enriched.slugZhHans = enriched.slugZhHans || (record && record.zhHans) || enriched.slug;
   enriched.slugZhHant = enriched.slugZhHant || (record && record.zhHant) || enriched.slugZhHans || enriched.slug;
-  enriched.slugEn = enriched.slugEn || (record && record.en) || enriched.slug;
+
+  if (lang === 'en') {
+    enriched.hasEn = true;
+    enriched.slugEn = enriched.slug;
+  } else {
+    // 只承认互指的英文版：英文数据文件必须声明 slugZhHans 指回本页
+    const reciprocalEn = maps.enTargetByZhHans.get(enriched.slugZhHans);
+    enriched.hasEn = Boolean(reciprocalEn);
+    enriched.slugEn = reciprocalEn || '';
+  }
 
   enriched.schemaString = JSON.stringify(enriched.schema || {}, null, 2);
   enriched.faqItems = extractFaqItems(enriched.schema);

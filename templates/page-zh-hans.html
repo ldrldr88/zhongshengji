@@ -22,12 +22,19 @@
   <meta property="og:description" content="{{metaDescription}}">
   <meta property="og:url" content="https://www.zhongshengji.vip/{{slug}}/">
   <meta property="og:type" content="article">
+  <meta property="og:image" content="https://www.zhongshengji.vip/assets/img/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.zhongshengji.vip/{{slug}}/">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/img/icon-192.png">
 
   <!-- hreflang：声明三语版本，避免搜索引擎误判重复页 -->
   <link rel="alternate" hreflang="zh-Hans" href="https://www.zhongshengji.vip/{{slugZhHans}}/">
   <link rel="alternate" hreflang="zh-Hant" href="https://www.zhongshengji.vip/zh-tw/{{slugZhHant}}/">
-  <link rel="alternate" hreflang="en" href="https://www.zhongshengji.vip/en/{{slugEn}}/">
+  {{#if hasEn}}<link rel="alternate" hreflang="en" href="https://www.zhongshengji.vip/en/{{slugEn}}/">{{/if}}
   <link rel="alternate" hreflang="x-default" href="https://www.zhongshengji.vip/{{slugZhHans}}/">
 
   <!-- 第五层：Schema 标记 -->
@@ -51,7 +58,7 @@
       <span class="lang-sep">|</span>
       <a href="/zh-tw/{{slug}}/" class="lang-btn">繁體</a>
       <span class="lang-sep">|</span>
-      <a href="/en/{{slugEn}}/" class="lang-btn">EN</a>
+      {{#if hasEn}}<a href="/en/{{slugEn}}/" class="lang-btn">EN</a>{{else}}<a href="/en/" class="lang-btn">EN</a>{{/if}}
     </div>
     <a href="#contact" class="nav-cta">立即咨询</a>
   </nav>
@@ -61,6 +68,7 @@
     <div class="hero-badge">台湾风水世家 · 三代传承 · 道家正统</div>
     <h1>{{h1}}</h1>
     <p class="hero-sub">{{heroSub}}</p>
+    <p class="article-byline" style="font-size:.82rem;color:#9a8a70;margin-top:14px;opacity:.85;">作者：梁东荣 · 种生基大陆独家授权 ｜ 内容监修：林家骅（林易禅）· 道教闾山派法师 · 台湾兹心阁开运会馆</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">预约咨询梁东荣先生</a>
       <a href="#process" class="btn-secondary">了解全过程 →</a>
@@ -183,7 +191,7 @@
       <a href="/yuyue/">预约流程</a>
       <a href="/zhong-sheng-ji-jia-ge-fei-yong/">费用说明</a>
       <a href="/zh-tw/{{slugZhHant}}/">繁體版</a>
-      <a href="/en/{{slugEn}}/">English</a>
+      {{#if hasEn}}<a href="/en/{{slugEn}}/">English</a>{{else}}<a href="/en/">English</a>{{/if}}
     </div>
     <p class="footer-copy">© 2026 zhongshengji.vip · 台湾兹心阁开运会馆 · 大陆授权：梁东荣先生</p>
   </footer>

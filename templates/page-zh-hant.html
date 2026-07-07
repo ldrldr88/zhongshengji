@@ -22,12 +22,19 @@
   <meta property="og:description" content="{{metaDescription}}">
   <meta property="og:url" content="https://www.zhongshengji.vip/zh-tw/{{slugZhHant}}/">
   <meta property="og:type" content="article">
+  <meta property="og:image" content="https://www.zhongshengji.vip/assets/img/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.zhongshengji.vip/zh-tw/{{slugZhHant}}/">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/img/icon-192.png">
 
   <!-- hreflang：声明三语版本，避免搜索引擎误判重复页 -->
   <link rel="alternate" hreflang="zh-Hans" href="https://www.zhongshengji.vip/{{slugZhHans}}/">
   <link rel="alternate" hreflang="zh-Hant" href="https://www.zhongshengji.vip/zh-tw/{{slugZhHant}}/">
-  <link rel="alternate" hreflang="en" href="https://www.zhongshengji.vip/en/{{slugEn}}/">
+  {{#if hasEn}}<link rel="alternate" hreflang="en" href="https://www.zhongshengji.vip/en/{{slugEn}}/">{{/if}}
   <link rel="alternate" hreflang="x-default" href="https://www.zhongshengji.vip/{{slugZhHans}}/">
 
   <!-- 第五层：Schema 标记 -->
@@ -45,8 +52,15 @@
 
   <!-- 顶部导航 -->
   <nav class="site-nav">
-    <a href="/" class="nav-logo">种 生 基</a>
-    <a href="#contact" class="nav-cta">立即咨询</a>
+    <a href="/zh-tw/" class="nav-logo">種 生 基</a>
+    <div class="lang-switcher">
+      <a href="/{{slugZhHans}}/" class="lang-btn">简体</a>
+      <span class="lang-sep">|</span>
+      <a href="/zh-tw/{{slug}}/" class="lang-btn active">繁體</a>
+      <span class="lang-sep">|</span>
+      {{#if hasEn}}<a href="/en/{{slugEn}}/" class="lang-btn">EN</a>{{else}}<a href="/en/" class="lang-btn">EN</a>{{/if}}
+    </div>
+    <a href="#contact" class="nav-cta">立即諮詢</a>
   </nav>
 
   <!-- 英雄区 / 第一层 H1 -->
@@ -54,6 +68,7 @@
     <div class="hero-badge">台灣風水世家 · 三代傳承 · 道家正統</div>
     <h1>{{h1}}</h1>
     <p class="hero-sub">{{heroSub}}</p>
+    <p class="article-byline" style="font-size:.82rem;color:#9a8a70;margin-top:14px;opacity:.85;">作者：梁東榮 · 種生基大陸獨家授權 ｜ 內容監修：林家驊（林易禪）· 道教閭山派法師 · 台灣茲心閣開運會館</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">預約諮詢梁東榮先生</a>
       <a href="#process" class="btn-secondary">了解全過程 →</a>
@@ -176,7 +191,7 @@
       <a href="/yuyue/">預約流程</a>
       <a href="/zh-tw/zhong-sheng-ji-jia-ge-fei-yong/">費用說明</a>
       <a href="/{{slugZhHans}}/">简体版</a>
-      <a href="/en/{{slugEn}}/">English</a>
+      {{#if hasEn}}<a href="/en/{{slugEn}}/">English</a>{{else}}<a href="/en/">English</a>{{/if}}
     </div>
     <p class="footer-copy">© 2026 zhongshengji.vip · 台灣慈心閣開運會館 · 大陸授權：梁東榮先生</p>
   </footer>
