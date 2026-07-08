@@ -2,8 +2,8 @@
   "slug": "taiwan-sheng-ji-master",
   "slugZhHans": "taiwan-lin-laoshi-zhong-sheng-ji",
   "slugZhHant": "taiwan-lin-laoshi-zhong-sheng-ji",
-  "metaTitle": "Taiwan Sheng Ji Master: Lin Family Lineage",
-  "metaDescription": "Learn about Taiwan Zi Xin Ge, Master Lin Zhi-Ying, Master Lin Jia-Hua and their three-generation Taoist Sheng Ji lineage.",
+  "metaTitle": "Taiwan's Sheng Ji Masters: 80-Year Lin Family Lineage, Taoist-Ordained",
+  "metaDescription": "Meet the masters behind authentic Sheng Ji: Master Lin Zhi-Ying (30+ years dragon-vein hunting, 5 published books) and Master Lin Jia-Hua, ordained by the 64th Celestial Master. 10,000+ clients worldwide. WeChat NSDG521.",
   "metaKeywords": "Taiwan Sheng Ji master, Master Lin Sheng Ji, Lin Zhi-Ying, Lin Jia-Hua, Zi Xin Ge, Taiwan Feng Shui master, Sheng Ji Taiwan",
   "h1": "Taiwan Sheng Ji Masters: Master Lin Zhi-Ying & Master Lin Jia-Hua — 3-Generation Taoist Lineage",
   "heroSub": "Zi Xin Ge Destiny Hall, Kaohsiung, Taiwan — a three-generation Feng Shui and Taoist family, conducting Sheng Ji ceremonies for clients across Asia",
@@ -68,6 +68,23 @@
           "content": "Externally, the plot receives the Danshui River, Dahan River and Xindian River in a counter-current configuration. Classical texts address this directly: 'Counter-current water to the hall — become a black-cap minister' and 'Gather all source waters — descendants buy all land in the world'. Both references confirm the formation as one of rapid, high-magnitude wealth generation. This is why financial improvement is consistently the most strongly reported outcome among clients."
         }
       ]
+    },
+    {
+      "h2": "Looking for a Famous Feng Shui Master in Taiwan? How to Judge the Real Ones",
+      "items": [
+        {
+          "h3": "What actually makes a Taiwan feng shui master 'famous'",
+          "content": "Taiwan has thousands of practitioners, but the markers of a genuinely established master are verifiable: decades of documented practice, published books, media appointments, and institutional roles. Master Lin Zhi-Ying checks every box — practicing since 1986, five published works on feng shui and Xuan Kong systems, former host of radio and TV metaphysics programs, named among the world's 100 leading I-Ching figures in 2006, and former consultant to the world's only listed feng shui company."
+        },
+        {
+          "h3": "Credentials you can verify, not titles you must take on faith",
+          "content": "Anyone can claim a lineage; few can document one. The Lin family's 80-year, three-generation record is public: Master Lin Jia-Hua was formally ordained into the Wanfa Zongtan register in 2007 under Zhang Yuan-Xian, the 64th Celestial Master — the highest orthodox credential in Taoism — and the family legally owns the dragon-vein land it uses, on the same vein as tycoon Wang Yung-ching's ancestral tomb."
+        },
+        {
+          "h3": "Why serious clients look beyond consultation to Sheng Ji",
+          "content": "Most famous masters in Taiwan offer readings and home feng shui. The Lin family's distinction is the rarest service in the field: authentic Sheng Ji on owned dragon-vein land — the discipline's pinnacle practice, requiring land, lineage and date-selection mastery that consultation-only masters cannot provide. Over 10,000 clients worldwide, served under strict confidentiality."
+        }
+      ]
     }
   ],
   "schema": {
@@ -98,6 +115,16 @@
       {
         "@type": "Thing",
         "name": "Living Tomb Feng Shui"
+      }
+    ],
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is a famous feng shui master in Taiwan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Master Lin Zhi-Ying (practicing since 1986, five published books, named among the world's 100 leading I-Ching figures) and his son Master Lin Jia-Hua (ordained under the 64th Celestial Master in 2007) lead an 80-year, three-generation Taiwan lineage specializing in authentic Sheng Ji on owned dragon-vein land."
+        }
       }
     ]
   }

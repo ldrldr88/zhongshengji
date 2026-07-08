@@ -104,6 +104,18 @@
     </section>
     {{/if}}
 
+    {{#if relatedLinks}}
+    <section class="related-reading">
+      <h2>{{relatedLinksTitle}}</h2>
+      {{#each relatedLinks}}
+      <a href="{{this.url}}" style="display:block;margin:14px 0;padding:18px 22px;border:1px solid rgba(198,160,90,.45);border-radius:8px;text-decoration:none;background:rgba(198,160,90,.06);">
+        <strong style="display:block;color:#7a1f1f;font-size:1.05rem;margin-bottom:4px;">{{this.title}} →</strong>
+        <span style="color:#6b5d4a;font-size:.92rem;">{{this.desc}}</span>
+      </a>
+      {{/each}}
+    </section>
+    {{/if}}
+
     {{#if showPrice}}
     <section id="price">
       <h2>Service Fees</h2>

@@ -85,3 +85,65 @@ logo 改为「種 生 基」，「立即咨询」改为「立即諮詢」。
    （补好后在英文 JSON 中声明 slugZhHans，hreflang 会自动接通）。
 3. 留资渠道：将 FAQ 24 问排版为 PDF 手册，在页面提供"邮件索取"入口，沉淀客户名单。
 4. Google Search Console 提交新 sitemap，观察新页收录与场景词排名。
+
+---
+
+# 第二轮优化（2026-07-08 · 基于 GSC 数据）
+
+## 一、禁忌页导流改造（GSC 流量第一入口）
+- 简繁两版禁忌页（/zhong-sheng-ji-jinji-zhuyishi/）文末新增"延伸阅读"导流区块，
+  链向：两天全过程详解、骗局辨别、价格页——把调研期流量导入转化路径。
+- 三个文章模板均已支持 relatedLinks 字段，今后任何页面在数据 JSON 中加
+  `relatedLinksTitle` + `relatedLinks: [{url,title,desc}]` 即可渲染同款区块。
+
+## 二、7 个新页面英文版全部补齐（GSC 验证英文有真实流量）
+- sheng-ji-full-ritual-process（全过程）
+- sheng-ji-before-major-decisions（重大决策前）
+- sheng-ji-for-children-education（子女教育）
+- sheng-ji-health-wellness（健康调理，含"非医疗、遵医嘱"边界声明）
+- sheng-ji-turn-bad-luck-around（转运）
+- sheng-ji-family-legacy（家族传承）
+- sheng-ji-hong-kong（香港客户）
+- 英文文件声明 slugZhHans/slugZhHant 后，build 的互指校验自动为
+  简繁对应页面输出 hreflang="en"，三语完全互指（已全站校验 0 异常）。
+
+## 三、英文老师页 CTR 优化（GSC：123 展示仅 2 点击）
+- metaTitle 改为 "Taiwan's Sheng Ji Masters: 80-Year Lin Family Lineage, Taoist-Ordained"
+- metaDescription 加入具体信任点（30+年寻龙、5 本著作、张天师奏职、10000+ 客户）。
+
+## 验证结果
+- sitemap 95 → 102 个 URL，无重复；全站坏链 0；hreflang 互指异常 0。
+
+## 部署后 GSC 待办
+1. Sitemaps 重新提交 sitemap.xml（102 URL）。
+2. URL inspection 对重点新页手动 Request Indexing（全过程页、香港页、7 个英文新页）。
+3. 两周后核对 Pages 索引报告；四周后对比禁忌页两版的展示/点击变化与
+   英文老师页 CTR 变化。
+
+---
+
+# 第三轮优化（2026-07-08 · 基于 GSC 查询词导出）
+
+## 一、禁忌页"负面调研词群"扩展（全站最大流量引擎）
+GSC 数据：種生基後果 227 展示/第5.2名、種生基禁忌 145/第6.5名、種生基壞處 122/第6名、
+種生基代價 第24.5名但 CTR 20%，词群合计约 660 展示，全部落在禁忌页但页面无对应 H2。
+- 新增三个直接回答式 H2（简繁同步）：坏处（三种情况如实分析）、后果（做对/做错两种结局）、
+  代价（金钱+时间配合+澄清"损寿损子孙"迷思）
+- metaTitle 改为覆盖整个词群：「種生基禁忌、壞處與後果全解析：做之前必知的5大禁忌與代價」
+- FAQ schema 由 3 问增至 6 问（坏处/后果/代价各一问）
+目标：词群从第 5-9 名推进前 3。
+
+## 二、马新页 meta 重写（马来西亚 216 展示 CTR 仅 0.93%）
+- 中文（简+繁）与英文版 metaTitle/Description 全部重写，加入在地钩子：
+  无需飞台湾、邮寄办理、RM4.7万/S$1.4万本币参考价、全程视频见证。
+
+## 三、英文老师页承接 "taiwan feng shui master" 泛词（33+17 展示，第26-37名）
+- 新增 H2 "Looking for a Famous Feng Shui Master in Taiwan? How to Judge the Real Ones"
+  及三个 H3（可验证的名师标准、可查证的资历、为什么高端客户选种生基），FAQ schema 加一问。
+
+## 站外待办（需您自行操作，对头部词"種生基"第41-75名的排名最关键）
+1. 31 个 YouTube 视频描述全部加上对应页面链接（现成外链资产，约1小时）。
+2. 公众号历史文章加官网链接。
+3. 为高雄兹心阁开运会馆注册 Google Business Profile 并挂网站（最强实体信号）。
+
+## 验证：坏链 0、JSON-LD 语法错误 0、sitemap 102 URL。
