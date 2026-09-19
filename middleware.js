@@ -36,6 +36,18 @@ export default async function middleware(request) {
     return Response.redirect(target, 308);
   }
 
+  if (url.pathname === '/.well-known/api-catalog') {
+    const catalogUrl = new URL('/.well-known/api-catalog.json', request.url);
+    const response = await fetch(catalogUrl, { headers: { accept: 'application/json' } });
+    const headers = new Headers(response.headers);
+    headers.set('content-type', 'application/linkset+json; charset=utf-8');
+    headers.set('access-control-allow-origin', '*');
+    return new Response(request.method === 'HEAD' ? null : await response.text(), {
+      status: response.status,
+      headers,
+    });
+  }
+
   const acceptsMarkdown = request.method === 'GET'
     && (request.headers.get('accept') || '').toLowerCase().includes('text/markdown');
   const looksLikePage = url.pathname.endsWith('/') || !pathSegment(url.pathname).includes('.');
