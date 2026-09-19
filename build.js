@@ -178,13 +178,15 @@ function writeAgentResources() {
     }],
   }, null, 2));
 
-  fs.writeFileSync(path.join(wellKnownDir, 'api-catalog.json'), JSON.stringify({
+  const apiCatalogText = JSON.stringify({
     linkset: [{
       anchor: `${BASE_URL}/agent-api/content-index.json`,
       'service-desc': [{ href: `${BASE_URL}/agent-api/openapi.json`, type: 'application/vnd.oai.openapi+json;version=3.1' }],
       'service-doc': [{ href: `${BASE_URL}/agent-api/docs.html`, type: 'text/html' }],
     }],
-  }, null, 2));
+  }, null, 2);
+  fs.writeFileSync(path.join(wellKnownDir, 'api-catalog'), apiCatalogText);
+  fs.writeFileSync(path.join(wellKnownDir, 'api-catalog.json'), apiCatalogText);
 
   fs.writeFileSync(path.join(wellKnownDir, 'ai-catalog.json'), JSON.stringify({
     specVersion: '1.0',

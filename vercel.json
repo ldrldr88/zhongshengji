@@ -198,11 +198,5 @@
       "destination": "/taiwan-lin-laoshi-zhong-sheng-ji/",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/.well-known/api-catalog",
-      "destination": "/.well-known/api-catalog.json"
-    }
   ]
 }
