@@ -185,7 +185,6 @@ function writeAgentResources() {
       'service-doc': [{ href: `${BASE_URL}/agent-api/docs.html`, type: 'text/html' }],
     }],
   }, null, 2);
-  fs.writeFileSync(path.join(wellKnownDir, 'api-catalog'), apiCatalogText);
   fs.writeFileSync(path.join(wellKnownDir, 'api-catalog.json'), apiCatalogText);
 
   fs.writeFileSync(path.join(wellKnownDir, 'ai-catalog.json'), JSON.stringify({
