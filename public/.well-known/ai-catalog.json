@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "种生基网站",
+    "identifier": "did:web:www.zhongshengji.vip"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:www.zhongshengji.vip:api:public-content",
+      "displayName": "种生基网站公开内容索引",
+      "type": "application/vnd.oai.openapi+json;version=3.1",
+      "url": "https://www.zhongshengji.vip/agent-api/openapi.json",
+      "representativeQueries": [
+        "什么是种生基",
+        "种生基需要准备什么",
+        "种生基费用和流程是什么"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.zhongshengji.vip:skill:site-content",
+      "displayName": "种生基网站内容查询 Skill",
+      "type": "text/markdown",
+      "url": "https://www.zhongshengji.vip/.well-known/agent-skills/site-content/SKILL.md",
+      "representativeQueries": [
+        "搜索种生基相关文章",
+        "读取种生基常见问题",
+        "引用种生基网站公开资料"
+      ]
+    }
+  ]
+}

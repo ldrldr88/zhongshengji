@@ -7,3 +7,4 @@ dist/
 .cache/
 *.log
 *_backup.html
+public/**/index.md

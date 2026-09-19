@@ -100,6 +100,7 @@
 }</script>
 
   <link rel="stylesheet" href="/assets/css/article-zh-hant.css">
+  <link rel="stylesheet" href="/assets/css/contact-shared.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,11 +204,11 @@
       <div class="steps">
         <div class="step">
           <div class="step-num"></div>
-          <div class="step-body"><strong>加助理微信</strong><span>微信号：NSDG521，聯繫人梁东荣先生</span></div>
+          <div class="step-body"><strong>添加梁先生微信</strong><span>微信號：NSDG521，24小時可諮詢</span></div>
         </div>
         <div class="step">
           <div class="step-num"></div>
-          <div class="step-body"><strong>支付訂金 1萬元</strong><span>确认意向，开始准备物料包装</span></div>
+          <div class="step-body"><strong>支付訂金人民幣 1 萬元</strong><span>確認意向，開始準備物料包裝</span></div>
         </div>
         <div class="step">
           <div class="step-num"></div>
@@ -231,26 +232,24 @@
     <!-- 联系区 -->
     <div class="contact-section" id="contact">
       <h2>立即預約種生基</h2>
-      <p class="contact-sub">如有疑问，请直接联系大陆独家授权代理梁东荣先生</p>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="contact-item-label">微信 / WeChat</div>
-          <div class="contact-item-value">NSDG521</div>
+      <p class="contact-sub">如有疑問，請直接聯繫梁先生，24小時可諮詢</p>
+      <div class="wechat-contact-panel" id="wechat-contact">
+        <div class="wechat-qr-wrap">
+          <img class="wechat-qr" src="/assets/img/wechat-contact.png" width="300" height="300" loading="lazy" alt="微信二維碼，掃碼添加梁先生">
+          <div class="wechat-qr-label">這是微信二維碼</div>
         </div>
-        <div class="contact-divider"></div>
-        <div class="contact-item">
-          <div class="contact-item-label">聯繫人</div>
-          <div class="contact-item-value">梁东荣 先生</div>
-        </div>
-        <div class="contact-divider"></div>
-        <div class="contact-item">
-          <div class="contact-item-label">郵箱</div>
-          <div class="contact-item-value">liangdongrong@gmail.com</div>
+        <div class="wechat-contact-details">
+          <p class="wechat-contact-kicker">微信號 / WeChat ID</p>
+          <p class="wechat-id">NSDG521</p>
+          <p class="wechat-contact-line"><strong>聯繫人：</strong>梁先生</p>
+          <p class="wechat-contact-line"><strong>諮詢時間：</strong>24小時可諮詢</p>
+          <p class="wechat-contact-line"><strong>郵箱：</strong><a href="mailto:liangdongrong@gmail.com">liangdongrong@gmail.com</a></p>
+          <button class="copy-wechat-btn" type="button" data-copy-wechat data-copied-label="已複製微信號" data-copied-message="微信號 NSDG521 已複製" data-copy-fallback="請手動複製微信號：NSDG521">複製微信號</button>
+          <p class="copy-wechat-status" data-copy-status aria-live="polite"></p>
         </div>
       </div>
-      <a href="/yuyue/" class="btn-primary" onclick="alert('请添加微信：NSDG521');">
-        添加微信預約 →
-      </a>
+      <a href="/yuyue/" class="btn-primary">查看完整預約流程 →</a>
+      <p class="service-notice">本服務屬於傳統文化服務，個人體驗因人而異，不承諾具體健康、財富、運勢或其他結果；涉及健康問題請遵醫囑，本站內容不能替代醫療診斷或治療。</p>
     </div>
 
   </main>
@@ -268,5 +267,6 @@
     <p class="footer-copy">© 2026 zhongshengji.vip · 台灣慈心閣開運會館 · 大陸授權：梁東榮先生</p>
   </footer>
 
+<script src="/assets/js/contact.js" defer></script>
 </body>
 </html>

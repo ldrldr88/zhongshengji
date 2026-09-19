@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const Handlebars = require('handlebars');
 
 const BASE_URL = 'https://www.zhongshengji.vip';
 const PUBLIC_DIR = './public';
+const contentEntries = [];
 
 const templates = {
   'zh-hans': Handlebars.compile(fs.readFileSync('./templates/page-zh-hans.html', 'utf-8')),
@@ -28,11 +30,10 @@ const staticPages = [
 
 const stalePaths = [
   './public/index_backup.html',
-];
-
-const legacyRedirectPaths = [
-  'mingren-fuhaо-zhong-sheng-ji', // Cyrillic о
-  'mingren-fuha芯-zhong-sheng-ji',
+  './public/mingren-fuha#U043e-zhong-sheng-ji',
+  './public/mingren-fuha#U82af-zhong-sheng-ji',
+  './public/mingren-fuhaо-zhong-sheng-ji',
+  './public/mingren-fuha芯-zhong-sheng-ji',
 ];
 
 function ensureDir(dir) {
@@ -45,43 +46,184 @@ function removeStalePaths() {
   });
 }
 
-function legacyRedirectHtml() {
-  return `<!doctype html>
-<html lang="zh-Hans">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHQMK2RV1D"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-JHQMK2RV1D');
-  </script>
-
-  <meta charset="utf-8">
-  <title>页面已迁移</title>
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="${BASE_URL}/mingren-fuhao-zhong-sheng-ji/">
-  <meta http-equiv="refresh" content="0; url=/mingren-fuhao-zhong-sheng-ji/">
-  <script>location.replace('/mingren-fuhao-zhong-sheng-ji/' + location.search);</script>
-</head>
-<body>
-  <p>页面已迁移，请访问 <a href="/mingren-fuhao-zhong-sheng-ji/">新页面</a>。</p>
-</body>
-</html>`;
-}
-
-function writeLegacyRedirectPages() {
-  legacyRedirectPaths.forEach(slug => {
-    const outDir = path.join(PUBLIC_DIR, slug);
-    ensureDir(outDir);
-    fs.writeFileSync(path.join(outDir, 'index.html'), legacyRedirectHtml());
-  });
-}
-
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+}
+
+function stripHtml(value = '') {
+  return String(value)
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function htmlMeta(filePath) {
+  const html = fs.readFileSync(filePath, 'utf-8');
+  const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || '';
+  const description = html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i)?.[1]
+    || html.match(/<meta[^>]+content=["']([^"']*)["'][^>]+name=["']description["']/i)?.[1]
+    || '';
+  return { title: stripHtml(title), description: stripHtml(description) };
+}
+
+function htmlToMarkdown(html) {
+  return String(html)
+    .replace(/<script\b[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, '')
+    .replace(/<nav\b[\s\S]*?<\/nav>/gi, '')
+    .replace(/<footer\b[\s\S]*?<\/footer>/gi, '')
+    .replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, '\n# $1\n')
+    .replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '\n## $1\n')
+    .replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, '\n### $1\n')
+    .replace(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, '[$2]($1)')
+    .replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, '\n- $1')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/p>/gi, '\n\n')
+    .replace(/<\/div>/gi, '\n')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n[ \t]+/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim() + '\n';
+}
+
+function writeMarkdownRepresentations() {
+  const stack = [PUBLIC_DIR];
+  let count = 0;
+
+  while (stack.length) {
+    const dir = stack.pop();
+    fs.readdirSync(dir, { withFileTypes: true }).forEach(entry => {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        stack.push(fullPath);
+      } else if (entry.name === 'index.html') {
+        const html = fs.readFileSync(fullPath, 'utf-8');
+        if (/name=["']robots["'][^>]+noindex/i.test(html)) return;
+        fs.writeFileSync(path.join(dir, 'index.md'), htmlToMarkdown(html));
+        count += 1;
+      }
+    });
+  }
+
+  return count;
+}
+
+function writeAgentResources() {
+  const apiDir = path.join(PUBLIC_DIR, 'agent-api');
+  const wellKnownDir = path.join(PUBLIC_DIR, '.well-known');
+  const skillPublicDir = path.join(wellKnownDir, 'agent-skills', 'site-content');
+  ensureDir(apiDir);
+  ensureDir(skillPublicDir);
+
+  const indexDocument = {
+    name: '种生基网站公开内容索引',
+    description: '用于搜索和引用本站已公开文章。内容属于传统文化资料，不构成医疗、财务或结果保证。',
+    generatedAt: `${contentEntries.reduce((latest, entry) => entry.updated > latest ? entry.updated : latest, '1970-01-01')}T00:00:00.000Z`,
+    total: contentEntries.length,
+    entries: contentEntries,
+  };
+  fs.writeFileSync(path.join(apiDir, 'content-index.json'), JSON.stringify(indexDocument, null, 2));
+
+  const openapi = {
+    openapi: '3.1.0',
+    info: {
+      title: '种生基网站公开内容 API',
+      version: '1.0.0',
+      description: '只读内容索引，用于查找并引用本站公开页面。',
+    },
+    servers: [{ url: BASE_URL }],
+    paths: {
+      '/agent-api/content-index.json': {
+        get: {
+          operationId: 'listPublicContent',
+          summary: '列出可公开检索的页面',
+          responses: {
+            200: {
+              description: '公开内容索引',
+              content: { 'application/json': { schema: { type: 'object' } } },
+            },
+          },
+        },
+      },
+    },
+  };
+  fs.writeFileSync(path.join(apiDir, 'openapi.json'), JSON.stringify(openapi, null, 2));
+  fs.writeFileSync(path.join(apiDir, 'docs.html'), `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>种生基网站公开内容 API</title><body><main><h1>种生基网站公开内容 API</h1><p>这是只读公开内容索引，用于查找并引用本站文章。</p><ul><li><a href="/agent-api/content-index.json">内容索引</a></li><li><a href="/agent-api/openapi.json">OpenAPI 文档</a></li></ul><p>传统文化内容不构成医疗、财务或结果保证。</p></main></body></html>`);
+
+  const skillSource = './agent-skills/site-content/SKILL.md';
+  const skillText = fs.readFileSync(skillSource, 'utf-8');
+  const skillDigest = crypto.createHash('sha256').update(skillText).digest('hex');
+  fs.writeFileSync(path.join(skillPublicDir, 'SKILL.md'), skillText);
+  fs.writeFileSync(path.join(wellKnownDir, 'agent-skills', 'index.json'), JSON.stringify({
+    $schema: 'https://schemas.agentskills.io/discovery/0.2.0/schema.json',
+    skills: [{
+      name: 'site-content',
+      type: 'skill-md',
+      description: '搜索、读取并引用种生基网站的公开内容。',
+      url: `${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md`,
+      digest: `sha256:${skillDigest}`,
+    }],
+  }, null, 2));
+
+  fs.writeFileSync(path.join(wellKnownDir, 'api-catalog.json'), JSON.stringify({
+    linkset: [{
+      anchor: `${BASE_URL}/agent-api/content-index.json`,
+      'service-desc': [{ href: `${BASE_URL}/agent-api/openapi.json`, type: 'application/vnd.oai.openapi+json;version=3.1' }],
+      'service-doc': [{ href: `${BASE_URL}/agent-api/docs.html`, type: 'text/html' }],
+    }],
+  }, null, 2));
+
+  fs.writeFileSync(path.join(wellKnownDir, 'ai-catalog.json'), JSON.stringify({
+    specVersion: '1.0',
+    host: { displayName: '种生基网站', identifier: 'did:web:www.zhongshengji.vip' },
+    entries: [
+      {
+        identifier: 'urn:air:www.zhongshengji.vip:api:public-content',
+        displayName: '种生基网站公开内容索引',
+        type: 'application/vnd.oai.openapi+json;version=3.1',
+        url: `${BASE_URL}/agent-api/openapi.json`,
+        representativeQueries: ['什么是种生基', '种生基需要准备什么', '种生基费用和流程是什么'],
+      },
+      {
+        identifier: 'urn:air:www.zhongshengji.vip:skill:site-content',
+        displayName: '种生基网站内容查询 Skill',
+        type: 'text/markdown',
+        url: `${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md`,
+        representativeQueries: ['搜索种生基相关文章', '读取种生基常见问题', '引用种生基网站公开资料'],
+      },
+    ],
+  }, null, 2));
+
+  const llmsLines = [
+    '# 种生基网站',
+    '',
+    '> 台湾兹心阁种生基公开资料。内容属于传统文化介绍，个人体验因人而异，不构成医疗、财务或结果保证。',
+    '',
+    '## 公开内容',
+    '',
+    ...contentEntries.map(entry => `- [${entry.title}](${entry.url}): ${entry.description}`),
+    '',
+    '## 机器可读入口',
+    '',
+    `- [内容索引](${BASE_URL}/agent-api/content-index.json)`,
+    `- [OpenAPI](${BASE_URL}/agent-api/openapi.json)`,
+    `- [Agent Skill](${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md)`,
+  ];
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'llms.txt'), llmsLines.join('\n') + '\n');
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsLines.join('\n') + '\n');
 }
 
 function listJsonFiles(dir) {
@@ -224,16 +366,23 @@ function build() {
   ensureDir('./public/zh-tw');
   ensureDir('./public/en');
   removeStalePaths();
-  writeLegacyRedirectPages();
 
   const maps = buildLanguageMaps();
   const pages = [];
 
   staticPages.forEach(page => {
     if (fs.existsSync(page.file)) {
+      const meta = htmlMeta(page.file);
       pages.push({
         ...page,
         lastmod: fs.statSync(page.file).mtime.toISOString().slice(0, 10),
+      });
+      contentEntries.push({
+        language: page.loc === '/en/' ? 'en' : page.loc === '/zh-tw/' ? 'zh-Hant' : 'zh-Hans',
+        title: meta.title,
+        description: meta.description,
+        url: `${BASE_URL}${page.loc}`,
+        updated: fs.statSync(page.file).mtime.toISOString().slice(0, 10),
       });
     }
   });
@@ -256,6 +405,13 @@ function build() {
         lastmod: getLastmod(rawData, filePath),
         priority: '0.8',
         changefreq: 'monthly',
+      });
+      contentEntries.push({
+        language: cfg.hreflang,
+        title: stripHtml(rawData.metaTitle || rawData.h1),
+        description: stripHtml(rawData.metaDescription || rawData.heroSub),
+        url: `${BASE_URL}${loc}`,
+        updated: getLastmod(rawData, filePath),
       });
     });
   });
@@ -280,6 +436,13 @@ function build() {
       priority: data.slug === 'videos' ? '0.8' : '0.7',
       changefreq: 'monthly',
     });
+    contentEntries.push({
+      language: 'zh-Hans',
+      title: stripHtml(rawData.metaTitle || rawData.h1),
+      description: stripHtml(rawData.metaDescription || rawData.heroSub),
+      url: `${BASE_URL}${loc}`,
+      updated: getLastmod(rawData, filePath),
+    });
   });
 
   const seen = new Set();
@@ -298,6 +461,10 @@ ${uniquePages.map(sitemapEntry).join('\n')}
 
   fs.writeFileSync('./public/sitemap.xml', sitemapXml);
   console.log(`\n✓ sitemap.xml 已更新（${uniquePages.length} 个 URL）`);
+  writeAgentResources();
+  const markdownCount = writeMarkdownRepresentations();
+  console.log(`✓ AI 公开内容索引已更新（${contentEntries.length} 条）`);
+  console.log(`✓ Markdown 表示已更新（${markdownCount} 个页面）`);
   console.log('✓ 完成！');
 }
 

@@ -1,9 +1,6 @@
-// Vercel Routing Middleware: normalize legacy typo URLs before static files are served.
-// It catches both raw Unicode and percent-encoded forms:
-//   /mingren-fuhaо-zhong-sheng-ji/  (Cyrillic о)
-//   /mingren-fuha芯-zhong-sheng-ji/
+// Vercel middleware: canonical host, legacy redirects and Markdown negotiation.
 export const config = {
-  matcher: '/mingren-fuha:path*',
+  matcher: '/:path*',
 };
 
 const TARGET_PATH = '/mingren-fuhao-zhong-sheng-ji/';
@@ -24,9 +21,14 @@ function withTrailingSlash(pathname) {
   return pathname.endsWith('/') ? pathname : `${pathname}/`;
 }
 
-export default function middleware(request) {
+export default async function middleware(request) {
   const url = new URL(request.url);
   const decodedPath = withTrailingSlash(safeDecodePath(url.pathname));
+
+  if (url.hostname === 'zhongshengji.vip') {
+    url.hostname = 'www.zhongshengji.vip';
+    return Response.redirect(url, 308);
+  }
 
   if (LEGACY_PATHS.has(decodedPath)) {
     const target = new URL(TARGET_PATH, request.url);
@@ -34,5 +36,33 @@ export default function middleware(request) {
     return Response.redirect(target, 308);
   }
 
+  const acceptsMarkdown = request.method === 'GET'
+    && (request.headers.get('accept') || '').toLowerCase().includes('text/markdown');
+  const looksLikePage = url.pathname.endsWith('/') || !pathSegment(url.pathname).includes('.');
+
+  if (acceptsMarkdown && looksLikePage) {
+    const markdownUrl = new URL(request.url);
+    markdownUrl.pathname = url.pathname === '/'
+      ? '/index.md'
+      : `${withTrailingSlash(url.pathname)}index.md`;
+    markdownUrl.search = '';
+
+    const response = await fetch(markdownUrl, {
+      headers: { accept: 'text/plain' },
+    });
+    if (response.ok) {
+      const body = await response.text();
+      const headers = new Headers(response.headers);
+      headers.set('content-type', 'text/markdown; charset=utf-8');
+      headers.set('vary', 'Accept');
+      headers.set('x-markdown-tokens', String(Math.max(1, Math.ceil(body.length / 4))));
+      return new Response(body, { status: 200, headers });
+    }
+  }
+
   // Returning undefined lets Vercel continue to normal filesystem routing.
+}
+
+function pathSegment(pathname) {
+  return pathname.split('/').filter(Boolean).pop() || '';
 }

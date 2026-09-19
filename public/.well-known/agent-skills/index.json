@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-content",
+      "type": "skill-md",
+      "description": "搜索、读取并引用种生基网站的公开内容。",
+      "url": "https://www.zhongshengji.vip/.well-known/agent-skills/site-content/SKILL.md",
+      "digest": "sha256:b64f48f1c35ef564eae071bd292346d086e67af8426a74b52cda8025dcf46f6f"
+    }
+  ]
+}

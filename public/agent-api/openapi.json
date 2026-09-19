@@ -1,0 +1,33 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "种生基网站公开内容 API",
+    "version": "1.0.0",
+    "description": "只读内容索引，用于查找并引用本站公开页面。"
+  },
+  "servers": [
+    {
+      "url": "https://www.zhongshengji.vip"
+    }
+  ],
+  "paths": {
+    "/agent-api/content-index.json": {
+      "get": {
+        "operationId": "listPublicContent",
+        "summary": "列出可公开检索的页面",
+        "responses": {
+          "200": {
+            "description": "公开内容索引",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

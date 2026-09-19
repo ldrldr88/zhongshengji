@@ -47,6 +47,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/home-en.css">
+  <link rel="stylesheet" href="/assets/css/contact-shared.css">
 </head>
 <body>
 
@@ -191,13 +192,24 @@
 
 <section class="contact-section" id="contact">
   <h2>Book a Consultation</h2>
-  <p class="contact-desc">Contact the sole authorised agent for overseas clients — all enquiries strictly confidential, no pressure</p>
-  <div class="contact-cards">
-    <div class="contact-card"><div class="contact-label">WeChat</div><div class="contact-value">NSDG521</div></div>
-    <div class="contact-card"><div class="contact-label">Contact</div><div class="contact-value">Liang Dongrong</div></div>
-    <div class="contact-card"><div class="contact-label">Email</div><div class="contact-value" style="font-size:0.85rem">liangdongrong@gmail.com</div></div>
+  <p class="contact-desc">Contact Mr. Liang via WeChat or email — enquiries welcome 24 hours a day</p>
+  <div class="wechat-contact-panel" id="wechat-contact">
+    <div class="wechat-qr-wrap">
+      <img class="wechat-qr" src="/assets/img/wechat-contact.png" width="300" height="300" loading="lazy" alt="WeChat QR code for adding Mr. Liang">
+      <div class="wechat-qr-label">This is a WeChat QR code</div>
+    </div>
+    <div class="wechat-contact-details">
+      <p class="wechat-contact-kicker">WeChat ID</p>
+      <p class="wechat-id">NSDG521</p>
+      <p class="wechat-contact-line"><strong>Contact:</strong> Mr. Liang</p>
+      <p class="wechat-contact-line"><strong>Hours:</strong> Enquiries welcome 24/7</p>
+      <p class="wechat-contact-line"><strong>Email:</strong> <a href="mailto:liangdongrong@gmail.com">liangdongrong@gmail.com</a></p>
+      <button class="copy-wechat-btn" type="button" data-copy-wechat data-copied-label="WeChat ID copied" data-copied-message="WeChat ID NSDG521 copied">Copy WeChat ID</button>
+      <p class="copy-wechat-status" data-copy-status aria-live="polite"></p>
+    </div>
   </div>
-  <a href="/yuyue/" class="btn-gold" onclick="alert('Please add WeChat: NSDG521');">Add WeChat to Book →</a>
+  <a href="/yuyue/" class="btn-gold">View the Full Booking Process →</a>
+  <p class="service-notice">This is a traditional cultural service. Individual experiences vary, and no specific health, wealth, fortune or other outcome is guaranteed. For health concerns, follow qualified medical advice; this website does not replace medical diagnosis or treatment.</p>
 </section>
 
 <footer class="site-footer">
@@ -214,5 +226,6 @@
   <p class="footer-copy">© 2026 zhongshengji.vip · Taiwan Zi Xin Ge Destiny Hall · Authorised Agent: Liang Dongrong</p>
 </footer>
 
+<script src="/assets/js/contact.js" defer></script>
 </body>
 </html>
