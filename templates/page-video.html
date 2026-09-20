@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/css/video.css?v=20260920">
+  <link rel="stylesheet" href="/assets/css/video.css?v=20260920-2">
   <link rel="stylesheet" href="/assets/css/contact-shared-v2.css">
 </head>
 <body>
@@ -147,6 +147,33 @@
       </a>
       {{/each}}
     </div>
+  </section>
+  {{/if}}
+
+  {{#if contentSummary}}
+  <section class="reader-guide" aria-labelledby="reader-guide-title">
+    <div class="reader-guide-kicker">视频文字导读</div>
+    <h2 id="reader-guide-title">本页内容摘要</h2>
+    <p class="reader-guide-summary">{{contentSummary}}</p>
+    {{#if keyPoints}}
+    <h3>观看时建议关注</h3>
+    <ul class="reader-guide-points">
+      {{#each keyPoints}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{#if readingNote}}
+    <p class="reader-guide-note"><strong>阅读说明：</strong>{{readingNote}}</p>
+    {{/if}}
+    {{#if articleLinks}}
+    <div class="reader-guide-links" aria-label="相关知识文章">
+      <strong>继续了解：</strong>
+      {{#each articleLinks}}
+      <a href="{{this.url}}">{{this.title}}</a>
+      {{/each}}
+    </div>
+    {{/if}}
   </section>
   {{/if}}
 

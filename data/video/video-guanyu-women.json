@@ -2,7 +2,7 @@
   "slug": "video-guanyu-women",
   "pageTag": "机构介绍视频",
   "metaTitle": "关于我们·兹心阁历史与客户评价·种生基官方介绍视频",
-  "metaDescription": "台湾兹心阁开运会馆官方介绍视频：林志萦大师30年历史、林家驊老师道法传承、真实客户评价见证。种生基权威服务机构，微信NSDG521咨询。",
+  "metaDescription": "本页整理兹心阁的公开历史、传承介绍、服务团队和客户评价，方便访客把机构自述与可核实资料分开查看。页面含视频、文字要点与相关资料。微信NSDG521。",
   "metaKeywords": "兹心阁介绍视频,种生基关于我们,林志萦大师,林家驊老师,种生基机构视频",
   "h1": "关于我们：兹心阁开运会馆历史与客户真实评价",
   "heroSub": "台湾兹心阁开运会馆官方介绍视频 · 三代传承历史 · 真实客户评价见证",
@@ -43,7 +43,7 @@
     "name": "关于我们·兹心阁历史与客户评价",
     "description": "台湾兹心阁开运会馆官方介绍视频，包含林志萦大师30年历史与真实客户评价",
     "thumbnailUrl": "https://img.youtube.com/vi/xgMzy-DN2Bg/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2021-07-08T05:17:01-07:00",
     "embedUrl": "https://www.youtube.com/embed/xgMzy-DN2Bg",
     "url": "https://www.youtube.com/watch?v=xgMzy-DN2Bg",
     "publisher": {
@@ -51,6 +51,35 @@
       "name": "慈心阁林家驊種生基",
       "url": "https://www.zhongshengji.vip"
     },
-    "inLanguage": "zh-TW"
-  }
+    "inLanguage": "zh-TW",
+    "duration": "PT3M47S",
+    "dateModified": "2026-09-20"
+  },
+  "contentSummary": "本页整理兹心阁的公开历史、传承介绍、服务团队和客户评价，方便访客把机构自述与可核实资料分开查看。",
+  "keyPoints": [
+    "机构历史和人员身份应能通过持续公开记录相互印证。",
+    "客户评价属于个人经历，不能代表所有人的结果。",
+    "当前大陆联系人为梁先生，微信NSDG521，咨询时间为24小时。"
+  ],
+  "readingNote": "本站内容用于介绍传统文化服务。个人体验因人而异，不构成医疗、法律、财务建议或任何结果保证。",
+  "articleLinks": [
+    {
+      "title": "关于团队与传承",
+      "url": "/about/"
+    },
+    {
+      "title": "如何寻找并核实服务者",
+      "url": "/zhong-sheng-ji-fengshui-shi-nali-zhao/"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "这段视频主要帮助我判断什么？",
+      "answer": "本页整理兹心阁的公开历史、传承介绍、服务团队和客户评价，方便访客把机构自述与可核实资料分开查看。"
+    },
+    {
+      "question": "咨询前应该重点核实什么？",
+      "answer": "建议先核实机构历史和人员身份应能通过持续公开记录相互印证；同时确认客户评价属于个人经历，不能代表所有人的结果。涉及个人体验的说法不代表任何结果保证。"
+    }
+  ]
 }

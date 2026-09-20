@@ -2,35 +2,21 @@
   "slug": "video-women-geng-hao",
   "pageTag": "种生基疑问解答视频",
   "metaTitle": "为什么我们的种生基比别人好？三大核心优势·林家驊老师视频解答",
-  "metaDescription": "我们种生基三大优势：台湾富贵双全独家龙穴（真龙正穴）、林氏家族三代传承（30年口碑）、林家驊老师2007年经张天师奏职道法资质。微信NSDG521。",
+  "metaDescription": "本页列出服务方认为自身具有的地点、传承和公开记录优势。选择时应把这些主张转化为可核实的问题，而不是直接接受“最好”的结论。页面含视频、文字要点与相关资料。微信NSDG521。",
   "metaKeywords": "种生基哪家好,种生基选择,最好的种生基",
   "h1": "为什么我们的种生基比别人好？三大核心优势",
   "heroSub": "林家驊老师亲自视频解答 · 台湾兹心阁开运会馆官方内容 · 微信NSDG521",
   "mainVideoId": "pX0UCni8L7g",
   "chapters": null,
   "videoGrid": null,
-  "sections": [
-    {
-      "h2": "关于本问题的延伸阅读",
-      "items": [
-        {
-          "h3": "查看更多种生基常见疑问",
-          "content": "本视频专门解答「我们种生基是不是比别人好」这一疑问。如需了解其他常见疑问，可访问我们的24个疑问合集页面，或直接通过微信NSDG521联系梁东荣先生进行一对一咨询。所有咨询严格保密，无任何预约压力。"
-        },
-        {
-          "h3": "五年期体验版是了解种生基效果的最佳方式",
-          "content": "如果观看视频后您对种生基有了初步了解，并希望亲身体验效果，五年期体验版（人民币7.2万元）是最合适的起点。无需亲临台湾，邮寄四样物品即可完成全套种生基仪式，全程视频记录回寄，效果不满意可在五年内随时与助理沟通。"
-        }
-      ]
-    }
-  ],
+  "sections": [],
   "schema": {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "name": "为什么我们的种生基比别人好？三大核心优势",
     "description": "我们种生基三大优势：台湾富贵双全独家龙穴（真龙正穴）、林氏家族三代传承（30年口碑）、林家驊老师2007年经张天师奏职道法资质。微信NSDG521。",
     "thumbnailUrl": "https://img.youtube.com/vi/pX0UCni8L7g/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2024-04-29T00:42:02-07:00",
     "embedUrl": "https://www.youtube.com/embed/pX0UCni8L7g",
     "url": "https://www.youtube.com/watch?v=pX0UCni8L7g",
     "publisher": {
@@ -38,6 +24,35 @@
       "name": "慈心阁林家驊種生基",
       "url": "https://www.zhongshengji.vip"
     },
-    "inLanguage": "zh-TW"
-  }
+    "inLanguage": "zh-TW",
+    "duration": "PT1M38S",
+    "dateModified": "2026-09-20"
+  },
+  "contentSummary": "本页列出服务方认为自身具有的地点、传承和公开记录优势。选择时应把这些主张转化为可核实的问题，而不是直接接受“最好”的结论。",
+  "keyPoints": [
+    "要求查看身份、传承和长期公开记录。",
+    "核对实际地点、土地使用和过程视频。",
+    "比较完整人民币报价、服务期限及后续安排。"
+  ],
+  "readingNote": "本站内容用于介绍传统文化服务。个人体验因人而异，不构成医疗、法律、财务建议或任何结果保证。",
+  "articleLinks": [
+    {
+      "title": "如何寻找并核实服务者",
+      "url": "/zhong-sheng-ji-fengshui-shi-nali-zhao/"
+    },
+    {
+      "title": "价格与费用说明",
+      "url": "/zhong-sheng-ji-jia-ge-fei-yong/"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "这段视频主要帮助我判断什么？",
+      "answer": "本页列出服务方认为自身具有的地点、传承和公开记录优势。选择时应把这些主张转化为可核实的问题，而不是直接接受“最好”的结论。"
+    },
+    {
+      "question": "咨询前应该重点核实什么？",
+      "answer": "建议先核实要求查看身份、传承和长期公开记录；同时确认核对实际地点、土地使用和过程视频。涉及个人体验的说法不代表任何结果保证。"
+    }
+  ]
 }

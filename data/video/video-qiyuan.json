@@ -2,35 +2,21 @@
   "slug": "video-qiyuan",
   "pageTag": "种生基疑问解答视频",
   "metaTitle": "种生基的起源：从唐宋皇室秘术到现代传承·林家驊老师视频解答",
-  "metaDescription": "种生基起源于唐宋时期，历代为帝王将相、巨商富豪秘密使用，近代随台湾风水文化传承系统化流传。林家驊老师讲述种生基历史起源。微信NSDG521。",
+  "metaDescription": "本页介绍种生基在民间与道家文化中的历史叙述，以及现代服务如何沿用相关概念。阅读时应区分传统记载、口述传承和可验证的现代资料。页面含视频、文字要点与相关资料。微信NSDG521。",
   "metaKeywords": "种生基起源,种生基历史,种生基由来",
   "h1": "种生基的起源：从唐宋皇室秘术到现代传承",
   "heroSub": "林家驊老师亲自视频解答 · 台湾兹心阁开运会馆官方内容 · 微信NSDG521",
   "mainVideoId": "6mptrWSrSzk",
   "chapters": null,
   "videoGrid": null,
-  "sections": [
-    {
-      "h2": "关于本问题的延伸阅读",
-      "items": [
-        {
-          "h3": "查看更多种生基常见疑问",
-          "content": "本视频专门解答「种生基的起源」这一疑问。如需了解其他常见疑问，可访问我们的24个疑问合集页面，或直接通过微信NSDG521联系梁东荣先生进行一对一咨询。所有咨询严格保密，无任何预约压力。"
-        },
-        {
-          "h3": "五年期体验版是了解种生基效果的最佳方式",
-          "content": "如果观看视频后您对种生基有了初步了解，并希望亲身体验效果，五年期体验版（人民币7.2万元）是最合适的起点。无需亲临台湾，邮寄四样物品即可完成全套种生基仪式，全程视频记录回寄，效果不满意可在五年内随时与助理沟通。"
-        }
-      ]
-    }
-  ],
+  "sections": [],
   "schema": {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "name": "种生基的起源：从唐宋皇室秘术到现代传承",
     "description": "种生基起源于唐宋时期，历代为帝王将相、巨商富豪秘密使用，近代随台湾风水文化传承系统化流传。林家驊老师讲述种生基历史起源。微信NSDG521。",
     "thumbnailUrl": "https://img.youtube.com/vi/6mptrWSrSzk/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2024-04-29T00:41:06-07:00",
     "embedUrl": "https://www.youtube.com/embed/6mptrWSrSzk",
     "url": "https://www.youtube.com/watch?v=6mptrWSrSzk",
     "publisher": {
@@ -38,6 +24,35 @@
       "name": "慈心阁林家驊種生基",
       "url": "https://www.zhongshengji.vip"
     },
-    "inLanguage": "zh-TW"
-  }
+    "inLanguage": "zh-TW",
+    "duration": "PT1M35S",
+    "dateModified": "2026-09-20"
+  },
+  "contentSummary": "本页介绍种生基在民间与道家文化中的历史叙述，以及现代服务如何沿用相关概念。阅读时应区分传统记载、口述传承和可验证的现代资料。",
+  "keyPoints": [
+    "历史故事用于理解文化背景，不等于当代效果证据。",
+    "关注现代服务者能提供的身份、地点和过程资料。",
+    "对帝王秘术、名人案例等说法保持来源意识。"
+  ],
+  "readingNote": "本站内容用于介绍传统文化服务。个人体验因人而异，不构成医疗、法律、财务建议或任何结果保证。",
+  "articleLinks": [
+    {
+      "title": "种生基是什么",
+      "url": "/zhong-sheng-ji-shi-shen-me/"
+    },
+    {
+      "title": "关于团队与传承",
+      "url": "/about/"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "这段视频主要帮助我判断什么？",
+      "answer": "本页介绍种生基在民间与道家文化中的历史叙述，以及现代服务如何沿用相关概念。阅读时应区分传统记载、口述传承和可验证的现代资料。"
+    },
+    {
+      "question": "咨询前应该重点核实什么？",
+      "answer": "建议先核实历史故事用于理解文化背景，不等于当代效果证据；同时确认关注现代服务者能提供的身份、地点和过程资料。涉及个人体验的说法不代表任何结果保证。"
+    }
+  ]
 }

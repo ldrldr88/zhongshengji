@@ -2,7 +2,7 @@
   "slug": "video-liang-dongrong-tiyan",
   "pageTag": "授权代理亲身体验",
   "metaTitle": "梁东荣亲身体验种生基全程演示·大陆授权代理真实记录",
-  "metaDescription": "大陆独家授权代理梁东荣先生亲身体验种生基全程视频，包含在台湾林家驊老师处完成种生基的真实记录。最直接的信任证明。微信NSDG521咨询。",
+  "metaDescription": "本页记录梁东荣先生本人参与服务的过程，帮助访客了解大陆联系人、沟通方式和实际交付流程。个人体验是背景资料，不构成他人的结果保证。页面含视频、文字要点与相关资料。微信NSDG521。",
   "metaKeywords": "梁东荣种生基视频,种生基体验视频,种生基演示视频,梁东荣NSDG521,种生基代理体验",
   "h1": "梁东荣亲身体验种生基全程演示视频",
   "heroSub": "大陆独家授权代理梁东荣先生亲赴台湾 · 完整记录自己的种生基仪式全过程",
@@ -43,7 +43,7 @@
     "name": "梁东荣亲身体验种生基全程演示视频",
     "description": "大陆独家授权代理梁东荣先生亲赴台湾完成种生基全程视频记录",
     "thumbnailUrl": "https://img.youtube.com/vi/lAM2IT9cQVU/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2023-06-03T06:41:04-07:00",
     "embedUrl": "https://www.youtube.com/embed/lAM2IT9cQVU",
     "url": "https://www.youtube.com/watch?v=lAM2IT9cQVU",
     "publisher": {
@@ -51,6 +51,35 @@
       "name": "慈心阁林家驊種生基",
       "url": "https://www.zhongshengji.vip"
     },
-    "inLanguage": "zh-TW"
-  }
+    "inLanguage": "zh-TW",
+    "duration": "PT4M46S",
+    "dateModified": "2026-09-20"
+  },
+  "contentSummary": "本页记录梁东荣先生本人参与服务的过程，帮助访客了解大陆联系人、沟通方式和实际交付流程。个人体验是背景资料，不构成他人的结果保证。",
+  "keyPoints": [
+    "核对联系人姓名、微信号和邮箱是否与本站一致。",
+    "观察流程记录是否连续，关键步骤是否有清楚说明。",
+    "预约前仍需单独确认方案、价格、材料和后续服务。"
+  ],
+  "readingNote": "本站内容用于介绍传统文化服务。个人体验因人而异，不构成医疗、法律、财务建议或任何结果保证。",
+  "articleLinks": [
+    {
+      "title": "关于团队与传承",
+      "url": "/about/"
+    },
+    {
+      "title": "完整服务流程",
+      "url": "/zhong-sheng-ji-quan-guo-cheng/"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "这段视频主要帮助我判断什么？",
+      "answer": "本页记录梁东荣先生本人参与服务的过程，帮助访客了解大陆联系人、沟通方式和实际交付流程。个人体验是背景资料，不构成他人的结果保证。"
+    },
+    {
+      "question": "咨询前应该重点核实什么？",
+      "answer": "建议先核实核对联系人姓名、微信号和邮箱是否与本站一致；同时确认观察流程记录是否连续，关键步骤是否有清楚说明。涉及个人体验的说法不代表任何结果保证。"
+    }
+  ]
 }

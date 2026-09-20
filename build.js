@@ -279,6 +279,33 @@ function extractFaqItems(schema) {
   return items;
 }
 
+function addFaqSchema(schema, faqItems) {
+  if (!Array.isArray(faqItems) || faqItems.length === 0) return schema || {};
+
+  const source = schema || {};
+  const graph = Array.isArray(source['@graph'])
+    ? source['@graph'].map(node => ({ ...node }))
+    : [{ ...source }];
+
+  graph.forEach(node => delete node['@context']);
+  graph.push({
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  });
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  };
+}
+
 function buildLanguageMaps() {
   const maps = {
     byEn: new Map(),
@@ -454,7 +481,7 @@ function build() {
     const relatedVideos = currentIndex < 0 ? [] : Array.from({ length: Math.min(4, videoDirectory.length - 1) }, (_, offset) => (
       videoDirectory[(currentIndex + offset + 1) % videoDirectory.length]
     ));
-    const schema = rawData.slug === 'videos' ? {
+    const baseSchema = rawData.slug === 'videos' ? {
       ...(rawData.schema || {}),
       mainEntity: {
         '@type': 'ItemList',
@@ -467,10 +494,14 @@ function build() {
         })),
       },
     } : (rawData.schema || {});
+    const faqItems = Array.isArray(rawData.faqItems) && rawData.faqItems.length > 0
+      ? rawData.faqItems
+      : extractFaqItems(rawData.schema);
+    const schema = addFaqSchema(baseSchema, faqItems);
     const data = {
       ...rawData,
       schemaString: JSON.stringify(schema, null, 2),
-      faqItems: extractFaqItems(rawData.schema),
+      faqItems,
       videoDirectory: rawData.slug === 'videos' ? videoDirectory : [],
       relatedVideos,
       lang: 'video',

@@ -2,7 +2,7 @@
   "slug": "video-san-fenzhong-jieshao",
   "pageTag": "机构介绍视频",
   "metaTitle": "三分钟了解种生基·林家驊·台湾三代传承道家正统",
-  "metaDescription": "三分钟快速了解种生基是什么、林家驊老师的传承背景、台湾兹心阁开运会馆的服务。慈心阁官方视频，微信NSDG521咨询梁东荣先生。",
+  "metaDescription": "这段三分钟视频概览种生基的基本概念、林家驊老师的公开背景和兹心阁的服务方式，适合快速判断是否值得继续了解。页面含视频、文字要点与相关资料。微信NSDG521。",
   "metaKeywords": "种生基介绍视频,林家驊种生基,兹心阁种生基,三分钟了解种生基",
   "h1": "三分钟认识种生基：林家驊老师亲自介绍",
   "heroSub": "台湾兹心阁开运会馆官方视频 · 三分钟快速了解种生基与林氏家族传承",
@@ -43,7 +43,7 @@
     "name": "三分钟认识种生基·林家驊老师亲自介绍",
     "description": "台湾兹心阁开运会馆官方视频，林家驊老师三分钟介绍种生基原理与林氏家族传承背景",
     "thumbnailUrl": "https://img.youtube.com/vi/MxzwXcxO-r8/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2025-12-17T19:54:58-08:00",
     "embedUrl": "https://www.youtube.com/embed/MxzwXcxO-r8",
     "url": "https://www.youtube.com/watch?v=MxzwXcxO-r8",
     "publisher": {
@@ -51,6 +51,35 @@
       "name": "慈心阁林家驊種生基",
       "url": "https://www.zhongshengji.vip"
     },
-    "inLanguage": "zh-TW"
-  }
+    "inLanguage": "zh-TW",
+    "duration": "PT3M10S",
+    "dateModified": "2026-09-20"
+  },
+  "contentSummary": "这段三分钟视频概览种生基的基本概念、林家驊老师的公开背景和兹心阁的服务方式，适合快速判断是否值得继续了解。",
+  "keyPoints": [
+    "先看清楚服务是什么、由谁执行、在哪里执行。",
+    "继续阅读费用、流程、禁忌和真假辨别页面。",
+    "把文化体验与确定结果承诺区分开。"
+  ],
+  "readingNote": "本站内容用于介绍传统文化服务。个人体验因人而异，不构成医疗、法律、财务建议或任何结果保证。",
+  "articleLinks": [
+    {
+      "title": "种生基是什么",
+      "url": "/zhong-sheng-ji-shi-shen-me/"
+    },
+    {
+      "title": "价格与费用说明",
+      "url": "/zhong-sheng-ji-jia-ge-fei-yong/"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "这段视频主要帮助我判断什么？",
+      "answer": "这段三分钟视频概览种生基的基本概念、林家驊老师的公开背景和兹心阁的服务方式，适合快速判断是否值得继续了解。"
+    },
+    {
+      "question": "咨询前应该重点核实什么？",
+      "answer": "建议先核实先看清楚服务是什么、由谁执行、在哪里执行；同时确认继续阅读费用、流程、禁忌和真假辨别页面。涉及个人体验的说法不代表任何结果保证。"
+    }
+  ]
 }

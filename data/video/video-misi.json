@@ -2,35 +2,21 @@
   "slug": "video-misi",
   "pageTag": "种生基疑问解答视频",
   "metaTitle": "大多数人对种生基的迷思：6个常见误解纠正·林家驊老师视频解答",
-  "metaDescription": "种生基常见迷思：会影响子孙运势（错）、偷种生基有效（错）、在家可以自己做（错）、符咒是核心（错）。林家驊老师逐一澄清。微信NSDG521。",
+  "metaDescription": "本页集中纠正常见误解，包括自己在家做、偷做、只靠符咒以及必然影响家人等说法，帮助访客把传闻和服务方公开流程分开。页面含视频、文字要点与相关资料。微信NSDG521。",
   "metaKeywords": "种生基误解,种生基迷思,种生基常见误区",
   "h1": "大多数人对种生基的迷思：6个常见误解纠正",
   "heroSub": "林家驊老师亲自视频解答 · 台湾兹心阁开运会馆官方内容 · 微信NSDG521",
   "mainVideoId": "msBokmONn2Y",
   "chapters": null,
   "videoGrid": null,
-  "sections": [
-    {
-      "h2": "关于本问题的延伸阅读",
-      "items": [
-        {
-          "h3": "查看更多种生基常见疑问",
-          "content": "本视频专门解答「大多数人对种生基的迷思」这一疑问。如需了解其他常见疑问，可访问我们的24个疑问合集页面，或直接通过微信NSDG521联系梁东荣先生进行一对一咨询。所有咨询严格保密，无任何预约压力。"
-        },
-        {
-          "h3": "五年期体验版是了解种生基效果的最佳方式",
-          "content": "如果观看视频后您对种生基有了初步了解，并希望亲身体验效果，五年期体验版（人民币7.2万元）是最合适的起点。无需亲临台湾，邮寄四样物品即可完成全套种生基仪式，全程视频记录回寄，效果不满意可在五年内随时与助理沟通。"
-        }
-      ]
-    }
-  ],
+  "sections": [],
   "schema": {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "name": "大多数人对种生基的迷思：6个常见误解纠正",
     "description": "种生基常见迷思：会影响子孙运势（错）、偷种生基有效（错）、在家可以自己做（错）、符咒是核心（错）。林家驊老师逐一澄清。微信NSDG521。",
     "thumbnailUrl": "https://img.youtube.com/vi/msBokmONn2Y/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2024-04-30T16:43:07-07:00",
     "embedUrl": "https://www.youtube.com/embed/msBokmONn2Y",
     "url": "https://www.youtube.com/watch?v=msBokmONn2Y",
     "publisher": {
@@ -38,6 +24,35 @@
       "name": "慈心阁林家驊種生基",
       "url": "https://www.zhongshengji.vip"
     },
-    "inLanguage": "zh-TW"
-  }
+    "inLanguage": "zh-TW",
+    "duration": "PT1M46S",
+    "dateModified": "2026-09-20"
+  },
+  "contentSummary": "本页集中纠正常见误解，包括自己在家做、偷做、只靠符咒以及必然影响家人等说法，帮助访客把传闻和服务方公开流程分开。",
+  "keyPoints": [
+    "遇到绝对化说法时先寻找可核实的流程与依据。",
+    "不要因为恐惧、催促或保密话术仓促付款。",
+    "传统文化解释不等于普遍事实或科学结论。"
+  ],
+  "readingNote": "本站内容用于介绍传统文化服务。个人体验因人而异，不构成医疗、法律、财务建议或任何结果保证。",
+  "articleLinks": [
+    {
+      "title": "种生基是什么",
+      "url": "/zhong-sheng-ji-shi-shen-me/"
+    },
+    {
+      "title": "骗局与真假辨别",
+      "url": "/zhong-sheng-ji-pian-ju-bian-bie/"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "这段视频主要帮助我判断什么？",
+      "answer": "本页集中纠正常见误解，包括自己在家做、偷做、只靠符咒以及必然影响家人等说法，帮助访客把传闻和服务方公开流程分开。"
+    },
+    {
+      "question": "咨询前应该重点核实什么？",
+      "answer": "建议先核实遇到绝对化说法时先寻找可核实的流程与依据；同时确认不要因为恐惧、催促或保密话术仓促付款。涉及个人体验的说法不代表任何结果保证。"
+    }
+  ]
 }

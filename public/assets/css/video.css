@@ -190,6 +190,35 @@
       text-underline-offset: 4px;
     }
 
+    /* ── 视频文字导读 ── */
+    .reader-guide {
+      margin: 42px 0 0;
+      padding: 30px 32px;
+      background: #fffaf1;
+      border: 1px solid var(--border-mid);
+      box-shadow: 0 10px 30px rgba(61,46,16,0.06);
+    }
+    .reader-guide-kicker {
+      color: var(--gold-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+    .reader-guide h2 { margin-top: 10px; }
+    .reader-guide-summary { color: var(--ink-soft); font-size: 1rem; }
+    .reader-guide-points { margin: 12px 0 22px; padding-left: 1.35rem; }
+    .reader-guide-points li { margin: 8px 0; padding-left: 4px; line-height: 1.8; }
+    .reader-guide-note {
+      padding: 14px 16px;
+      background: var(--paper-dark);
+      border-left: 3px solid var(--gold);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .reader-guide-links { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 18px; font-size: 0.9rem; }
+    .reader-guide-links strong { color: var(--ink); }
+    .reader-guide-links a { color: var(--gold-dark); font-weight: 700; text-underline-offset: 4px; }
+
     /* ── H2/H3 内容 ── */
     h2 { font-size: 1.4rem; color: var(--ink); font-weight: 700; margin: 48px 0 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border); position: relative; letter-spacing: 0.05em; }
     h2::before { content: ''; position: absolute; bottom: -1px; left: 0; width: 40px; height: 2px; background: var(--gold); }
@@ -245,4 +274,5 @@
       .chapters { padding: 20px; }
       .video-directory-grid, .related-video-grid { grid-template-columns: 1fr; }
       .video-directory-card { min-height: 0; }
+      .reader-guide { padding: 24px 20px; }
     }
