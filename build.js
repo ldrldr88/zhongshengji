@@ -353,12 +353,29 @@ function renderPage(tmpl, data, outDir) {
   fs.writeFileSync(path.join(outDir, 'index.html'), tmpl(data));
 }
 
+function escapeXml(value = '') {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function sitemapEntry(page) {
+  const videoXml = page.video ? `
+    <video:video>
+      <video:thumbnail_loc>${escapeXml(page.video.thumbnailLoc)}</video:thumbnail_loc>
+      <video:title>${escapeXml(page.video.title)}</video:title>
+      <video:description>${escapeXml(page.video.description)}</video:description>
+      <video:player_loc>${escapeXml(page.video.playerLoc)}</video:player_loc>
+    </video:video>` : '';
+
   return `  <url>
     <loc>${BASE_URL}${page.loc}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    <priority>${page.priority}</priority>${videoXml}
   </url>`;
 }
 
@@ -417,12 +434,45 @@ function build() {
     });
   });
 
-  listJsonFiles('./data/video').forEach(filePath => {
-    const rawData = readJson(filePath);
+  const videoRecords = listJsonFiles('./data/video').map(filePath => ({
+    filePath,
+    rawData: readJson(filePath),
+  }));
+  const videoDirectory = videoRecords
+    .map(record => record.rawData)
+    .filter(record => record.slug !== 'videos')
+    .map(record => ({
+      slug: record.slug,
+      label: record.pageTag,
+      title: stripHtml(record.h1 || record.metaTitle),
+      description: stripHtml(record.heroSub || record.metaDescription),
+    }));
+  const videoTemplateLastmod = fs.statSync('./templates/page-video.html').mtime.toISOString().slice(0, 10);
+
+  videoRecords.forEach(({ filePath, rawData }) => {
+    const currentIndex = videoDirectory.findIndex(item => item.slug === rawData.slug);
+    const relatedVideos = currentIndex < 0 ? [] : Array.from({ length: Math.min(4, videoDirectory.length - 1) }, (_, offset) => (
+      videoDirectory[(currentIndex + offset + 1) % videoDirectory.length]
+    ));
+    const schema = rawData.slug === 'videos' ? {
+      ...(rawData.schema || {}),
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: videoDirectory.length,
+        itemListElement: videoDirectory.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.title,
+          url: `${BASE_URL}/${item.slug}/`,
+        })),
+      },
+    } : (rawData.schema || {});
     const data = {
       ...rawData,
-      schemaString: JSON.stringify(rawData.schema || {}, null, 2),
+      schemaString: JSON.stringify(schema, null, 2),
       faqItems: extractFaqItems(rawData.schema),
+      videoDirectory: rawData.slug === 'videos' ? videoDirectory : [],
+      relatedVideos,
       lang: 'video',
     };
     const loc = `/${data.slug}/`;
@@ -433,9 +483,15 @@ function build() {
 
     pages.push({
       loc,
-      lastmod: getLastmod(rawData, filePath),
+      lastmod: [getLastmod(rawData, filePath), videoTemplateLastmod].sort().pop(),
       priority: data.slug === 'videos' ? '0.8' : '0.7',
       changefreq: 'monthly',
+      video: data.mainVideoId ? {
+        thumbnailLoc: `https://img.youtube.com/vi/${data.mainVideoId}/hqdefault.jpg`,
+        title: stripHtml(data.h1 || data.metaTitle),
+        description: stripHtml(data.metaDescription || data.heroSub),
+        playerLoc: `https://www.youtube.com/embed/${data.mainVideoId}`,
+      } : null,
     });
     contentEntries.push({
       language: 'zh-Hans',
@@ -456,7 +512,8 @@ function build() {
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 ${uniquePages.map(sitemapEntry).join('\n')}
 </urlset>`;
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://www.zhongshengji.vip/</loc>
     <lastmod>2026-09-19</lastmod>
@@ -182,195 +183,381 @@
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-24-wenti/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/n-PcN8TD7BE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基24个常见疑问：林家驊老师逐一视频解答</video:title>
+      <video:description>林家驊老师亲自回答种生基24个最常见疑问：何为种生基、功效、程序、费用、副作用、多久见效、如何辨别真假大师等，完整合集视频。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/n-PcN8TD7BE</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-bian-bie-zhengjia/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/fj-1xmNxCvw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基大师那么多，怎么辨别真假？5个核心方法</video:title>
+      <video:description>辨别种生基大师真假5个方法：核查道法传承晋职记录、验证真实龙穴土地、索取全程未剪辑视频、确认收费透明、核实长期从业记录。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/fj-1xmNxCvw</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-duojiu-youxiaoguo/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/BsBo7SbVcck/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基多久会有效果？三个阶段时间线详解</video:title>
+      <video:description>种生基见效三阶段：1个月内面相气色改善；1-3个月贵人增多机会出现；3-6个月事业财运明显提升。林家驊老师详细解析见效时间线。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/BsBo7SbVcck</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-fei-yong-wei-he-gao/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/wXSOKu5vMD8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基费用为什么这么高昂？三个核心原因</video:title>
+      <video:description>种生基费用高昂三大原因：真龙正穴土地购置维护成本极高；正统道法仪式时间与资源投入大；高端改运服务的市场定位。林家驊老师坦诚解释。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wXSOKu5vMD8</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-fenmudi-zhong-sheng-ji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/MraPgAMJRvE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>坟墓的地方可以种生基吗？阴穴与阳穴的核心区别</video:title>
+      <video:description>坟墓区域不适合种生基。阴宅聚集阴气，与活人种生基所需的阳穴地气性质相反。强行在坟墓处做种生基可能干扰当事人阳气运势。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/MraPgAMJRvE</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-fuchao/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/thzXswUurwc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基需要用符咒吗？正统道法与符咒的关系</video:title>
+      <video:description>正统道家种生基主要依赖法师道法传承与龙穴地气，疏文是必要的沟通媒介，不依赖符咒作为核心手段。林家驊老师澄清常见误解。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/thzXswUurwc</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-fuzhoyong/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/EcQ4XnmNC6s/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基有没有副作用？正统做法完整说明</video:title>
+      <video:description>正统道家种生基对命主本人无负面影响，不损耗健康或寿元，不影响子孙运势。有5大禁忌需遵守：不作奸犯科、不随意宣扬、需配合努力等。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/EcQ4XnmNC6s</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-guanyu-women/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/xgMzy-DN2Bg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>关于我们：兹心阁开运会馆历史与客户真实评价</video:title>
+      <video:description>台湾兹心阁开运会馆官方介绍视频：林志萦大师30年历史、林家驊老师道法传承、真实客户评价见证。种生基权威服务机构，微信NSDG521咨询。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/xgMzy-DN2Bg</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-hewei-zhong-sheng-ji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/fFKux69hI68/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>何为种生基？林家驊老师视频解答</video:title>
+      <video:description>何为种生基是最基础的疑问。种生基（生基风水）是道家传统风水秘术，在活人在世时选取真龙正穴，将头发指甲血液安置龙穴，借地脉龙气持续提升运势。台湾林氏三代传承，微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/fFKux69hI68</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-jiali-zhong-sheng-ji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/xv0dvTS-xkc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>在家里可以种生基吗？为什么必须要在真龙正穴</video:title>
+      <video:description>在家里不可以做种生基。种生基效力来自两个不可替代的条件：正统道家法师传承资质和真龙正穴地脉之气，缺一不可。林家驊老师解释原因。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/xv0dvTS-xkc</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-kehu-quancheng/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-liang-dongrong-tiyan/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/lAM2IT9cQVU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>梁东荣亲身体验种生基全程演示视频</video:title>
+      <video:description>大陆独家授权代理梁东荣先生亲身体验种生基全程视频，包含在台湾林家驊老师处完成种生基的真实记录。最直接的信任证明。微信NSDG521咨询。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/lAM2IT9cQVU</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-longxue-tudi/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/qLXJUoCUGiI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>台湾富贵双全龙穴实地视频：种生基风水宝地真实记录</video:title>
+      <video:description>台湾富贵双全龙穴实地视频：发源观音山、三台星结作、三水逆朝，官贵财富俱全格局。林志萦大师选定独家龙穴土地，种生基效果的根本保障。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/qLXJUoCUGiI</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-misi/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/msBokmONn2Y/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>大多数人对种生基的迷思：6个常见误解纠正</video:title>
+      <video:description>种生基常见迷思：会影响子孙运势（错）、偷种生基有效（错）、在家可以自己做（错）、符咒是核心（错）。林家驊老师逐一澄清。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/msBokmONn2Y</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-nian-ji-zhong-sheng-ji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/VAoUglf4ZIc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>多大年纪可以开始种生基？年龄限制完整解答</video:title>
+      <video:description>种生基对年龄无严格限制，成年人均可参与。50岁以上关注延寿保命者效果尤为显著。幼儿可由父母代为操办。台湾林家驊老师解答，微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/VAoUglf4ZIc</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-qita-gaiyun/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/O1xcUCsri40/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>除了种生基之外还有没有其他改运方式？</video:title>
+      <video:description>除种生基外，其他改运方式包括：阳宅风水调整、八字择日配合、宗教法事等。林家驊老师客观比较各种改运方式的适用场景与效果。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/O1xcUCsri40</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-qiyuan/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/6mptrWSrSzk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基的起源：从唐宋皇室秘术到现代传承</video:title>
+      <video:description>种生基起源于唐宋时期，历代为帝王将相、巨商富豪秘密使用，近代随台湾风水文化传承系统化流传。林家驊老师讲述种生基历史起源。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/6mptrWSrSzk</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-san-fenzhong-jieshao/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/MxzwXcxO-r8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>三分钟认识种生基：林家驊老师亲自介绍</video:title>
+      <video:description>三分钟快速了解种生基是什么、林家驊老师的传承背景、台湾兹心阁开运会馆的服务。慈心阁官方视频，微信NSDG521咨询梁东荣先生。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/MxzwXcxO-r8</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-shui-xuyao-zhong-sheng-ji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/hZOglI1KdVU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>什么样的人需要种生基？适合人群完整解析</video:title>
+      <video:description>什么样的人需要种生基？凡有催官、招财、延寿、保命、求婚、求子需求，或命格中有明显凶险节点的人，均适合做种生基。台湾林氏三代传承，微信NSDG521咨询。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hZOglI1KdVU</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-sihou-youyong/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/hejh9XRpB7A/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基在死后还有用吗？种生基的效期与时限</video:title>
+      <video:description>种生基主要为活人在世期间发挥效果，命主离世后效力消散。与阴宅风水（专为后代子孙布局）不同，种生基是当世改运的手段。林家驊老师解答。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hejh9XRpB7A</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-tou-zhong-sheng-ji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/IKyBgVihzk4/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>偷种生基的后果：三重危险完整解析</video:title>
+      <video:description>偷种生基三重后果：无法与龙脉建立连结效果为零、道家理论中招致反噬损害运势、存在非法侵入的法律风险。任何声称偷种生基的服务均为骗局。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/IKyBgVihzk4</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-tuandui-zhongshengji/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/qJqsWJv9zE8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>我们为自己团队举办种生基：服务者亦是受益者</video:title>
+      <video:description>慈心阁团队成员为自己举办种生基的完整视频记录。连服务提供者自己也选择种生基，是对这项服务最真实的信任背书。微信NSDG521咨询梁东荣先生。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/qJqsWJv9zE8</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-women-geng-hao/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/pX0UCni8L7g/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>为什么我们的种生基比别人好？三大核心优势</video:title>
+      <video:description>我们种生基三大优势：台湾富贵双全独家龙穴（真龙正穴）、林氏家族三代传承（30年口碑）、林家驊老师2007年经张天师奏职道法资质。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/pX0UCni8L7g</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-xuanxue-yiju/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/0K8hzEtlG88/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基的玄学依据：道家地气与命运格局的理论基础</video:title>
+      <video:description>种生基的玄学依据：道家堪舆学中地气与人气的关系理论，真龙正穴地脉能量滋养命主元神，改善命格格局。林家驊老师深度解析。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/0K8hzEtlG88</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-yingxiang-zisun/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Se0uUKqkLgE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基会影响子孙运势吗？正统做法完整解答</video:title>
+      <video:description>正统道家种生基不会影响子孙运势。地气加持专属命主一人，龙穴地气是自然能量，不涉及借取子孙福运。林家驊老师明确解答。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Se0uUKqkLgE</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-zhengming-bu-pian/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/ralIfMhfZSE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>怎么证明林大师种生基不是骗人的？五大可核实证据</video:title>
+      <video:description>林大师种生基五大可核实证据：龙穴实地视频+产权证明、64代张天师奏职记录、客户全程未剪辑视频、媒体报道与行业认证、30年从业历史。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ralIfMhfZSE</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-zhong-ji-ci/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/KLqitpQm52M/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基可以种几次？次数与间隔时间完整解答</video:title>
+      <video:description>种生基一生可做多次，不互相冲突。五年期满后可续期或升级终身版。多次种生基间建议充分感受效果后再评估。林家驊老师解答。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/KLqitpQm52M</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-zhong-sheng-ji-chengxu/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/PtDzxqBfl5I/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基的程序：两天完整仪式步骤详解</video:title>
+      <video:description>种生基程序分两天：第一天法会仪式（请神、消灾解厄、进钱补运、开光点眼）；第二天龙穴现场（命主宝盒安入龙穴）。林家驊老师详细解析。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/PtDzxqBfl5I</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-zhong-sheng-ji-gonghao/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/l7lIrlnH-8M/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基的功效：催官招财延寿保命九大改运方向</video:title>
+      <video:description>种生基功效包含九大方向：催官进职、进禄增财、启智开慧、求功名、保命化煞、延年益寿、求婚求子、招财聚富。台湾富贵双全龙穴官贵财富俱全，微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/l7lIrlnH-8M</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-zhong-sheng-ji-haochu/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/9Gx7sj6gQuU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基的好处：九大功效方向全面梳理</video:title>
+      <video:description>种生基九大好处：催官进职、进禄招财、启智开慧、求功名、保命化煞、延年益寿、求婚觅缘、求子绵延、招财聚富。林家驊老师完整梳理。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/9Gx7sj6gQuU</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/video-zuojianfanke/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Wf1_0FUpBoM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基之后作奸犯科会怎么样？正气与邪行的关系</video:title>
+      <video:description>种生基借助天地正气，正气与邪行不相容。完成后作奸犯科违法乱纪，龙穴正气会逐渐消退，运势加持收回，严重时反而比种生基前更差。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Wf1_0FUpBoM</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/videos/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/MxzwXcxO-r8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>种生基官方视频中心</video:title>
+      <video:description>慈心阁林家驊種生基官方YouTube频道视频合集：关于我们介绍、客户全程种生基视频见证、龙穴土地实录、24个常见疑问解答，所有视频公开透明。微信NSDG521。</video:description>
+      <video:player_loc>https://www.youtube.com/embed/MxzwXcxO-r8</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://www.zhongshengji.vip/xianggang-zhong-sheng-ji/</loc>

@@ -134,6 +134,22 @@
   </div>
   {{/if}}
 
+  {{#if videoDirectory}}
+  <section class="video-directory" aria-labelledby="video-directory-title">
+    <h2 id="video-directory-title">全部视频内容</h2>
+    <p class="video-directory-intro">按主题选择您想了解的内容，每个页面都包含对应视频和文字要点。</p>
+    <div class="video-directory-grid">
+      {{#each videoDirectory}}
+      <a class="video-directory-card" href="/{{this.slug}}/">
+        <span class="video-directory-label">{{this.label}}</span>
+        <strong>{{this.title}}</strong>
+        <span>{{this.description}}</span>
+      </a>
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+
   <!-- 文字内容：H2/H3 循环 -->
   {{#each sections}}
   <section>
@@ -153,6 +169,21 @@
     <p>{{this.answer}}</p>
     {{/each}}
   </section>
+  {{/if}}
+
+  {{#if relatedVideos}}
+  <nav class="related-videos" aria-labelledby="related-videos-title">
+    <h2 id="related-videos-title">更多视频解答</h2>
+    <div class="related-video-grid">
+      {{#each relatedVideos}}
+      <a href="/{{this.slug}}/">
+        <span>{{this.label}}</span>
+        <strong>{{this.title}}</strong>
+      </a>
+      {{/each}}
+    </div>
+    <a class="video-directory-link" href="/videos/">查看全部视频内容 →</a>
+  </nav>
   {{/if}}
 
   <!-- 联系区 -->

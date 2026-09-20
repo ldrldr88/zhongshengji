@@ -117,6 +117,79 @@
     .video-card-num { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold-dark); margin-bottom: 6px; }
     .video-card-title { font-size: 0.9rem; font-weight: 700; color: var(--gold-light); line-height: 1.5; }
 
+    /* ── 视频内容目录与相关推荐 ── */
+    .video-directory { margin-top: 48px; }
+    .video-directory-intro { color: var(--text-muted); margin-bottom: 22px; }
+    .video-directory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .video-directory-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 168px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      background: #fffaf1;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .video-directory-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(61,46,16,0.08);
+      transform: translateY(-2px);
+    }
+    .video-directory-label {
+      color: var(--gold-dark);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      margin-bottom: 8px;
+    }
+    .video-directory-card strong {
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+    .video-directory-card > span:last-child {
+      color: var(--text-muted);
+      display: -webkit-box;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    .related-videos { margin-top: 48px; }
+    .related-video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .related-video-grid a {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      background: var(--paper-dark);
+      text-decoration: none;
+    }
+    .related-video-grid span { color: var(--gold-dark); font-size: 0.68rem; letter-spacing: 0.12em; }
+    .related-video-grid strong { color: var(--ink); font-size: 0.9rem; line-height: 1.55; }
+    .related-video-grid a:hover { border-color: var(--gold); }
+    .video-directory-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--gold-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
     /* ── H2/H3 内容 ── */
     h2 { font-size: 1.4rem; color: var(--ink); font-weight: 700; margin: 48px 0 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border); position: relative; letter-spacing: 0.05em; }
     h2::before { content: ''; position: absolute; bottom: -1px; left: 0; width: 40px; height: 2px; background: var(--gold); }
@@ -170,4 +243,6 @@
     @media (max-width: 640px) {
       .contact-divider { display: none; }
       .chapters { padding: 20px; }
+      .video-directory-grid, .related-video-grid { grid-template-columns: 1fr; }
+      .video-directory-card { min-height: 0; }
     }
