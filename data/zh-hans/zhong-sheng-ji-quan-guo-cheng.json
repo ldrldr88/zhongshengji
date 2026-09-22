@@ -90,24 +90,36 @@
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": ["Article", "FAQPage"],
+    "@type": [
+      "Article",
+      "FAQPage"
+    ],
     "headline": "种生基两天全过程详解：每个仪式环节的目的与用意",
     "datePublished": "2026-07-07",
-    "dateModified": "2026-07-07",
+    "dateModified": "2026-09-21",
     "author": {
       "@type": "Person",
       "name": "梁东荣",
-      "jobTitle": "种生基大陆独家授权代理"
+      "jobTitle": "种生基咨询联系人"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "种生基 · 台湾兹心阁开运会馆大陆授权",
+      "name": "种生基 · 台湾兹心阁开运会馆服务信息",
       "url": "https://www.zhongshengji.vip"
     },
     "about": [
-      {"@type": "Thing", "name": "种生基全过程"},
-      {"@type": "Thing", "name": "种生基仪式流程"},
-      {"@type": "Thing", "name": "道教科仪"}
+      {
+        "@type": "Thing",
+        "name": "种生基全过程"
+      },
+      {
+        "@type": "Thing",
+        "name": "种生基仪式流程"
+      },
+      {
+        "@type": "Thing",
+        "name": "道教科仪"
+      }
     ],
     "mainEntity": [
       {
