@@ -40,6 +40,9 @@
 
   <link rel="stylesheet" href="/assets/css/video.css?v=20260920-2">
   <link rel="stylesheet" href="/assets/css/contact-shared-v2.css">
+{{#if processGallery}}
+  <link rel="stylesheet" href="/assets/css/process-evidence.css?v=20260928-1">
+{{/if}}
 </head>
 <body>
 
@@ -178,6 +181,21 @@
   </section>
   {{/if}}
 
+{{#if processGallery}}
+  <section class="process-evidence" aria-labelledby="process-evidence-title">
+    <h2 id="process-evidence-title">{{processGallery.title}}</h2>
+    <p>{{processGallery.intro}}</p>
+    <div class="process-evidence-grid">
+      {{#each processGallery.items}}
+      <figure class="process-evidence-card">
+        <img src="{{this.src}}" width="636" height="360" loading="lazy" decoding="async" alt="{{this.alt}}">
+        <figcaption><strong>{{this.title}}</strong><span>{{this.caption}}</span></figcaption>
+      </figure>
+      {{/each}}
+    </div>
+    <p class="process-evidence-note">{{processGallery.note}}</p>
+  </section>
+{{/if}}
   <!-- 文字内容：H2/H3 循环 -->
   {{#each sections}}
   <section>

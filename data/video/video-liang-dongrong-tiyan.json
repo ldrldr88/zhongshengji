@@ -53,7 +53,7 @@
     },
     "inLanguage": "zh-TW",
     "duration": "PT4M46S",
-    "dateModified": "2026-09-22"
+    "dateModified": "2026-09-28"
   },
   "contentSummary": "本页记录梁东荣先生本人参与服务的过程，帮助访客了解大陆联系人、沟通方式和实际交付流程。个人体验是背景资料，不构成他人的结果保证。",
   "keyPoints": [
@@ -72,6 +72,31 @@
       "url": "/zhong-sheng-ji-quan-guo-cheng/"
     }
   ],
+  "processGallery": {
+    "title": "原始视频中的三个过程画面",
+    "intro": "以下画面直接截取自梁先生本人参与的原始视频，用于补充说明视频中的实际流程节点。",
+    "items": [
+      {
+        "src": "/assets/img/process/participant-material-placement-v1.jpg",
+        "alt": "梁先生本人参与命主纸人与仪式材料安置的手部画面",
+        "title": "材料安置",
+        "caption": "本人参与命主纸人与相关材料的准备环节。"
+      },
+      {
+        "src": "/assets/img/process/participant-box-preparation-v1.jpg",
+        "alt": "梁先生本人参与仪式宝盒准备的手部画面",
+        "title": "宝盒准备",
+        "caption": "本人参与宝盒整理与封装前的操作画面。"
+      },
+      {
+        "src": "/assets/img/process/box-placement-v1.jpg",
+        "alt": "两个仪式宝盒完成安置后的现场俯拍画面",
+        "title": "现场安置",
+        "caption": "宝盒按流程安置后的现场俯拍记录。"
+      }
+    ],
+    "note": "公开画面已排除姓名、证件、联系方式和清晰第三方人脸；这些画面只记录流程，不构成任何效果证明。"
+  },
   "faqItems": [
     {
       "question": "这段视频主要帮助我判断什么？",
