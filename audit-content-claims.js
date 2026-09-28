@@ -26,12 +26,13 @@ const RISK_PATTERNS = [
   /(?:速发财富|速發財富|快速见效|快速見效|固定见效|固定見效|一生运势|一生運勢|积累福荫|積累福廕|发挥效果|發揮效果)/i,
   /(?:具备效力|具備效力|发挥作用|發揮作用|持续加持|持續加持|永久连结|永久連結|源源引导|源源引導|吸取地气|吸取地氣|传导地气|傳導地氣|接收.*地气|接收.*地氣)/i,
   /(?:法力加持|注入法力|沟通.*神明|溝通.*神明|神明.*(?:知悉|接纳|接納)|护佑|護佑|改运效果|改運效果|真实的改运|真實的改運)/i,
+  /(?:法力注入|吸过龙气|吸過龍氣|请求.*(?:神明|龙神).*接纳|請求.*(?:神明|龍神).*接納)/i,
   /(?:(?:消灾|消災).{0,20}(?:清走|清除|完成|发挥|發揮|稳固|穩固)|(?:补运|補運).{0,20}(?:注入|补足|補足|发挥|發揮))/i,
   /(?:一年左右显现|一年左右顯現|一年.*见效|一年.*見效|影响多代|影響多代|荫庇后代|蔭庇後代)/i,
   /\b(?:will|guarantees?|guaranteed|ensures?|proven|producing|rapid wealth generation|significant results?)\b.{0,80}\b(?:wealth|career|promotion|health|longevity|marriage|fertility|fortune|success|achievement|income|results?)\b/i,
 ];
 
-const CONTEXT_PATTERN = /(?:传统|傳統|文化解释|文化解釋|说法|說法|服务方|服務方|从业者|從業者|声称|聲稱|传闻|傳聞|个人反馈|個人回饋|个人经验|個人經驗|风险|風險|不接受|没有|沒有|不是|不适合|不適合|不保证|不保證|不承诺|不承諾|不把|不能|不构成|不構成|不代表|无法|無法|未经|未經|可能|祈愿|祈願|愿望|願望|建议|建議|核实|核實|警惕|拒绝|拒絕|不要|并非|並非|不应|不應|不足以|traditional|cultural|provider|practitioner|claimed|reported|belief|cannot|does not|doesn't|not guarantee|no guarantee|not evidence|no evidence|may|might|should not|do not|avoid|warning)/i;
+const CONTEXT_PATTERN = /(?:传统|傳統|文化解释|文化解釋|说法|說法|所谓|所謂|服务方|服務方|从业者|從業者|声称|聲稱|传闻|傳聞|个人反馈|個人回饋|个人经验|個人經驗|风险|風險|不接受|不因|没有|沒有|不是|不适合|不適合|不保证|不保證|不承诺|不承諾|不把|不能|不构成|不構成|不代表|无法|無法|未经|未經|可能|祈愿|祈願|愿望|願望|建议|建議|核实|核實|警惕|拒绝|拒絕|不要|并非|並非|不应|不應|不足以|traditional|cultural|provider|practitioner|claimed|reported|belief|cannot|does not|doesn't|not guarantee|no guarantee|not evidence|no evidence|may|might|should not|do not|avoid|warning)/i;
 
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
@@ -40,15 +41,20 @@ function walk(dir) {
   });
 }
 
+function inspectString(value, filePath, jsonPath, findings) {
+  const segments = value.split(/(?<=[。！？!?；;])/).map(segment => segment.trim()).filter(Boolean);
+  segments.forEach(segment => {
+    if (/[?？]$/.test(segment)) return;
+    if (RISK_PATTERNS.some(pattern => pattern.test(segment)) && !CONTEXT_PATTERN.test(segment)) {
+      findings.push({ file: filePath, path: jsonPath, text: segment });
+    }
+  });
+}
+
 function inspect(value, filePath, jsonPath, key, findings) {
   if (typeof value === 'string') {
     if (!TEXT_KEYS.has(key)) return;
-    const segments = value.split(/(?<=[。！？!?；;])/).map(segment => segment.trim()).filter(Boolean);
-    segments.forEach(segment => {
-      if (RISK_PATTERNS.some(pattern => pattern.test(segment)) && !CONTEXT_PATTERN.test(segment)) {
-        findings.push({ file: filePath, path: jsonPath, text: segment });
-      }
-    });
+    inspectString(value, filePath, jsonPath, findings);
     return;
   }
   if (Array.isArray(value)) {
@@ -69,6 +75,23 @@ ROOTS.flatMap(walk)
   .forEach(filePath => {
     const payload = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     inspect(payload, filePath, '$', '', findings);
+  });
+
+walk('public')
+  .filter(filePath => filePath.endsWith('.html'))
+  .sort()
+  .forEach(filePath => {
+    const visibleText = fs.readFileSync(filePath, 'utf8')
+      .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;|&#160;/gi, ' ')
+      .replace(/&amp;/gi, '&')
+      .replace(/&quot;|&#34;/gi, '"')
+      .replace(/&#39;|&apos;/gi, "'")
+      .replace(/\s+/g, ' ')
+      .trim();
+    inspectString(visibleText, filePath, '$visibleText', findings);
   });
 
 if (findings.length === 0) {
