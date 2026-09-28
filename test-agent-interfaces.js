@@ -75,6 +75,13 @@ const list = invoke(mcpHandler, {
 assert.equal(list.statusCode, 200);
 assert.equal(json(list.body).result.tools[0].name, 'search_site_content');
 assert.equal(json(list.body).result.tools[0].annotations.readOnlyHint, true);
+assert.deepEqual(
+  json(list.body).result.tools[0].outputSchema.properties.language.anyOf,
+  [
+    { type: 'string', enum: ['zh-Hans', 'zh-Hant', 'en'] },
+    { type: 'null' },
+  ],
+);
 
 const call = invoke(mcpHandler, {
   method: 'POST',

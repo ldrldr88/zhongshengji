@@ -47,7 +47,12 @@ const SEARCH_TOOL = {
     required: ['query', 'language', 'limit', 'total', 'results'],
     properties: {
       query: { type: 'string' },
-      language: { type: ['string', 'null'] },
+      language: {
+        anyOf: [
+          { type: 'string', enum: ['zh-Hans', 'zh-Hant', 'en'] },
+          { type: 'null' },
+        ],
+      },
       limit: { type: 'integer' },
       total: { type: 'integer', minimum: 0 },
       results: {
