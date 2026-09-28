@@ -50,6 +50,26 @@ const invalidLanguage = invoke(contentSearchHandler, {
 assert.equal(invalidLanguage.statusCode, 400);
 assert.equal(json(invalidLanguage.body).error.code, 'invalid_language');
 
+const naturalPreparationQuery = invoke(contentSearchHandler, {
+  method: 'GET',
+  query: { q: '种生基需要准备什么', language: 'zh-Hans', limit: '3' },
+});
+assert.equal(naturalPreparationQuery.statusCode, 200);
+assert.ok(json(naturalPreparationQuery.body).total > 0);
+assert.ok(json(naturalPreparationQuery.body).results.some(result => (
+  result.url.endsWith('/zhong-sheng-ji-xuyao-sheme-wupin/')
+)));
+
+const scamPreventionQuery = invoke(contentSearchHandler, {
+  method: 'GET',
+  query: { q: '种生基怎么防骗', language: 'zh-Hans', limit: '3' },
+});
+assert.equal(scamPreventionQuery.statusCode, 200);
+assert.ok(json(scamPreventionQuery.body).total > 0);
+assert.ok(json(scamPreventionQuery.body).results.some(result => (
+  result.url.endsWith('/zhong-sheng-ji-pian-ju-bian-bie/')
+)));
+
 const initialize = invoke(mcpHandler, {
   method: 'POST',
   headers: {},
