@@ -153,7 +153,34 @@ function writeAgentResources() {
           responses: {
             200: {
               description: '公开内容索引',
-              content: { 'application/json': { schema: { type: 'object' } } },
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    required: ['name', 'description', 'generatedAt', 'total', 'entries'],
+                    properties: {
+                      name: { type: 'string' },
+                      description: { type: 'string' },
+                      generatedAt: { type: 'string', format: 'date-time' },
+                      total: { type: 'integer', minimum: 0 },
+                      entries: {
+                        type: 'array',
+                        items: {
+                          type: 'object',
+                          required: ['language', 'title', 'description', 'url', 'updated'],
+                          properties: {
+                            language: { type: 'string', enum: ['zh-Hans', 'zh-Hant', 'en'] },
+                            title: { type: 'string' },
+                            description: { type: 'string' },
+                            url: { type: 'string', format: 'uri' },
+                            updated: { type: 'string', format: 'date' },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
             },
           },
         },
@@ -208,23 +235,75 @@ function writeAgentResources() {
     ],
   }, null, 2));
 
+  const contentPolicyLines = [
+    '## 内容使用政策',
+    '',
+    '- 搜索索引：允许（search=yes）',
+    '- AI 输入与带来源引用：允许（ai-input=yes）',
+    '- AI 模型训练：不授权（ai-train=no）',
+    '',
+  ];
+  const corePaths = new Set([
+    '/',
+    '/about/',
+    '/yuyue/',
+    '/zhong-sheng-ji-shi-shen-me/',
+    '/zhong-sheng-ji-jia-ge-fei-yong/',
+    '/zhong-sheng-ji-jinji-zhuyishi/',
+    '/zhong-sheng-ji-pian-ju-bian-bie/',
+    '/videos/',
+    '/zh-tw/',
+    '/en/',
+  ]);
+  const coreEntries = contentEntries.filter(entry => {
+    const pathname = new URL(entry.url).pathname;
+    return corePaths.has(pathname);
+  });
   const llmsLines = [
     '# 种生基网站',
     '',
     '> 台湾兹心阁种生基公开资料。内容属于传统文化介绍，个人体验因人而异，不构成医疗、财务或结果保证。',
     '',
-    '## 公开内容',
+    ...contentPolicyLines,
+    '## 核心内容',
     '',
-    ...contentEntries.map(entry => `- [${entry.title}](${entry.url}): ${entry.description}`),
+    ...coreEntries.map(entry => `- [${entry.title}](${entry.url}): ${entry.description}`),
     '',
     '## 机器可读入口',
     '',
+    `- [完整公开资料](${BASE_URL}/llms-full.txt)`,
     `- [内容索引](${BASE_URL}/agent-api/content-index.json)`,
     `- [OpenAPI](${BASE_URL}/agent-api/openapi.json)`,
     `- [Agent Skill](${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md)`,
   ];
+  const languageSections = [
+    ['简体中文', 'zh-Hans'],
+    ['繁體中文', 'zh-Hant'],
+    ['English', 'en'],
+  ].flatMap(([heading, language]) => [
+    `## ${heading}`,
+    '',
+    ...contentEntries
+      .filter(entry => entry.language === language)
+      .map(entry => `- [${entry.title}](${entry.url}): ${entry.description}（更新：${entry.updated}）`),
+    '',
+  ]);
+  const llmsFullLines = [
+    '# 种生基网站完整公开资料索引',
+    '',
+    '> 本文件汇总网站全部公开页面的标题、摘要、语言和更新时间。传统文化内容不构成医疗、财务或结果保证。',
+    '',
+    ...contentPolicyLines,
+    ...languageSections,
+    '## 机器可读入口',
+    '',
+    `- [简要导航](${BASE_URL}/llms.txt)`,
+    `- [结构化内容索引](${BASE_URL}/agent-api/content-index.json)`,
+    `- [OpenAPI](${BASE_URL}/agent-api/openapi.json)`,
+    `- [Agent Skill](${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md)`,
+  ];
   fs.writeFileSync(path.join(PUBLIC_DIR, 'llms.txt'), llmsLines.join('\n') + '\n');
-  fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsLines.join('\n') + '\n');
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsFullLines.join('\n') + '\n');
 }
 
 function listJsonFiles(dir) {

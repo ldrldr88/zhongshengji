@@ -41,6 +41,14 @@
           "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </agent-api/openapi.json>; rel=\"service-desc\"; type=\"application/vnd.oai.openapi+json;version=3.1\", </agent-api/docs.html>; rel=\"service-doc\"; type=\"text/html\", </.well-known/ai-catalog.json>; rel=\"describedby\"; type=\"application/json\""
         },
         {
+          "key": "Content-Signal",
+          "value": "search=yes, ai-input=yes, ai-train=no"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
           "key": "Cache-Control",
           "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
         }
