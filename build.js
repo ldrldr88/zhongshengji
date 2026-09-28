@@ -125,8 +125,10 @@ function writeAgentResources() {
   const apiDir = path.join(PUBLIC_DIR, 'agent-api');
   const wellKnownDir = path.join(PUBLIC_DIR, '.well-known');
   const skillPublicDir = path.join(wellKnownDir, 'agent-skills', 'site-content');
+  const mcpPublicDir = path.join(wellKnownDir, 'mcp');
   ensureDir(apiDir);
   ensureDir(skillPublicDir);
+  ensureDir(mcpPublicDir);
 
   const indexDocument = {
     name: '种生基网站公开内容索引',
@@ -141,11 +143,64 @@ function writeAgentResources() {
     openapi: '3.1.0',
     info: {
       title: '种生基网站公开内容 API',
-      version: '1.0.0',
-      description: '只读内容索引，用于查找并引用本站公开页面。',
+      version: '1.1.0',
+      description: '只读内容查询与完整索引，用于查找并引用本站公开页面。',
+      license: {
+        name: '本站公开内容使用政策（search=yes, ai-input=yes, ai-train=no）',
+        url: `${BASE_URL}/llms.txt`,
+      },
     },
     servers: [{ url: BASE_URL }],
+    security: [],
     paths: {
+      '/api/content-search': {
+        get: {
+          operationId: 'searchPublicContent',
+          summary: '按关键词搜索公开页面',
+          description: '返回标题、描述或 URL 同时包含全部查询词的公开页面。空结果返回 200 和空 results。',
+          parameters: [
+            {
+              name: 'q',
+              in: 'query',
+              required: true,
+              description: '查询关键词；多个空格分隔的关键词必须同时匹配。',
+              schema: { type: 'string', minLength: 1, maxLength: 100 },
+            },
+            {
+              name: 'language',
+              in: 'query',
+              required: false,
+              schema: { type: 'string', enum: ['zh-Hans', 'zh-Hant', 'en'] },
+            },
+            {
+              name: 'limit',
+              in: 'query',
+              required: false,
+              schema: { type: 'integer', minimum: 1, maximum: 10, default: 5 },
+            },
+          ],
+          responses: {
+            200: {
+              description: '搜索结果（可以为空）',
+              content: {
+                'application/json': { schema: { $ref: '#/components/schemas/SearchResponse' } },
+              },
+            },
+            400: {
+              description: '缺少或无效的查询参数',
+              content: {
+                'application/json': { schema: { $ref: '#/components/schemas/ErrorResponse' } },
+              },
+            },
+            405: {
+              description: '不支持的 HTTP 方法',
+              content: {
+                'application/json': { schema: { $ref: '#/components/schemas/ErrorResponse' } },
+              },
+            },
+          },
+        },
+      },
       '/agent-api/content-index.json': {
         get: {
           operationId: 'listPublicContent',
@@ -165,21 +220,58 @@ function writeAgentResources() {
                       total: { type: 'integer', minimum: 0 },
                       entries: {
                         type: 'array',
-                        items: {
-                          type: 'object',
-                          required: ['language', 'title', 'description', 'url', 'updated'],
-                          properties: {
-                            language: { type: 'string', enum: ['zh-Hans', 'zh-Hant', 'en'] },
-                            title: { type: 'string' },
-                            description: { type: 'string' },
-                            url: { type: 'string', format: 'uri' },
-                            updated: { type: 'string', format: 'date' },
-                          },
-                        },
+                        items: { $ref: '#/components/schemas/ContentEntry' },
                       },
                     },
                   },
                 },
+              },
+            },
+            404: {
+              description: '内容索引不存在',
+            },
+          },
+        },
+      },
+    },
+    components: {
+      schemas: {
+        ContentEntry: {
+          type: 'object',
+          additionalProperties: false,
+          required: ['language', 'title', 'description', 'url', 'updated'],
+          properties: {
+            language: { type: 'string', enum: ['zh-Hans', 'zh-Hant', 'en'] },
+            title: { type: 'string' },
+            description: { type: 'string' },
+            url: { type: 'string', format: 'uri' },
+            updated: { type: 'string', format: 'date' },
+          },
+        },
+        SearchResponse: {
+          type: 'object',
+          additionalProperties: false,
+          required: ['query', 'language', 'limit', 'total', 'results'],
+          properties: {
+            query: { type: 'string' },
+            language: { type: ['string', 'null'], enum: ['zh-Hans', 'zh-Hant', 'en', null] },
+            limit: { type: 'integer', minimum: 1, maximum: 10 },
+            total: { type: 'integer', minimum: 0 },
+            results: { type: 'array', items: { $ref: '#/components/schemas/ContentEntry' } },
+          },
+        },
+        ErrorResponse: {
+          type: 'object',
+          additionalProperties: false,
+          required: ['error'],
+          properties: {
+            error: {
+              type: 'object',
+              additionalProperties: false,
+              required: ['code', 'message'],
+              properties: {
+                code: { type: 'string' },
+                message: { type: 'string' },
               },
             },
           },
@@ -188,7 +280,7 @@ function writeAgentResources() {
     },
   };
   fs.writeFileSync(path.join(apiDir, 'openapi.json'), JSON.stringify(openapi, null, 2));
-  fs.writeFileSync(path.join(apiDir, 'docs.html'), `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>种生基网站公开内容 API</title><body><main><h1>种生基网站公开内容 API</h1><p>这是只读公开内容索引，用于查找并引用本站文章。</p><ul><li><a href="/agent-api/content-index.json">内容索引</a></li><li><a href="/agent-api/openapi.json">OpenAPI 文档</a></li></ul><p>传统文化内容不构成医疗、财务或结果保证。</p></main></body></html>`);
+  fs.writeFileSync(path.join(apiDir, 'docs.html'), `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>种生基网站公开内容 API</title><body><main><h1>种生基网站公开内容 API</h1><p>这是只读公开内容服务，用于查找并引用本站文章。</p><h2>查询</h2><p><code>GET /api/content-search?q=费用&amp;language=zh-Hans&amp;limit=5</code></p><p>q 为必填参数；language 可选 zh-Hans、zh-Hant 或 en；limit 为 1–10，默认 5。无匹配结果时返回空 results。</p><ul><li><a href="/api/content-search?q=%E8%B4%B9%E7%94%A8&amp;language=zh-Hans&amp;limit=5">查询示例</a></li><li><a href="/agent-api/content-index.json">完整内容索引</a></li><li><a href="/agent-api/openapi.json">OpenAPI 文档</a></li><li><a href="/.well-known/mcp/server-card.json">MCP Server Card</a></li></ul><p>传统文化内容不构成医疗、财务或结果保证。</p></main></body></html>`);
 
   const skillSource = './agent-skills/site-content/SKILL.md';
   const skillText = fs.readFileSync(skillSource, 'utf-8');
@@ -207,7 +299,7 @@ function writeAgentResources() {
 
   const apiCatalogText = JSON.stringify({
     linkset: [{
-      anchor: `${BASE_URL}/agent-api/content-index.json`,
+      anchor: `${BASE_URL}/api/content-search`,
       'service-desc': [{ href: `${BASE_URL}/agent-api/openapi.json`, type: 'application/vnd.oai.openapi+json;version=3.1' }],
       'service-doc': [{ href: `${BASE_URL}/agent-api/docs.html`, type: 'text/html' }],
     }],
@@ -226,6 +318,13 @@ function writeAgentResources() {
         representativeQueries: ['什么是种生基', '种生基需要准备什么', '种生基费用和流程是什么'],
       },
       {
+        identifier: 'urn:air:www.zhongshengji.vip:mcp:public-content',
+        displayName: '种生基网站公开内容 MCP',
+        type: 'application/json',
+        url: `${BASE_URL}/.well-known/mcp/server-card.json`,
+        representativeQueries: ['通过 MCP 搜索种生基公开内容', '查找种生基流程文章', '查询种生基费用页面'],
+      },
+      {
         identifier: 'urn:air:www.zhongshengji.vip:skill:site-content',
         displayName: '种生基网站内容查询 Skill',
         type: 'text/markdown',
@@ -233,6 +332,30 @@ function writeAgentResources() {
         representativeQueries: ['搜索种生基相关文章', '读取种生基常见问题', '引用种生基网站公开资料'],
       },
     ],
+  }, null, 2));
+
+  fs.writeFileSync(path.join(mcpPublicDir, 'server-card.json'), JSON.stringify({
+    name: 'zhongshengji-public-content',
+    title: '种生基网站公开内容 MCP',
+    description: '通过一个有边界的只读工具搜索 zhongshengji.vip 已公开的文章和视频页面。',
+    version: '1.0.0',
+    mcp: {
+      endpoint: `${BASE_URL}/api/mcp`,
+      transport: 'streamable-http',
+      protocolVersions: ['2025-11-25', '2025-06-18', '2025-03-26'],
+      authentication: { type: 'none' },
+    },
+    tools: [{
+      name: 'search_site_content',
+      description: '按关键词和可选语言搜索本站公开内容。',
+      readOnly: true,
+    }],
+    boundaries: {
+      reads: '仅限本站公开内容索引',
+      writes: false,
+      personalData: false,
+      disclaimer: '传统文化内容不构成医疗、财务或效果保证。',
+    },
   }, null, 2));
 
   const contentPolicyLines = [
@@ -272,8 +395,10 @@ function writeAgentResources() {
     '## 机器可读入口',
     '',
     `- [完整公开资料](${BASE_URL}/llms-full.txt)`,
+    `- [公开内容查询 API](${BASE_URL}/api/content-search?q=%E7%A7%8D%E7%94%9F%E5%9F%BA)`,
     `- [内容索引](${BASE_URL}/agent-api/content-index.json)`,
     `- [OpenAPI](${BASE_URL}/agent-api/openapi.json)`,
+    `- [MCP Server Card](${BASE_URL}/.well-known/mcp/server-card.json)`,
     `- [Agent Skill](${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md)`,
   ];
   const languageSections = [
@@ -298,8 +423,10 @@ function writeAgentResources() {
     '## 机器可读入口',
     '',
     `- [简要导航](${BASE_URL}/llms.txt)`,
+    `- [公开内容查询 API](${BASE_URL}/api/content-search?q=%E7%A7%8D%E7%94%9F%E5%9F%BA)`,
     `- [结构化内容索引](${BASE_URL}/agent-api/content-index.json)`,
     `- [OpenAPI](${BASE_URL}/agent-api/openapi.json)`,
+    `- [MCP Server Card](${BASE_URL}/.well-known/mcp/server-card.json)`,
     `- [Agent Skill](${BASE_URL}/.well-known/agent-skills/site-content/SKILL.md)`,
   ];
   fs.writeFileSync(path.join(PUBLIC_DIR, 'llms.txt'), llmsLines.join('\n') + '\n');

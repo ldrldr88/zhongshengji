@@ -10,7 +10,7 @@
 
 ## 简体中文
 
-- [种生基 · 台湾风水世家三代传承 · 道家正统 · 富贵双全龙穴](https://www.zhongshengji.vip/): 台湾兹心阁林志萦大师、林家骅老师主持种生基，三代传承道家正统，富贵双全龙穴。五年期人民币7.2万元，终身版人民币50万元，微信NSDG521联系梁先生。（更新：2026-09-22）
+- [种生基 · 台湾风水世家三代传承 · 道家正统 · 富贵双全龙穴](https://www.zhongshengji.vip/): 台湾兹心阁林志萦大师、林家骅老师主持种生基，三代传承道家正统，富贵双全龙穴。五年期人民币7.2万元，终身版人民币50万元，微信NSDG521联系梁先生。（更新：2026-09-28）
 - [关于我们 · 林志萦大师 · 林家骅老师 · 台湾兹心阁开运会馆](https://www.zhongshengji.vip/about/): 台湾兹心阁开运会馆，林志萦大师从业逾30年、荣获全球易学百大人物；林家骅老师经六十四代张天师奏职晋升道家法师。三代传承，梁先生提供咨询，微信NSDG521。（更新：2026-09-22）
 - [预约种生基流程 · 七步完成 · 联系梁东荣微信NSDG521](https://www.zhongshengji.vip/yuyue/): 种生基预约七步流程：加微信NSDG521联系梁先生→付人民币1万元订金→邮寄物料包→付尾款寄物品→统一寄台湾→择日法会→三样物品回寄。24小时可咨询。（更新：2026-09-22）
 - [上市、并购、竞标前种生基：重大决策关键期的最后保障](https://www.zhongshengji.vip/guanjian-juece-qian-zhong-sheng-ji/): 说明重大决策前咨询种生基时应核对的费用、土地、执行与交付信息；传统说法不等于结果保证，也不能替代专业决策。微信NSDG521咨询。（更新：2026-09-28）
@@ -122,6 +122,8 @@
 ## 机器可读入口
 
 - [简要导航](https://www.zhongshengji.vip/llms.txt)
+- [公开内容查询 API](https://www.zhongshengji.vip/api/content-search?q=%E7%A7%8D%E7%94%9F%E5%9F%BA)
 - [结构化内容索引](https://www.zhongshengji.vip/agent-api/content-index.json)
 - [OpenAPI](https://www.zhongshengji.vip/agent-api/openapi.json)
+- [MCP Server Card](https://www.zhongshengji.vip/.well-known/mcp/server-card.json)
 - [Agent Skill](https://www.zhongshengji.vip/.well-known/agent-skills/site-content/SKILL.md)

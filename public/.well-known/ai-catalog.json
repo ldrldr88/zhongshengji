@@ -17,6 +17,17 @@
       ]
     },
     {
+      "identifier": "urn:air:www.zhongshengji.vip:mcp:public-content",
+      "displayName": "种生基网站公开内容 MCP",
+      "type": "application/json",
+      "url": "https://www.zhongshengji.vip/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "通过 MCP 搜索种生基公开内容",
+        "查找种生基流程文章",
+        "查询种生基费用页面"
+      ]
+    },
+    {
       "identifier": "urn:air:www.zhongshengji.vip:skill:site-content",
       "displayName": "种生基网站内容查询 Skill",
       "type": "text/markdown",

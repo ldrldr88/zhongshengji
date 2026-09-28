@@ -2,15 +2,96 @@
   "openapi": "3.1.0",
   "info": {
     "title": "种生基网站公开内容 API",
-    "version": "1.0.0",
-    "description": "只读内容索引，用于查找并引用本站公开页面。"
+    "version": "1.1.0",
+    "description": "只读内容查询与完整索引，用于查找并引用本站公开页面。",
+    "license": {
+      "name": "本站公开内容使用政策（search=yes, ai-input=yes, ai-train=no）",
+      "url": "https://www.zhongshengji.vip/llms.txt"
+    }
   },
   "servers": [
     {
       "url": "https://www.zhongshengji.vip"
     }
   ],
+  "security": [],
   "paths": {
+    "/api/content-search": {
+      "get": {
+        "operationId": "searchPublicContent",
+        "summary": "按关键词搜索公开页面",
+        "description": "返回标题、描述或 URL 同时包含全部查询词的公开页面。空结果返回 200 和空 results。",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "查询关键词；多个空格分隔的关键词必须同时匹配。",
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "zh-Hans",
+                "zh-Hant",
+                "en"
+              ]
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10,
+              "default": 5
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "搜索结果（可以为空）",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "缺少或无效的查询参数",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "不支持的 HTTP 方法",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/agent-api/content-index.json": {
       "get": {
         "operationId": "listPublicContent",
@@ -47,42 +128,121 @@
                     "entries": {
                       "type": "array",
                       "items": {
-                        "type": "object",
-                        "required": [
-                          "language",
-                          "title",
-                          "description",
-                          "url",
-                          "updated"
-                        ],
-                        "properties": {
-                          "language": {
-                            "type": "string",
-                            "enum": [
-                              "zh-Hans",
-                              "zh-Hant",
-                              "en"
-                            ]
-                          },
-                          "title": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          },
-                          "url": {
-                            "type": "string",
-                            "format": "uri"
-                          },
-                          "updated": {
-                            "type": "string",
-                            "format": "date"
-                          }
-                        }
+                        "$ref": "#/components/schemas/ContentEntry"
                       }
                     }
                   }
                 }
+              }
+            }
+          },
+          "404": {
+            "description": "内容索引不存在"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ContentEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "language",
+          "title",
+          "description",
+          "url",
+          "updated"
+        ],
+        "properties": {
+          "language": {
+            "type": "string",
+            "enum": [
+              "zh-Hans",
+              "zh-Hant",
+              "en"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "SearchResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "query",
+          "language",
+          "limit",
+          "total",
+          "results"
+        ],
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "language": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "zh-Hans",
+              "zh-Hant",
+              "en",
+              null
+            ]
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentEntry"
+            }
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
               }
             }
           }

@@ -24,6 +24,8 @@
 ## 机器可读入口
 
 - [完整公开资料](https://www.zhongshengji.vip/llms-full.txt)
+- [公开内容查询 API](https://www.zhongshengji.vip/api/content-search?q=%E7%A7%8D%E7%94%9F%E5%9F%BA)
 - [内容索引](https://www.zhongshengji.vip/agent-api/content-index.json)
 - [OpenAPI](https://www.zhongshengji.vip/agent-api/openapi.json)
+- [MCP Server Card](https://www.zhongshengji.vip/.well-known/mcp/server-card.json)
 - [Agent Skill](https://www.zhongshengji.vip/.well-known/agent-skills/site-content/SKILL.md)

@@ -1,7 +1,7 @@
 {
   "linkset": [
     {
-      "anchor": "https://www.zhongshengji.vip/agent-api/content-index.json",
+      "anchor": "https://www.zhongshengji.vip/api/content-search",
       "service-desc": [
         {
           "href": "https://www.zhongshengji.vip/agent-api/openapi.json",

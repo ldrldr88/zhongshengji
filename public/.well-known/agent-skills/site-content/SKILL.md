@@ -18,10 +18,12 @@ description: 搜索、读取并引用 zhongshengji.vip 已公开的种生基介�
 
 ## 查询步骤
 
-1. 获取 `https://www.zhongshengji.vip/agent-api/content-index.json`。
-2. 按问题关键词、语言、标题和描述筛选条目。
-3. 打开条目的 `url`。需要更精简文本时，请为同一 URL 发送 `Accept: text/markdown`。
+1. 调用只读查询接口 `GET https://www.zhongshengji.vip/api/content-search?q=<关键词>&language=<可选语言>&limit=<1-10>`。语言仅可为 `zh-Hans`、`zh-Hant` 或 `en`；不传时搜索全部语言。
+2. 如果需要遍历全部页面，再获取 `https://www.zhongshengji.vip/agent-api/content-index.json`，按语言、标题和描述筛选。
+3. 打开结果条目的 `url`。需要更精简文本时，请为同一 URL 发送 `Accept: text/markdown`。
 4. 回答时附上具体页面 URL，并区分网站事实陈述、传统文化观点和客户个人反馈。
+
+也可以连接 `https://www.zhongshengji.vip/api/mcp`，调用只读工具 `search_site_content`。MCP 服务卡位于 `https://www.zhongshengji.vip/.well-known/mcp/server-card.json`。
 
 ## 联系信息
 

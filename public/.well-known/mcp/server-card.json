@@ -1,0 +1,31 @@
+{
+  "name": "zhongshengji-public-content",
+  "title": "种生基网站公开内容 MCP",
+  "description": "通过一个有边界的只读工具搜索 zhongshengji.vip 已公开的文章和视频页面。",
+  "version": "1.0.0",
+  "mcp": {
+    "endpoint": "https://www.zhongshengji.vip/api/mcp",
+    "transport": "streamable-http",
+    "protocolVersions": [
+      "2025-11-25",
+      "2025-06-18",
+      "2025-03-26"
+    ],
+    "authentication": {
+      "type": "none"
+    }
+  },
+  "tools": [
+    {
+      "name": "search_site_content",
+      "description": "按关键词和可选语言搜索本站公开内容。",
+      "readOnly": true
+    }
+  ],
+  "boundaries": {
+    "reads": "仅限本站公开内容索引",
+    "writes": false,
+    "personalData": false,
+    "disclaimer": "传统文化内容不构成医疗、财务或效果保证。"
+  }
+}

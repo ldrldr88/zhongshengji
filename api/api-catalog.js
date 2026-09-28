@@ -7,7 +7,7 @@ module.exports = function handler(request, response) {
   response.statusCode = 200;
   response.end(JSON.stringify({
     linkset: [{
-      anchor: `${BASE_URL}/agent-api/content-index.json`,
+      anchor: `${BASE_URL}/api/content-search`,
       'service-desc': [{
         href: `${BASE_URL}/agent-api/openapi.json`,
         type: 'application/vnd.oai.openapi+json;version=3.1',

@@ -38,7 +38,7 @@
         },
         {
           "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </agent-api/openapi.json>; rel=\"service-desc\"; type=\"application/vnd.oai.openapi+json;version=3.1\", </agent-api/docs.html>; rel=\"service-doc\"; type=\"text/html\", </.well-known/ai-catalog.json>; rel=\"describedby\"; type=\"application/json\""
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </agent-api/openapi.json>; rel=\"service-desc\"; type=\"application/vnd.oai.openapi+json;version=3.1\", </agent-api/docs.html>; rel=\"service-doc\"; type=\"text/html\", </.well-known/ai-catalog.json>; rel=\"describedby\"; type=\"application/json\", </.well-known/mcp/server-card.json>; rel=\"describedby\"; type=\"application/json\""
         },
         {
           "key": "Content-Signal",
@@ -78,6 +78,15 @@
     },
     {
       "source": "/.well-known/ai-catalog.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp/server-card.json",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
