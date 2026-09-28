@@ -3,26 +3,26 @@
   "slugZhHans": "zhong-sheng-ji-pian-ju-bian-bie",
   "slugZhHant": "zhong-sheng-ji-pian-ju-bian-bie",
   "metaTitle": "Sheng Ji Risks & Scam Warning: 5 Checks",
-  "metaDescription": "Avoid Sheng Ji scams by checking ordination records, land ownership, full ceremony videos, pricing and verifiable credentials.",
+  "metaDescription": "Before paying, verify identity claims, land-use documents, written scope, pricing and refund terms. No single video, certificate or article proves results.",
   "metaKeywords": "Sheng Ji scam, fake Sheng Ji master, Sheng Ji risks, how to verify Sheng Ji, living tomb scam warning",
   "h1": "Sheng Ji Scam Warning: 5 Ways to Identify a Legitimate Master Before You Pay",
-  "heroSub": "The Sheng Ji market contains many fraudulent operators — these 5 checks will help you distinguish genuine from fake before committing",
-  "showPrice": true,
+  "heroSub": "Check people, place, scope, price and contract terms without treating promotional material as complete proof",
+  "showPrice": false,
   "sections": [
     {
       "h2": "Common Sheng Ji Scam Types",
       "items": [
         {
           "h3": "Scam Type 1: No Real Dragon Vein — Just Theatrical Performance",
-          "content": "The most common Sheng Ji scam involves claiming to have a dragon vein plot while actually performing rituals on ordinary land or even indoors. Without a genuine dragon vein, there is no earth qi to channel — the entire premise of Sheng Ji collapses. These operators typically charge low fees (a few thousand to tens of thousands RMB) to attract clients, but deliver no energetic value."
+          "content": "Some providers claim to use a particular 'dragon vein' site but do not provide ownership or lawful-use documents matching the location, rights holder and service date. Check the document issuer, validity and permitted use. 'Dragon vein' and 'earth qi' are traditional Feng Shui descriptions; they do not replace land documents or prove outcomes."
         },
         {
           "h3": "Scam Type 2: Unverifiable Taoist Lineage",
-          "content": "Legitimate Sheng Ji ceremonies must be officiated by a Taoist master with a clear, documented ordination lineage. Many operators claim to be 'masters' with 'family-inherited' abilities but cannot produce any verifiable ordination record, temple affiliation, or lineage documentation."
+          "content": "If a provider claims an ordination, lineage or professional status, ask for the exact name, date, issuer and original document, then check the issuing body or an independent primary source where possible. An unverifiable claim is a risk signal, but a title alone does not establish service quality."
         },
         {
           "h3": "Scam Type 3: Refusing to Provide Full Ceremony Video",
-          "content": "Any genuine Sheng Ji provider films the complete ceremony and willingly shares unedited footage with prospective clients before payment. Any operator who refuses — citing 'ritual confidentiality' or 'trade secrets' — should be immediately disqualified. There is nothing to hide in a legitimate ceremony."
+          "content": "Agree in writing before payment on the steps, what may be recorded, privacy limits and deliverables. Video can show recorded portions but cannot by itself prove identity, land rights, uninterrupted performance or results. Refusal to document the agreed scope is more important than whether every part may be filmed."
         }
       ]
     },
@@ -31,15 +31,15 @@
       "items": [
         {
           "h3": "Check 1: Taoist Ordination Record — Specific, Named, and Verifiable",
-          "content": "Ask for the master's exact ordination details: date, ordaining authority, lineage name, and Taoist title. For reference, Master Lin Jia-Hua was ordained in 2007 by the 64th Zhang Tianshi (Zhang Yuan-Xian) into the Wan Fa Zong Tan, within the Lü Shan lineage of the Jing Ming Zong, with the Taoist name Lin Yi Chan. This level of specificity should be the minimum standard."
+          "content": "Ask for the claimed ordination date, issuing authority, lineage and title. This site states that Lin Jia-Hua received an ordination in 2007 and uses the Taoist name Lin Yi Chan; treat that as a provider statement until the original record and issuer can be checked. Such a record would support only what it explicitly states, not service outcomes."
         },
         {
           "h3": "Check 2: Real Dragon Vein Land — Documented Ownership",
-          "content": "Request proof of land ownership or usage rights for the claimed dragon vein plot, along with on-site video showing the specific location, surrounding terrain, and Feng Shui formation (mountain origin, water configuration). The Fu Gui Shuang Quan plot used by Master Lin can be described in precise classical Feng Shui terms: origin at Guanyin Mountain, San Tai Xing formation, three-river counter-current water configuration."
+          "content": "Request ownership, lease or use authorization that matches the actual site, rights holder, validity period and permitted activity. This site calls the location the 'Fu Gui Shuang Quan dragon vein'; that is the provider's traditional Feng Shui name. Site descriptions and video may help identify a place but cannot prove title, authorization or results."
         },
         {
           "h3": "Checks 3–5: Client Videos, Verifiable Public Record & Transparent Fees",
-          "content": "Request multiple full-length, unedited ceremony videos from previous clients (not marketing compilations). Search the master's name online for independent media coverage, industry association records or historical mentions — Master Lin Zhi-Ying's 2006 'Global Top 100 Yi Studies Figures' recognition from the International Yi Studies Federation is publicly verifiable. Confirm that the full fee is stated upfront with no hidden charges or post-ceremony 'top-up' requests."
+          "content": "Historical client material should be shown only with consent and without exposing birth data, biological samples or other sensitive information. For media and association claims, find the original publisher, date and exact named person. Confirm total price, third-party costs, cancellation, refund and deliverables in writing, and pause if extra payment is demanded on the basis of guaranteed effects."
         }
       ]
     }
@@ -49,7 +49,7 @@
     "@type": "Article",
     "headline": "Sheng Ji Scam Warning: 5 Ways to Identify a Legitimate Master Before You Pay",
     "datePublished": "2026-01-01",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-09-28",
     "inLanguage": "en",
     "author": {
       "@type": "Person",

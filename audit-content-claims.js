@@ -33,6 +33,9 @@ const RISK_PATTERNS = [
 ];
 
 const CONTEXT_PATTERN = /(?:传统|傳統|文化解释|文化解釋|说法|說法|所谓|所謂|服务方|服務方|从业者|從業者|声称|聲稱|传闻|傳聞|个人反馈|個人回饋|个人经验|個人經驗|风险|風險|不接受|不因|没有|沒有|不是|不适合|不適合|不保证|不保證|不承诺|不承諾|不把|不能|不构成|不構成|不代表|无法|無法|未经|未經|可能|祈愿|祈願|愿望|願望|建议|建議|核实|核實|警惕|拒绝|拒絕|不要|并非|並非|不应|不應|不足以|traditional|cultural|provider|practitioner|claimed|reported|belief|cannot|does not|doesn't|not guarantee|no guarantee|not evidence|no evidence|may|might|should not|do not|avoid|warning)/i;
+const ABSOLUTE_RISK_PATTERNS = [
+  /\b(?:deepest effect|most powerful(?: and lasting)? option|lifelong destiny elevation|ongoing energetic support|deliver no energetic value|all earth qi is directed solely to you)\b/i,
+];
 
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
@@ -45,7 +48,8 @@ function inspectString(value, filePath, jsonPath, findings) {
   const segments = value.split(/(?<=[。！？!?；;])/).map(segment => segment.trim()).filter(Boolean);
   segments.forEach(segment => {
     if (/[?？]$/.test(segment)) return;
-    if (RISK_PATTERNS.some(pattern => pattern.test(segment)) && !CONTEXT_PATTERN.test(segment)) {
+    if (ABSOLUTE_RISK_PATTERNS.some(pattern => pattern.test(segment))
+      || (RISK_PATTERNS.some(pattern => pattern.test(segment)) && !CONTEXT_PATTERN.test(segment))) {
       findings.push({ file: filePath, path: jsonPath, text: segment });
     }
   });
