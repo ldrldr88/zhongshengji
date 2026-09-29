@@ -3,9 +3,9 @@
   "slugZhHans": "zhong-sheng-ji-jia-ge-fei-yong",
   "slugZhHant": "zhong-sheng-ji-jia-ge-fei-yong",
   "metaTitle": "Sheng Ji Price & Cost: RMB 72,000 vs RMB 500,000",
-  "metaDescription": "Compare Sheng Ji pricing: the 5-year RMB 72,000 package and the lifetime RMB 500,000 package, including what each includes.",
+  "metaDescription": "Compare Sheng Ji pricing: the RMB 72,000 Momentum Breakthrough Plan and RMB 500,000 Lifetime Momentum Plan, including service terms and what each includes.",
   "metaKeywords": "Sheng Ji price, Sheng Ji cost, Zhong Sheng Ji fee, living tomb ritual cost, Malaysia Singapore Sheng Ji price",
-  "h1": "Sheng Ji Price & Cost: 5-Year vs Lifetime Package — Full Breakdown",
+  "h1": "Sheng Ji Price & Cost: Momentum Breakthrough Plan vs Lifetime Momentum Plan",
   "heroSub": "Prices are quoted in RMB and confirmed in writing before payment; Mr. Liang Dongrong handles enquiries and coordination",
   "showPrice": true,
   "sections": [
@@ -13,16 +13,16 @@
       "h2": "Two Packages: Price Overview",
       "items": [
         {
-          "h3": "5-Year Experience Package: RMB 72,000",
+          "h3": "Momentum Breakthrough Plan (Service Term: 5 Years): RMB 72,000",
           "content": "Total fee: RMB 72,000. Deposit: RMB 10,000; balance: RMB 62,000. The stated arrangement uses a shared plot and does not require travel to Taiwan. Confirm materials, courier or customs rules, delivery and any upgrade difference in writing before payment."
         },
         {
-          "h3": "Lifetime Package: RMB 500,000 (Exclusive Plot Arrangement)",
+          "h3": "Lifetime Momentum Plan: RMB 500,000 (Exclusive Plot Arrangement)",
           "content": "Total fee: RMB 500,000. The stated arrangement requires personal attendance in Taiwan and assigns an exclusive plot. The verifiable differences are price, term, attendance, plot-use arrangement and deliverables; exclusivity does not prove a stronger or longer-lasting effect. Confirm the itinerary and written scope before payment."
         },
         {
-          "h3": "Upgrading from 5-Year to Lifetime",
-          "content": "After completing the 5-Year package, you can upgrade to Lifetime at any time by paying the difference of RMB 428,000. A new exclusive plot will be selected, and you will attend the full Lifetime ceremony in Taiwan."
+          "h3": "Upgrading from the Momentum Breakthrough Plan to the Lifetime Momentum Plan",
+          "content": "After completing the Momentum Breakthrough Plan (5-year service term), you can upgrade to the Lifetime Momentum Plan at any time by paying the difference of RMB 428,000. A new exclusive plot will be selected, and you will attend the full Lifetime Momentum Plan ceremony in Taiwan."
         }
       ]
     },
@@ -60,9 +60,9 @@
   "schema": {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Sheng Ji Price & Cost: 5-Year vs Lifetime Package — Full Breakdown",
+    "headline": "Sheng Ji Price & Cost: Momentum Breakthrough Plan vs Lifetime Momentum Plan",
     "datePublished": "2026-01-01",
-    "dateModified": "2026-09-28",
+    "dateModified": "2026-09-29",
     "inLanguage": "en",
     "author": {
       "@type": "Person",
