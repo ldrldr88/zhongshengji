@@ -2,44 +2,69 @@
   "slug": "sheng-ji-risks-scam-warning",
   "slugZhHans": "zhong-sheng-ji-pian-ju-bian-bie",
   "slugZhHant": "zhong-sheng-ji-pian-ju-bian-bie",
-  "metaTitle": "Sheng Ji Risks & Scam Warning: 5 Checks",
-  "metaDescription": "Before paying, verify identity claims, land-use documents, written scope, pricing and refund terms. No single video, certificate or article proves results.",
+  "metaTitle": "Zhong Sheng Ji Scam Warning: 5 Practical Checks",
+  "metaDescription": "Before paying, confirm the official contact, service plan, process records, RMB pricing, personal-material handling, delivery, rescheduling and refund terms.",
   "metaKeywords": "Sheng Ji scam, fake Sheng Ji master, Sheng Ji risks, how to verify Sheng Ji, living tomb scam warning",
-  "h1": "Sheng Ji Scam Warning: 5 Ways to Identify a Legitimate Master Before You Pay",
-  "heroSub": "Check people, place, scope, price and contract terms without treating promotional material as complete proof",
+  "h1": "Zhong Sheng Ji Scam Warning: 5 Practical Checks Before You Pay",
+  "heroSub": "Confirm the contact, plan, process, price, privacy and delivery; reject unexplained extra charges or guaranteed outcomes",
   "showPrice": false,
   "sections": [
     {
-      "h2": "Common Sheng Ji Scam Types",
+      "h2": "Common Zhong Sheng Ji Scam Signals",
       "items": [
         {
-          "h3": "Scam Type 1: No Real Dragon Vein — Just Theatrical Performance",
-          "content": "Some providers claim to use a particular 'dragon vein' site but do not provide ownership or lawful-use documents matching the location, rights holder and service date. Check the document issuer, validity and permitted use. 'Dragon vein' and 'earth qi' are traditional Feng Shui descriptions; they do not replace land documents or prove outcomes."
+          "h3": "Impersonated Contact or Payment Account",
+          "content": "The public contact for this site is Mr. Liang Dongrong via WeChat NSDG521 and liangdongrong@gmail.com. Pause if someone uses the team name while changing the contact or payment account without confirmation through the published channel."
         },
         {
-          "h3": "Scam Type 2: Unverifiable Taoist Lineage",
-          "content": "If a provider claims an ordination, lineage or professional status, ask for the exact name, date, issuer and original document, then check the issuing body or an independent primary source where possible. An unverifiable claim is a risk signal, but a title alone does not establish service quality."
+          "h3": "Unclear Process or Delivery",
+          "content": "The selected plan, schedule, materials, main steps, video record, return items and follow-up should be explained before payment. Promotional claims are not a substitute for a clear service scope."
         },
         {
-          "h3": "Scam Type 3: Refusing to Provide Full Ceremony Video",
-          "content": "Agree in writing before payment on the steps, what may be recorded, privacy limits and deliverables. Video can show recorded portions but cannot by itself prove identity, land rights, uninterrupted performance or results. Refusal to document the agreed scope is more important than whether every part may be filmed."
+          "h3": "Low Initial Price Followed by Repeated Charges",
+          "content": "Confirm the total RMB price, RMB 10,000 deposit, balance, upgrade difference, rescheduling and refund terms. Unexplained charges for emergency, extra empowerment or guaranteed effects are warning signs."
         }
       ]
     },
     {
-      "h2": "5 Core Checks to Verify a Sheng Ji Master",
+      "h2": "5 Practical Checks Before Booking",
       "items": [
         {
-          "h3": "Check 1: Taoist Ordination Record — Specific, Named, and Verifiable",
-          "content": "Ask for the claimed ordination date, issuing authority, lineage and title. This site states that Lin Jia-Hua received an ordination in 2007 and uses the Taoist name Lin Yi Chan; treat that as a provider statement until the original record and issuer can be checked. Such a record would support only what it explicitly states, not service outcomes."
+          "h3": "1. Use the Published Contact",
+          "content": "Contact Mr. Liang through WeChat NSDG521 or liangdongrong@gmail.com and reconfirm the selected plan and payment arrangement before sending funds."
         },
         {
-          "h3": "Check 2: Real Dragon Vein Land — Documented Ownership",
-          "content": "Request ownership, lease or use authorization that matches the actual site, rights holder, validity period and permitted activity. This site calls the location the 'Fu Gui Shuang Quan dragon vein'; that is the provider's traditional Feng Shui name. Site descriptions and video may help identify a place but cannot prove title, authorization or results."
+          "h3": "2. Confirm the Actual Service Arrangement",
+          "content": "Confirm who coordinates the service, where it is carried out, whether travel to Taiwan is required, the expected schedule, service term and plot arrangement."
         },
         {
-          "h3": "Checks 3–5: Client Videos, Verifiable Public Record & Transparent Fees",
-          "content": "Historical client material should be shown only with consent and without exposing birth data, biological samples or other sensitive information. For media and association claims, find the original publisher, date and exact named person. Confirm total price, third-party costs, cancellation, refund and deliverables in writing, and pause if extra payment is demanded on the basis of guaranteed effects."
+          "h3": "3. Confirm Records and Deliverables",
+          "content": "Confirm the recording scope, video delivery, return items and follow-up contact. A video can show recorded steps but cannot guarantee the same outcome for every client."
+        },
+        {
+          "h3": "4. Confirm Personal-Material Handling",
+          "content": "Before sending hair, nail clippings, clothing or other personal materials, confirm the recipient, address, purpose, retention and handling after completion. Ask about non-invasive alternatives for any biological sample."
+        },
+        {
+          "h3": "5. Confirm Price, Rescheduling and Refunds",
+          "content": "The current published plans are RMB 72,000 and RMB 500,000, with an RMB 10,000 booking deposit. Confirm the balance, upgrade difference, third-party costs, rescheduling, cancellation, refund and full delivery."
+        }
+      ]
+    },
+    {
+      "h2": "Three Booking Boundaries",
+      "items": [
+        {
+          "h3": "Use Long-Standing Public Channels",
+          "content": "Return to the published WeChat ID or email if anyone changes the contact, payment account or plan."
+        },
+        {
+          "h3": "Keep the Transaction Clear",
+          "content": "Confirm the service, payment stages, schedule, delivery, personal-material handling, rescheduling and refund terms, and keep payment and communication records."
+        },
+        {
+          "h3": "Reject Guaranteed Outcomes and Fear-Based Pressure",
+          "content": "No health, wealth, career, marriage, fertility or fortune result is guaranteed. Stop if anyone claims immediate payment is required to prevent harm or demands extra fees to remove a threat."
         }
       ]
     }
@@ -47,9 +72,9 @@
   "schema": {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Sheng Ji Scam Warning: 5 Ways to Identify a Legitimate Master Before You Pay",
+    "headline": "Zhong Sheng Ji Scam Warning: 5 Practical Checks Before You Pay",
     "datePublished": "2026-01-01",
-    "dateModified": "2026-09-28",
+    "dateModified": "2026-10-18",
     "inLanguage": "en",
     "author": {
       "@type": "Person",

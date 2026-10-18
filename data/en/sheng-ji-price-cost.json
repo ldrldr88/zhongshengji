@@ -2,11 +2,11 @@
   "slug": "sheng-ji-price-cost",
   "slugZhHans": "zhong-sheng-ji-jia-ge-fei-yong",
   "slugZhHant": "zhong-sheng-ji-jia-ge-fei-yong",
-  "metaTitle": "Sheng Ji Price & Cost: RMB 72,000 vs RMB 500,000",
-  "metaDescription": "Compare Sheng Ji pricing: the RMB 72,000 Momentum Breakthrough Plan and RMB 500,000 Lifetime Momentum Plan, including service terms and what each includes.",
+  "metaTitle": "Zhong Sheng Ji Price: RMB 72,000 vs RMB 500,000",
+  "metaDescription": "Zhong Sheng Ji prices are quoted globally in RMB: RMB 72,000 or RMB 500,000, with an RMB 10,000 deposit, remaining balance and upgrade difference.",
   "metaKeywords": "Sheng Ji price, Sheng Ji cost, Zhong Sheng Ji fee, living tomb ritual cost, Malaysia Singapore Sheng Ji price",
-  "h1": "Sheng Ji Price & Cost: Momentum Breakthrough Plan vs Lifetime Momentum Plan",
-  "heroSub": "Prices are quoted in RMB and confirmed in writing before payment; Mr. Liang Dongrong handles enquiries and coordination",
+  "h1": "Zhong Sheng Ji Price and Cost: RMB 72,000 vs RMB 500,000",
+  "heroSub": "Global RMB pricing · RMB 10,000 booking deposit · balance and upgrade rules explained",
   "showPrice": true,
   "sections": [
     {
@@ -14,11 +14,11 @@
       "items": [
         {
           "h3": "Momentum Breakthrough Plan (Service Term: 5 Years): RMB 72,000",
-          "content": "Total fee: RMB 72,000. Deposit: RMB 10,000; balance: RMB 62,000. The stated arrangement uses a shared plot and does not require travel to Taiwan. Confirm materials, courier or customs rules, delivery and any upgrade difference in writing before payment."
+          "content": "Total fee: RMB 72,000. Deposit: RMB 10,000; balance: RMB 62,000. The arrangement uses a shared plot and does not require travel to Taiwan. Materials, courier or customs rules, delivery and any upgrade difference are confirmed during booking."
         },
         {
           "h3": "Lifetime Momentum Plan: RMB 500,000 (Exclusive Plot Arrangement)",
-          "content": "Total fee: RMB 500,000. The stated arrangement requires personal attendance in Taiwan and assigns an exclusive plot. The verifiable differences are price, term, attendance, plot-use arrangement and deliverables; exclusivity does not prove a stronger or longer-lasting effect. Confirm the itinerary and written scope before payment."
+          "content": "Total fee: RMB 500,000. The arrangement requires personal attendance in Taiwan and uses an exclusive plot. The practical differences are price, term, attendance, plot-use arrangement and deliverables; exclusivity does not guarantee a stronger or longer-lasting effect. Dates, itinerary and delivery are confirmed during booking."
         },
         {
           "h3": "Upgrading from the Momentum Breakthrough Plan to the Lifetime Momentum Plan",
@@ -35,7 +35,7 @@
         },
         {
           "h3": "Full HD Video Recording of the Entire Ceremony",
-          "content": "The agreed ceremony portions are recorded and delivered after completion. Video can help check which steps were recorded, but it cannot by itself prove practitioner credentials, land rights, uninterrupted performance or outcomes. Confirm the recording scope and privacy terms in writing."
+          "content": "The agreed ceremony portions are recorded and delivered after completion. The video record is part of the delivery and does not guarantee health, wealth, career or fortune outcomes. Recording scope, privacy and delivery format are confirmed during booking."
         },
         {
           "h3": "3 Items Mailed Back to You After Completion",
@@ -48,7 +48,7 @@
       "items": [
         {
           "h3": "Step 1: Add WeChat NSDG521 and Confirm Your Booking",
-          "content": "Contact Mr. Liang Dongrong via WeChat NSDG521 for the written package scope and current quote. Do not send sensitive personal data until the recipient, purpose, retention and handling terms have been confirmed."
+          "content": "Contact Mr. Liang Dongrong via WeChat NSDG521 for the package scope and current quote. Confirm the selected plan, total price, payment stages, materials, privacy, delivery, rescheduling and refund terms before sending payment or personal materials."
         },
         {
           "h3": "Step 2: Pay RMB 10,000 Deposit to Begin the Process",
@@ -60,9 +60,9 @@
   "schema": {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Sheng Ji Price & Cost: Momentum Breakthrough Plan vs Lifetime Momentum Plan",
+    "headline": "Zhong Sheng Ji Price and Cost: RMB 72,000 vs RMB 500,000",
     "datePublished": "2026-01-01",
-    "dateModified": "2026-09-29",
+    "dateModified": "2026-10-18",
     "inLanguage": "en",
     "author": {
       "@type": "Person",
@@ -83,5 +83,23 @@
         "name": "Zhong Sheng Ji"
       }
     ]
-  }
+  },
+  "relatedLinksTitle": "Continue with meaning, practical costs and process",
+  "relatedLinks": [
+    {
+      "url": "/en/what-is-zhong-sheng-ji/",
+      "title": "What Is Zhong Sheng Ji?",
+      "desc": "Understand the cultural meaning, service process and limits."
+    },
+    {
+      "url": "/en/sheng-ji-taboos-precautions/",
+      "title": "Zhong Sheng Ji Costs, Consequences and Risks",
+      "desc": "Review financial, time, privacy and opportunity costs."
+    },
+    {
+      "url": "/en/sheng-ji-full-ritual-process/",
+      "title": "Zhong Sheng Ji Process",
+      "desc": "See the main steps from booking to recorded delivery."
+    }
+  ]
 }
